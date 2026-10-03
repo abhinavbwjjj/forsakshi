@@ -1,0 +1,1462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive,noimageindex">
+<meta name="description" content="For Sakshi. Open slowly.">
+<meta property="og:title" content="Brick by Brick">
+<meta property="og:description" content="For Sakshi. Open slowly.">
+<meta name="theme-color" content="#f6eee4">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Brick by Brick</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gloock&family=Kalam:wght@300;400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+/* Layout: one long letter that opens from a wax-sealed envelope and is told as an architect's drawing set (8 sheets): 3D portraits, a clock of calls, a kintsugi plate, two kids, revisions, a coin, a 3D house built brick by brick, and a sunrise. Beige paper, baby pink, gold for repair, her words in her own blue pen. */
+:root{
+  --cream:#f6eee4;
+  --paper:#fffaf3;
+  --sand:#eadccb;
+  --blush:#f8dadd;
+  --petal:#efb6be;
+  --rose:#c9727f;
+  --wine:#5b3139;
+  --ink:#4a3135;
+  --ink-soft:#866864;
+  --pen:#34478c;
+  --his:#9a4f5c;
+  --gold:#c9a15f;
+  --gold-hi:#f2dba4;
+  --f-display:"Gloock","Bodoni Moda","Didot",Georgia,serif;
+  --f-body:"Newsreader","Iowan Old Style",Georgia,serif;
+  --f-her:"Kalam","Segoe Print","Bradley Hand",cursive;
+  --f-arch:"Architects Daughter","Segoe Print","Marker Felt",cursive;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:var(--f-body);font-size:1.1rem;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.16;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .42 0 0 0 0 .3 0 0 0 0 .26 0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+main{overflow-x:clip}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:max(18px,5vw)}
+.read{max-width:36rem}
+p{margin:0 0 1.05em}
+h2{font-family:var(--f-display);font-weight:400;color:var(--wine);font-size:clamp(2.15rem,7vw,3.9rem);line-height:1.04;letter-spacing:-.01em;text-wrap:balance;margin:0 0 .55em}
+.sheet{font-family:var(--f-arch);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--his);display:flex;align-items:center;gap:.8rem;margin:0 0 1.4rem}
+.sheet::before{content:"";width:2.2rem;border-top:1.5px solid currentColor;opacity:.6}
+.lede{font-family:var(--f-body);font-style:italic;font-size:clamp(1.3rem,3.6vw,1.6rem);line-height:1.45;color:var(--wine)}
+.hing{font-family:var(--f-display);color:var(--rose);font-size:1.15em}
+.arch{font-family:var(--f-arch);color:var(--his)}
+.sec{padding-block:clamp(5rem,14vh,9rem)}
+
+/* her words, in her blue pen on her notebook paper */
+.her{position:relative;margin:1.8rem 0;max-width:33rem;padding:1.15rem 1.35rem 1.1rem 2.1rem;background-color:var(--paper);color:var(--pen);font-family:var(--f-her);font-weight:300;font-size:1.2rem;line-height:2rem;background-image:linear-gradient(90deg,transparent 1.35rem,rgba(201,114,127,.35) 1.35rem 1.45rem,transparent 1.45rem),repeating-linear-gradient(180deg,transparent 0 1.94rem,rgba(52,71,140,.12) 1.94rem 2rem);background-position:0 0,0 .95rem;transform:rotate(var(--r,-.8deg));box-shadow:0 1px 0 rgba(0,0,0,.04),0 22px 40px -22px rgba(91,49,57,.45);border-radius:2px}
+.her::before{content:"";position:absolute;top:-11px;left:50%;width:88px;height:22px;transform:translateX(-50%) rotate(-3deg);background:rgba(239,182,190,.55);box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.her p{margin:0}
+.her cite{display:block;margin-top:.45rem;font-family:var(--f-arch);font-style:normal;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--his);line-height:1.3}
+
+/* handwriting svg */
+.hw{display:block;height:auto;overflow:visible}
+.hw path{fill:currentColor;fill-opacity:1;stroke:currentColor;stroke-width:12;stroke-linejoin:round}
+.js .hw path{fill-opacity:0;stroke-dasharray:var(--len);stroke-dashoffset:var(--len)}
+.js .hw.in path{stroke-dashoffset:0;fill-opacity:1;transition:stroke-dashoffset var(--dur,2.6s) cubic-bezier(.45,.05,.3,1),fill-opacity .9s ease calc(var(--dur,2.6s) - .5s)}
+
+/* reveal */
+.js [data-rv]{opacity:0;transform:translateY(18px);transition:opacity 1s ease,transform 1.1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js [data-rv].in{opacity:1;transform:none}
+
+/* ---------- envelope ---------- */
+.envsec{min-height:94svh;display:grid;place-items:center;align-content:center;gap:1.6rem;padding:3rem max(18px,5vw) 4rem;background:radial-gradient(120% 70% at 50% 40%,#fbe7e6 0,var(--cream) 62%)}
+.kicker{font-family:var(--f-arch);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--his);margin:0;text-align:center}
+.env{position:relative;width:min(88vw,470px);aspect-ratio:1.52;perspective:1600px;cursor:pointer;outline:none;margin-top:4.5rem;-webkit-tap-highlight-color:transparent}
+.env:focus-visible{outline:2px solid var(--rose);outline-offset:10px;border-radius:8px}
+.env-back{position:absolute;inset:0;border-radius:6px;background:linear-gradient(170deg,#ecdcca,#e3cfba);box-shadow:0 40px 70px -30px rgba(91,49,57,.55),0 2px 0 rgba(255,255,255,.4) inset}
+.env-letter{position:absolute;left:6%;right:6%;top:6%;height:86%;z-index:1;background:var(--paper);border-radius:3px;padding:7% 8%;display:grid;align-content:start;gap:7%;box-shadow:0 2px 8px rgba(91,49,57,.12);transition:transform 1.25s cubic-bezier(.3,.9,.25,1)}
+.env-letter b{font-family:var(--f-her);font-weight:400;color:var(--pen);font-size:clamp(1rem,4vw,1.35rem)}
+.env-letter i{display:block;height:2px;background:rgba(52,71,140,.16);border-radius:2px}
+.env-letter i:nth-of-type(2){width:82%}.env-letter i:nth-of-type(3){width:64%}
+.env-pocket{position:absolute;inset:0;z-index:2;border-radius:6px;background:linear-gradient(180deg,#f3e7da,#eedfcf);clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%);filter:drop-shadow(0 -1px 0 rgba(91,49,57,.06))}
+.env-pocket svg.folds{position:absolute;inset:0;width:100%;height:100%}
+.env-name{position:absolute;left:50%;bottom:5%;width:44%;transform:translateX(-50%);color:var(--his)}
+.postmark{position:absolute;left:7%;bottom:10%;width:62px;height:62px;border-radius:50%;border:1.5px solid rgba(201,114,127,.5);display:grid;place-items:center;text-align:center;font-family:var(--f-arch);font-size:.55rem;line-height:1.2;letter-spacing:.08em;color:rgba(201,114,127,.75);transform:rotate(-14deg)}
+.postmark::after{content:"";position:absolute;inset:5px;border-radius:50%;border:1px dashed rgba(201,114,127,.45)}
+.env-flap{position:absolute;left:0;right:0;top:0;height:60%;z-index:3;transform-origin:50% 0;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.5,.05,.25,1),z-index 0s .5s}
+.env-flap div{position:absolute;inset:0;clip-path:polygon(0 0,100% 0,50% 100%);backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.flap-out{background:linear-gradient(180deg,#f0e2d2,#e8d6c3);filter:drop-shadow(0 6px 6px rgba(91,49,57,.18))}
+.flap-in{background:linear-gradient(0deg,#ead8c5,#e2cbb6);transform:rotateX(180deg)}
+.seal{position:absolute;left:50%;top:60%;width:clamp(64px,19vw,86px);height:clamp(64px,19vw,86px);z-index:4;transform:translate(-50%,-50%);transition:opacity .4s}
+.seal-half{position:absolute;inset:0;transition:transform 1.1s cubic-bezier(.4,.1,.5,1),opacity 1s ease .2s}
+.seal-half .wax{position:absolute;inset:0;border-radius:47% 53% 51% 49%/52% 46% 54% 48%;background:radial-gradient(circle at 34% 30%,#fbd3d8 0,#eba3ae 38%,#d27c8b 72%,#b9616f 100%);box-shadow:inset -4px -6px 10px rgba(120,40,55,.35),inset 4px 5px 8px rgba(255,255,255,.45),0 6px 14px -4px rgba(120,40,55,.55)}
+.seal-half .wax::before{content:"";position:absolute;inset:16%;border-radius:50%;border:2px solid rgba(255,235,238,.45);box-shadow:inset 0 0 0 1px rgba(150,60,75,.25)}
+.seal-half .mark{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-display);font-size:clamp(1.6rem,6vw,2.1rem);color:#c06a79;text-shadow:-1px -1px 0 rgba(255,230,234,.6),1px 1px 1px rgba(110,35,50,.45)}
+.seal-half.l{clip-path:polygon(0 0,52% 0,46% 22%,55% 38%,44% 55%,54% 72%,47% 100%,0 100%)}
+.seal-half.r{clip-path:polygon(52% 0,100% 0,100% 100%,47% 100%,54% 72%,44% 55%,55% 38%,46% 22%)}
+.seal::after{content:"";position:absolute;inset:-12px;border-radius:50%;border:1.5px solid rgba(201,114,127,.55);animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{transform:scale(.85);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+.env-hint{font-family:var(--f-arch);color:var(--his);font-size:1rem;margin:0;letter-spacing:.04em;transition:opacity .5s}
+.env.crack .seal::after{display:none}
+.env.crack .seal-half.l{transform:translate(-46px,120px) rotate(-38deg);opacity:0}
+.env.crack .seal-half.r{transform:translate(52px,130px) rotate(42deg);opacity:0}
+.env.open .env-flap{transform:rotateX(180deg);z-index:0}
+.env.rise .env-letter{transform:translateY(-62%)}
+.opened .env-hint{opacity:0}
+
+/* ---------- letter ---------- */
+.letter{position:relative;max-width:40rem;margin-inline:auto;background:var(--paper);padding:clamp(2rem,6vw,3.6rem) clamp(1.4rem,6vw,3.4rem) clamp(2.4rem,6vw,3.6rem);box-shadow:0 40px 80px -40px rgba(91,49,57,.45),0 1px 0 rgba(0,0,0,.03);transform:rotate(-.6deg);border-radius:2px}
+.letter::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(180deg,transparent 0 2.15rem,rgba(201,114,127,.12) 2.15rem 2.2rem);mask:linear-gradient(transparent 0,#000 7rem)}
+.letter .date{font-family:var(--f-her);color:var(--pen);text-align:right;font-size:1.02rem;margin-bottom:1.2rem}
+.letter .hello{width:min(70%,330px);color:var(--his);margin:0 0 1.6rem -.3rem}
+.letter .big{font-family:var(--f-display);color:var(--wine);font-size:clamp(1.8rem,5.6vw,2.6rem);line-height:1.12;margin-bottom:1.1em}
+.letter p{position:relative}
+.letter .go{font-family:var(--f-arch);color:var(--his);font-size:.98rem;margin:1.8rem 0 0}
+.flower{position:absolute;width:110px;right:-26px;bottom:-34px;transform:rotate(14deg);pointer-events:none}
+
+/* ---------- 3D tracks ---------- */
+.track{position:relative}
+.sticky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.sticky canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.nogl .sticky canvas{display:none}
+
+/* portraits */
+#portraits .sticky{background:radial-gradient(90% 60% at 50% 42%,#fde9e9 0,#f6e3dc 45%,#efdcd0 100%)}
+.pt-intro{position:absolute;inset:auto 0 auto 0;top:max(1.2rem,env(safe-area-inset-top,0px));display:flex;justify-content:space-between;align-items:flex-start;padding-inline:max(18px,5vw);pointer-events:none;z-index:2}
+.pt-count{font-family:var(--f-arch);color:var(--his);font-size:.85rem;letter-spacing:.12em;font-variant-numeric:tabular-nums}
+.pt-cap{position:absolute;left:0;right:0;bottom:max(5svh,1.5rem);z-index:2;display:grid;justify-items:center;padding-inline:max(18px,6vw);pointer-events:none}
+.pt-cap p{grid-area:1/1;max-width:26rem;text-align:center;font-family:var(--f-arch);color:var(--wine);font-size:clamp(1.02rem,3.6vw,1.22rem);line-height:1.45;margin:0;background:rgba(255,250,243,.82);padding:.7rem 1.1rem;border-radius:3px;box-shadow:0 16px 30px -18px rgba(91,49,57,.5);transition:opacity .55s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.pt-cap p:not(.on){opacity:0;transform:translateY(10px)}
+.pt-fallback{display:none}
+.nogl .pt-fallback{display:grid;gap:2.5rem;padding:4rem max(18px,5vw)}
+
+/* ---------- clock ---------- */
+#clock .sticky{display:grid;place-items:center;background:radial-gradient(70% 55% at 50% 45%,#fbeeea 0,var(--cream) 70%)}
+.dial{position:absolute;width:min(104vw,640px);aspect-ratio:1;left:50%;top:44%;transform:translate(-50%,-50%);opacity:.9}
+.dial .num{font-family:var(--f-display);fill:var(--rose);font-size:13px}
+.dial .tick{stroke:var(--ink-soft);stroke-width:.6;opacity:.45}
+.dial .tick.h{stroke-width:1.4;opacity:.7;stroke:var(--rose)}
+.dial .hand{stroke-linecap:round}
+.phone{position:relative;z-index:2;width:min(52vw,236px);aspect-ratio:.49;margin-top:-6svh;border-radius:34px;padding:9px;background:linear-gradient(145deg,#fffaf4,#eadccb);box-shadow:0 40px 60px -30px rgba(91,49,57,.6),inset 0 0 0 1px rgba(255,255,255,.7);transform:perspective(900px) rotateY(var(--ry,0deg)) rotateX(var(--rx,0deg));transition:transform .6s ease}
+.screen{position:relative;width:100%;height:100%;border-radius:26px;overflow:hidden;background:#17121a}
+.screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .7s ease,transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.screen img.contain{object-fit:contain}
+.screen img:not(.on){opacity:0;transform:scale(1.08)}
+.screen img.on{opacity:1;transform:scale(1)}
+.sbar{position:absolute;left:0;right:0;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:10px 16px 6px;font:600 .72rem/1 -apple-system,"Segoe UI",Roboto,sans-serif;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.5);font-variant-numeric:tabular-nums}
+.batt{display:flex;align-items:center;gap:4px}
+.batt i{position:relative;width:22px;height:11px;border:1.4px solid #fff;border-radius:3px;display:block}
+.batt i::after{content:"";position:absolute;right:-4px;top:2.5px;width:2px;height:4px;background:#fff;border-radius:0 1px 1px 0}
+.batt i b{position:absolute;left:1px;top:1px;bottom:1px;width:calc(var(--b,50) * .18px);background:#fff;border-radius:1px;transition:width .5s}
+.batt.low i b{background:#ff6b6b}
+.batt .bolt{display:none;font-size:.7rem}
+.batt.chg .bolt{display:inline}
+.notch{position:absolute;top:8px;left:50%;width:30%;height:16px;transform:translateX(-50%);background:#0e0b10;border-radius:10px;z-index:3}
+.clock-cap{position:relative;z-index:2;margin-top:1.4rem;max-width:22rem;text-align:center;padding-inline:18px;min-height:5.2em;display:grid}
+.clock-cap p{grid-area:1/1;margin:0;font-family:var(--f-arch);color:var(--wine);font-size:1.08rem;line-height:1.45;transition:opacity .5s ease,transform .6s ease}
+.clock-cap p:not(.on){opacity:0;transform:translateY(8px)}
+.clock-cap b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.6rem;color:var(--rose);font-variant-numeric:tabular-nums;margin-bottom:.15rem}
+
+/* ---------- kintsugi ---------- */
+.kin{display:grid;gap:3rem;align-items:center}
+@media(min-width:900px){.kin{grid-template-columns:1fr 1fr;gap:4rem}}
+.plate-wrap{position:sticky;top:12vh;justify-self:center;width:min(86vw,440px)}
+@media(max-width:899px){.plate-wrap{position:relative;top:0}}
+.plate{width:100%;height:auto;display:block;overflow:visible}
+.plate-cap{text-align:center;font-family:var(--f-arch);color:var(--his);font-size:.92rem;margin-top:.6rem}
+.glint{animation:glint 3.4s linear infinite}
+@keyframes glint{from{stroke-dashoffset:var(--gl)}to{stroke-dashoffset:0}}
+
+/* ---------- kids ---------- */
+.kids-stage{position:relative;margin:2.4rem auto 2rem;max-width:760px}
+.kids-stage svg{width:100%;height:auto;display:block;overflow:visible}
+.kid .leg{transform-box:fill-box;transform-origin:50% 0}
+.walking .kid .leg.a{animation:stepA .5s ease-in-out infinite alternate}
+.walking .kid .leg.b{animation:stepA .5s ease-in-out infinite alternate-reverse}
+@keyframes stepA{from{transform:rotate(16deg)}to{transform:rotate(-16deg)}}
+.walking .kid .bob{animation:bob .25s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(-2px)}}
+.kid-lbl{font-family:var(--f-arch);font-size:13px;fill:var(--his)}
+.heart{transition:opacity .8s ease,transform 1.6s cubic-bezier(.2,.8,.2,1);transform-box:fill-box;transform-origin:50% 100%}
+
+/* ---------- revisions ---------- */
+.revs{list-style:none;padding:0;margin:2.2rem 0 2.6rem;display:grid;gap:.85rem;position:relative}
+.revs li{font-family:var(--f-display);font-size:clamp(1.5rem,4.6vw,2.3rem);line-height:1.2;color:var(--wine);max-width:100%;transition:opacity .3s ease}
+.revs .x{background-image:linear-gradient(var(--rose),var(--rose));background-repeat:no-repeat;background-position:0 62%;background-size:0% 2.5px;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background-size .55s cubic-bezier(.6,.1,.2,1)}
+.revs li.struck .x{background-size:100% 2.5px}
+.revs li.gone{opacity:.13}
+.stays{font-family:var(--f-arch);color:var(--his);margin:0 0 .4rem;transition:opacity 1s}
+.yp{width:min(92%,520px);color:var(--rose);margin:0 0 .4rem -.4rem}
+.gold-ul{display:block;width:min(70%,360px);height:14px;margin:-.2rem 0 1.6rem}
+.gold-ul path{fill:none;stroke:var(--gold);stroke-width:3;stroke-linecap:round;stroke-dasharray:400;stroke-dashoffset:400;transition:stroke-dashoffset 1.4s ease 2.2s}
+.yp.in + .gold-ul path{stroke-dashoffset:0}
+
+/* ---------- coin ---------- */
+.terms{display:grid;gap:2.6rem;align-items:center}
+@media(min-width:880px){.terms{grid-template-columns:1.05fr 1fr}}
+.coin-card{position:relative;background:var(--paper);padding:2rem 1.4rem 1.6rem;display:grid;justify-items:center;gap:1.1rem;text-align:center;box-shadow:0 30px 60px -36px rgba(91,49,57,.55);transform:rotate(.7deg)}
+.coin-card .rule{font-family:var(--f-arch);color:var(--his);font-size:1.08rem;margin:0}
+.coin-stage{perspective:800px;width:140px;height:140px}
+.coin{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 1.6s cubic-bezier(.22,.9,.24,1)}
+.face{position:absolute;inset:0;border-radius:50%;display:grid;place-items:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:radial-gradient(circle at 34% 28%,#ffe6ea 0,#f4b9c2 38%,#df8e9c 80%);box-shadow:inset 0 0 0 7px #e8c78b,inset 0 0 0 9px #b98c49,inset 0 0 0 11px rgba(255,240,215,.7),0 14px 30px -10px rgba(120,40,55,.6);font-family:var(--f-arch);color:#7a3443;font-size:1rem;line-height:1.1}
+.face span{display:block;font-size:1.5rem;color:#b55a6c}
+.face.t{transform:rotateY(180deg)}
+.btn{font:inherit;font-family:var(--f-arch);font-size:1.05rem;letter-spacing:.03em;cursor:pointer;border-radius:999px;padding:.75rem 1.6rem;border:1.5px solid var(--rose);background:var(--blush);color:var(--wine);transition:transform .2s,box-shadow .2s,background .2s;box-shadow:0 8px 18px -10px rgba(201,114,127,.8)}
+.btn:hover{transform:translateY(-2px);background:#fbe3e6}
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn:focus-visible{outline:2px solid var(--rose);outline-offset:4px}
+.result{font-family:var(--f-display);font-size:1.45rem;color:var(--wine);min-height:2rem;margin:0}
+.score{display:grid;grid-template-columns:1fr 1fr;width:100%;max-width:320px;border-top:1.5px solid rgba(91,49,57,.2)}
+.score>div{padding:.7rem .4rem 0;display:grid;gap:.15rem;justify-items:center}
+.score>div+div{border-left:1.5px solid rgba(91,49,57,.2)}
+.score span{font-family:var(--f-arch);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.score b{font-family:var(--f-display);font-weight:400;font-size:2.4rem;line-height:1;color:var(--wine);font-variant-numeric:tabular-nums}
+.tally{height:26px;width:120px}
+.tally line{stroke:var(--rose);stroke-width:2.4;stroke-linecap:round}
+.me-note{font-family:var(--f-arch);font-size:.92rem;color:var(--his);margin:0;min-height:1.4em}
+
+/* ---------- house ---------- */
+#house .sticky{background:linear-gradient(180deg,var(--sky1,#f9e3e2) 0%,var(--sky2,#f7eadf) 60%,#f3e7da 100%)}
+#house .sticky::before{content:"";position:absolute;right:-10%;top:-10%;width:80%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,214,160,.85),rgba(255,214,160,0) 60%);opacity:var(--sunop,0);transition:opacity .4s}
+.hud{position:absolute;top:max(1rem,env(safe-area-inset-top,0px));left:max(18px,4vw);right:max(18px,4vw);z-index:2;display:flex;justify-content:space-between;gap:1rem;font-family:var(--f-arch);color:var(--his);font-size:.82rem;letter-spacing:.08em;pointer-events:none}
+.hud b{font-weight:400;font-variant-numeric:tabular-nums;color:var(--wine)}
+.hsteps{position:relative;z-index:3;margin-top:-100svh;padding-top:40svh;padding-bottom:20svh}
+.hstep{min-height:100svh;display:flex;align-items:flex-end;padding:0 max(18px,5vw);pointer-events:none}
+.card{pointer-events:auto;position:sticky;bottom:max(5svh,1rem);margin-bottom:5svh;width:min(100%,27rem);background:rgba(255,250,243,.93);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:1.3rem 1.3rem 1.2rem;border-radius:3px;box-shadow:0 30px 50px -30px rgba(91,49,57,.55);transform:rotate(var(--r,-.6deg))}
+.card::before{content:"";position:absolute;top:-10px;left:22px;width:74px;height:20px;background:rgba(239,182,190,.6);transform:rotate(-4deg)}
+.card .no{font-family:var(--f-arch);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--his);margin:0 0 .5rem}
+.card .h{font-family:var(--f-her);font-weight:300;color:var(--pen);font-size:1.1rem;line-height:1.75;margin:0 0 .8rem}
+.card .n{font-family:var(--f-arch);color:var(--his);font-size:1.02rem;line-height:1.55;margin:0;padding-left:.8rem;border-left:2px solid var(--petal)}
+@media(min-width:900px){.hstep{justify-content:flex-end;align-items:flex-start;padding-top:14svh}.card{top:24svh;bottom:auto;margin-bottom:0}}
+
+/* ---------- choose ---------- */
+.choose-grid{display:grid;gap:3rem;align-items:center}
+@media(min-width:880px){.choose-grid{grid-template-columns:1.2fr 1fr}}
+.ichoose{width:min(100%,520px);color:var(--rose);margin:1.4rem 0 .8rem -.4rem}
+.oof{position:relative;width:min(78vw,340px);aspect-ratio:760/1351;justify-self:center;transform:rotate(2deg)}
+.oof .mat{position:absolute;left:-14px;right:-14px;bottom:-16px;top:calc(var(--ft) * 100% - 14px);background:var(--paper);box-shadow:0 30px 50px -28px rgba(91,49,57,.55)}
+.oof .bgimg{position:absolute;left:0;right:0;bottom:0;top:calc(var(--ft) * 100%);background-size:100% auto;background-position:50% 100%;background-repeat:no-repeat}
+.oof .fg{position:absolute;inset:0;width:100%;height:100%;transform:translateY(var(--py,0px));filter:drop-shadow(0 18px 20px rgba(91,49,57,.28))}
+.oof figcaption{position:absolute;left:0;right:0;bottom:-3.4rem;text-align:center;font-family:var(--f-arch);color:var(--his);font-size:.95rem}
+
+/* ---------- finale ---------- */
+.dawn{--p:0;position:relative;isolation:isolate;padding:clamp(9rem,24vh,14rem) 0 5rem;background:linear-gradient(180deg,var(--cream) 0,#f9dcd8 18%,#f7cbbf 42%,#f8dcb7 70%,#fcecd3 100%)}
+.sunrise{position:absolute;left:50%;top:clamp(4rem,12vh,8rem);width:min(70vw,360px);aspect-ratio:1;border-radius:50%;z-index:-1;background:radial-gradient(circle,#fffbe9 0 22%,#ffe2a4 38%,rgba(255,206,150,.55) 52%,rgba(255,200,150,0) 70%);transform:translate(-50%,calc((1 - var(--p)) * 160px));opacity:calc(.35 + var(--p) * .65)}
+.dawn h2{text-align:center;max-width:15ch;margin-inline:auto}
+.dawn .sub{text-align:center;font-style:italic;font-size:1.45rem;color:var(--wine);margin-bottom:2.6rem}
+.torn{position:relative;width:min(74vw,380px);aspect-ratio:1100/1318;margin-inline:auto}
+.torn::before{content:"";position:absolute;inset:-30%;z-index:-1;border-radius:50%;background:radial-gradient(circle,rgba(255,240,205,.95),rgba(255,220,170,0) 62%);opacity:calc(var(--p) * .95)}
+.piece{position:absolute;inset:0;background:url(img/caps.jpg) center/cover no-repeat;filter:drop-shadow(0 22px 26px rgba(91,49,57,.35))}
+.piece.l{transform:translateX(calc((1 - var(--p)) * -17%)) rotate(calc((1 - var(--p)) * -6deg))}
+.piece.r{transform:translateX(calc((1 - var(--p)) * 17%)) rotate(calc((1 - var(--p)) * 6deg))}
+.seam{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.seam polyline{fill:none;stroke:url(#seamG);stroke-width:.9;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;opacity:0;transition:stroke-dashoffset 1.8s ease .2s;filter:drop-shadow(0 0 3px rgba(255,214,140,.9))}
+.joined .seam polyline{stroke-dashoffset:0;opacity:1}
+.torn-cap{text-align:center;font-family:var(--f-arch);color:var(--his);font-size:.95rem;margin:1.5rem auto 0;max-width:22rem}
+.holdrow{display:grid;justify-items:center;gap:.7rem;margin:2.2rem 0 .5rem}
+.hold{position:relative;width:104px;height:104px;border-radius:50%;border:0;cursor:pointer;background:radial-gradient(circle at 34% 30%,#fdd7dc 0,#eda5b0 40%,#d47e8c 80%);box-shadow:inset -4px -6px 12px rgba(120,40,55,.3),inset 4px 5px 10px rgba(255,255,255,.5),0 14px 26px -10px rgba(120,40,55,.6);user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:none;-webkit-tap-highlight-color:transparent;transition:transform .2s}
+.hold:active{transform:scale(.96)}
+.hold:focus-visible{outline:2px solid var(--wine);outline-offset:6px}
+.hold svg{position:absolute;inset:-10px;width:calc(100% + 20px);height:calc(100% + 20px);transform:rotate(-90deg)}
+.hold svg circle{fill:none;stroke:var(--wine);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:345;stroke-dashoffset:calc(345 - var(--p) * 345)}
+.hold .hh{position:absolute;inset:0;display:grid;place-items:center}
+.hold-lbl{font-family:var(--f-arch);color:var(--wine);font-size:1rem;margin:0;transition:opacity .4s}
+.there{font-family:var(--f-display);font-size:1.7rem;color:var(--wine);text-align:center;min-height:2.4rem;margin:0}
+.joined .hold{pointer-events:none;opacity:.55}
+.final{max-width:36rem;margin:4.5rem auto 0;display:grid;gap:1.25rem;padding-inline:max(18px,5vw)}
+.final p{margin:0;font-size:1.16rem}
+.ilove{width:min(100%,560px);color:var(--rose);margin-left:-.4rem}
+.final .hing{font-size:1.65rem}
+.sign{display:flex;align-items:flex-end;gap:1rem;margin-top:.6rem}
+.abhi{width:150px;color:var(--wine)}
+.sign small{font-family:var(--f-arch);color:var(--his);font-size:.95rem;padding-bottom:.6rem}
+.tblock{max-width:36rem;margin:4.5rem auto 0;display:grid;grid-template-columns:auto minmax(0,1fr);border:1.5px solid var(--wine);font-family:var(--f-arch);font-size:.92rem;color:var(--wine);background:rgba(255,250,243,.55)}
+.tblock div{padding:.55rem .8rem;border-top:1px solid rgba(91,49,57,.3)}
+.tblock div:nth-child(-n+2){border-top:0}
+.tblock .k{letter-spacing:.14em;text-transform:uppercase;font-size:.7rem;color:var(--his);border-right:1px solid rgba(91,49,57,.3);display:flex;align-items:center}
+.endseal{width:76px;height:76px;margin:3.5rem auto 0;position:relative}
+.endseal .seal-half{position:absolute;inset:0}
+
+/* ---------- chrome ---------- */
+.music{position:fixed;top:calc(env(safe-area-inset-top,0px) + 14px);right:14px;z-index:70;width:46px;height:46px;border-radius:50%;border:1.5px solid var(--petal);background:rgba(255,250,243,.88);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 20px -12px rgba(91,49,57,.6);opacity:0;pointer-events:none;transition:opacity .6s}
+.music.show{opacity:1;pointer-events:auto}
+.music:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+.eq{display:flex;gap:3px;align-items:flex-end;height:16px}
+.eq i{width:3px;background:var(--rose);border-radius:2px;height:5px}
+.music.on .eq i{animation:eq .9s ease-in-out infinite alternate}
+.music.on .eq i:nth-child(2){animation-delay:-.3s}.music.on .eq i:nth-child(3){animation-delay:-.6s}
+@keyframes eq{from{height:4px}to{height:16px}}
+.where{position:fixed;left:14px;bottom:calc(env(safe-area-inset-bottom,0px) + 14px);z-index:70;font-family:var(--f-arch);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--his);background:rgba(255,250,243,.85);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:.4rem .75rem;border-radius:999px;box-shadow:0 8px 16px -12px rgba(91,49,57,.6);opacity:0;transition:opacity .5s;pointer-events:none;font-variant-numeric:tabular-nums}
+.where.show{opacity:1}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:65}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01s!important;transition-delay:0s!important}
+}
+
+/* ---------- v3: her real handwriting, childhood prints, letter pages ---------- */
+.scrap{position:relative;margin:2rem 0;max-width:34rem;transform:rotate(var(--r,-.8deg));filter:drop-shadow(0 18px 22px rgba(91,49,57,.22))}
+.scrap::before{content:"";position:absolute;z-index:2;top:-10px;left:calc(50% - 46px);width:92px;height:22px;transform:rotate(-3deg);background:rgba(239,182,190,.62)}
+.scrap .paper{background:#fffaf3;padding:10px 12px 8px}
+.scrap img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+.scrap figcaption{margin-top:.55rem;font-family:var(--f-arch);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--his)}
+.scrap.small{max-width:20rem}
+.card .scrap{margin:.6rem 0 .9rem;filter:drop-shadow(0 10px 12px rgba(91,49,57,.18))}
+.card .scrap::before{width:60px;height:16px;left:calc(50% - 30px);top:-8px}
+
+.letter .clip{position:absolute;top:-34px;left:-14px;width:min(40%,190px);transform:rotate(-7deg);z-index:2}
+.letter .clip .mini{background:#fbf8f2;padding:6px 6px 18px;box-shadow:0 14px 24px -12px rgba(91,49,57,.5)}
+.letter .clip img{display:block;width:100%;height:auto}
+.letter .clip svg{position:absolute;top:-22px;left:22px;width:22px;height:64px;transform:rotate(8deg)}
+.letter .date{margin-left:42%}
+.letter .hello{margin-top:1.4rem}
+.love3{font-family:var(--f-display);color:var(--wine);font-size:clamp(1.9rem,6vw,2.8rem);line-height:1.12;margin:0 0 1rem}
+.love3 span{display:block;color:var(--rose)}
+
+.prints{position:relative;display:grid;margin:2.6rem auto 1rem;max-width:720px;padding-bottom:1rem}
+.print{margin:0;background:#fbf8f2;padding:10px 10px 40px;box-shadow:0 30px 50px -28px rgba(91,49,57,.6);transform:rotate(var(--r,-2deg))}
+.print .pimg{position:relative;aspect-ratio:1195/896;overflow:hidden;background:#d9cfc6}
+.print .pbg,.print .pfg{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover}
+.print .pbg{transform:translateY(calc(var(--sh,0px) * -1)) scale(1.02)}
+.print .pfg{transform:translateY(var(--sh,0px))}
+.js .print .pimg{filter:sepia(.85) brightness(1.75) contrast(.5) saturate(.3) blur(1.5px);transition:filter 3.4s cubic-bezier(.3,.1,.3,1) .3s}
+.js .print.in .pimg{filter:none}
+.print figcaption{position:absolute;left:14px;right:14px;bottom:10px;font-family:var(--f-arch);color:var(--his);font-size:.95rem}
+.print.p1{width:88%;--r:-2.2deg}
+.print.p2{width:72%;justify-self:end;margin-top:-14%;--r:2.6deg;z-index:2}
+.inner-big{font-family:var(--f-display);color:var(--wine);font-size:clamp(2rem,6.6vw,3.3rem);line-height:1.08;margin:.4rem 0 1.2rem}
+.inner-big .hing{display:block;font-size:.62em;line-height:1.3;margin-bottom:.5rem}
+
+.stack-wrap{display:grid;justify-items:center;gap:1rem;margin:2.4rem 0 1rem}
+.stack{position:relative;width:min(90vw,540px);aspect-ratio:792/1164;cursor:pointer;-webkit-tap-highlight-color:transparent;border:0;padding:0;background:none}
+.stack:focus-visible{outline:2px solid var(--rose);outline-offset:8px}
+.pg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fffaf3;box-shadow:0 24px 40px -24px rgba(91,49,57,.55);transform:translate(calc(var(--i,0) * 7px),calc(var(--i,0) * 6px)) rotate(var(--r,0deg));transition:transform .5s cubic-bezier(.3,.8,.3,1),opacity .45s ease}
+.pg.out{transform:translate(-118%,-3%) rotate(-16deg);opacity:0}
+.stack-hint{font-family:var(--f-arch);color:var(--his);font-size:.95rem;margin:0;font-variant-numeric:tabular-nums}
+.sigs{display:flex;flex-wrap:wrap;align-items:flex-end;gap:1.2rem 2rem;margin-top:.8rem}
+.sigs .scrap{margin:0;max-width:150px;--r:3deg}
+.sigs .scrap::before{width:50px;height:14px;left:calc(50% - 25px);top:-7px}
+.sigs .scrap figcaption{font-size:.66rem}
+
+</style>
+</head>
+<body>
+
+
+<canvas id="fx" aria-hidden="true"></canvas>
+<button class="music" id="music" type="button" aria-label="Music" aria-pressed="false"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button>
+<div class="where" id="where" aria-hidden="true"></div>
+
+<main>
+
+<!-- ENVELOPE -->
+<section class="envsec" id="top">
+  <p class="kicker">Drawing set · 9 sheets · for Sakshi</p>
+  <div class="env" id="env" role="button" tabindex="0" aria-label="Break the seal and open the letter">
+    <div class="env-back"></div>
+    <div class="env-letter" aria-hidden="true"><b>Hello you!!</b><i></i><i></i><i></i></div>
+    <div class="env-pocket">
+      <svg class="folds" viewBox="0 0 100 66" preserveAspectRatio="none" aria-hidden="true"><path d="M0 66L42 30M100 66L58 30" stroke="rgba(91,49,57,.08)" stroke-width=".5" fill="none"/></svg>
+      <svg class="hw env-name" data-path="forSakshi" data-dur="2.2s" aria-label="For Sakshi"></svg>
+      <div class="postmark" aria-hidden="true">OSLO<br>03·10·26</div>
+    </div>
+    <div class="env-flap" aria-hidden="true"><div class="flap-out"></div><div class="flap-in"></div></div>
+    <div class="seal" aria-hidden="true">
+      <div class="seal-half l"><div class="wax"></div><div class="mark">A</div></div>
+      <div class="seal-half r"><div class="wax"></div><div class="mark">A</div></div>
+    </div>
+  </div>
+  <p class="env-hint" id="env-hint">Tap the seal. Sound on, if you can.</p>
+</section>
+
+<!-- LETTER -->
+<section class="sec wrap" id="letter" data-where="My reply">
+  <article class="letter">
+    <div class="clip" aria-hidden="true">
+      <svg viewBox="0 0 22 64"><path d="M6 60V12a5 5 0 0 1 10 0v40a3 3 0 0 1-6 0V16" fill="none" stroke="#b9a07a" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <div class="mini"><img src="k/kid2.jpg" alt=""></div>
+    </div>
+    <p class="date">3/10/2026, Saturday night</p>
+    <svg class="hw hello" data-path="helloYou" aria-label="Hello you!!"></svg>
+    <p class="love3" data-rv>I love you,<span>and I really love you,</span>and I really really love you.</p>
+    <p data-rv style="--d:.15s">Your handwritten note matters a lot to me, and I wanted to reply in a similar manner. So I made this website as my reply.</p>
+    <p data-rv style="--d:.3s">If not anything, I hope this brings a smile on your face.</p>
+    <p class="go" data-rv style="--d:.45s">Go slowly. Scroll like you're turning pages.</p>
+    <svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
+      <path d="M58 118C60 92 62 70 70 48" stroke="#b9a07a" stroke-width="1.6" fill="none"/>
+      <path d="M62 86C50 80 44 70 44 62C54 66 60 74 62 86Z" fill="#c9cfb0" opacity=".9"/>
+      <g transform="translate(70 42)"><g fill="#f2bcc4" opacity=".95"><ellipse rx="9" ry="15" transform="rotate(0) translate(0 -13)"/><ellipse rx="9" ry="15" transform="rotate(72) translate(0 -13)"/><ellipse rx="9" ry="15" transform="rotate(144) translate(0 -13)"/><ellipse rx="9" ry="15" transform="rotate(216) translate(0 -13)"/><ellipse rx="9" ry="15" transform="rotate(288) translate(0 -13)"/></g><circle r="5.5" fill="#e3b46c"/></g>
+    </svg>
+  </article>
+</section>
+
+<!-- SHEET 01: THE LITTLE BOY AND THE LITTLE GIRL -->
+<section class="sec wrap" id="kids" data-where="Sheet 01 · Two little kids">
+  <p class="sheet">Sheet 01 · The little boy and the little girl</p>
+  <div class="read">
+    <h2 data-rv>That little boy, and that little girl.</h2>
+  </div>
+  <div class="prints">
+    <figure class="print p1"><div class="pimg"><img class="pbg" src="k/kid1_bg.jpg" alt=""><img class="pfg" src="k/kid1_fg.webp" alt="A little boy in a red helicopter shirt holding a baby girl on an armchair"></div><figcaption>The picture I made of us as kids.</figcaption></figure>
+    <figure class="print p2"><div class="pimg"><img class="pbg" src="k/kid2_bg.jpg" alt=""><img class="pfg" src="k/kid2_fg.webp" alt="The little boy with his arm around the baby girl, a teddy bear beside them"></div><figcaption>Still holding on.</figcaption></figure>
+  </div>
+  <div class="read">
+    <figure class="scrap" data-rv style="--r:-1deg"><div class="paper"><img src="h/h_boy.jpg" alt="Her handwriting: to an image that you made of our childhood pictures together. And, I feel that I want to protect that little boy and his innocence."></div><figcaption>your letter, page 13</figcaption></figure>
+    <p class="inner-big" data-rv><span class="hing">Tumne wo inner child wali baat ekdum sahi likhi hai.</span>My inner child needed you.</p>
+    <p data-rv>When I put my guards down for the very first time in front of you, I trusted you with everything. My inner child came on surface in front of you, and all that kid needed was you.</p>
+    <figure class="scrap" data-rv style="--r:.9deg"><div class="paper"><img src="h/h_inner.jpg" alt="Her handwriting: And you have told me multiple times that you trust me and opened up about your vulnerabilities, that means you trust me with your inner child. And, I realize that all you wanted was love, not be shouted at, the same way I used to feel as a toddler."></div><figcaption>your letter, page 15</figcaption></figure>
+    <p data-rv>And that little girl, I'll protect her too. With me she never has to be perfect, never has to defend herself, never has to keep a way out.</p>
+  </div>
+</section>
+
+<!-- SHEET 02: YOUR LETTER -->
+<section class="sec wrap" id="yourletter" data-where="Sheet 02 · Your letter">
+  <p class="sheet">Sheet 02 · Your letter</p>
+  <div class="read">
+    <h2 data-rv>Your letter.</h2>
+    <p data-rv>I read every page, more than once. Whatever you wrote is the exact truth. All I needed was you.</p>
+  </div>
+  <div class="stack-wrap">
+    <button class="stack" id="stack" type="button" aria-label="Your handwritten letter. Tap to turn the page.">
+      <img class="pg" data-n="13" src="h/page13.jpg" alt="Page 13 of her handwritten letter" style="--r:-1.2deg">
+      <img class="pg" data-n="15" src="h/page15.jpg" alt="Page 15 of her handwritten letter" style="--r:1.4deg">
+      <img class="pg" data-n="16" src="h/page16.jpg" alt="Page 16 of her handwritten letter" style="--r:-.6deg">
+      <img class="pg" data-n="17" src="h/page17.jpg" alt="Page 17 of her handwritten letter" style="--r:1deg">
+    </button>
+    <p class="stack-hint" id="stack-hint">Page 13 · tap to turn</p>
+  </div>
+  <div class="read">
+    <figure class="scrap" data-rv style="--r:-.7deg"><div class="paper"><img src="h/h_sorry.jpg" alt="Her handwriting: I just want to say sorry, I know its a small word to your inner child... Hey! I am sorry I did not listen to you when you were trying to call me and instead I shouted, ignored you. But, all I want is to love you, protect you and nourish you."></div><figcaption>your letter, page 15</figcaption></figure>
+    <p data-rv>I heard every word.</p>
+  </div>
+</section>
+
+<!-- SHEET 03: PORTRAITS -->
+<section class="sec wrap" data-where="Sheet 03 · You">
+  <p class="sheet">Sheet 03 · You</p>
+  <div class="read">
+    <h2 data-rv>Before anything else, you.</h2>
+    <p data-rv style="--d:.15s">Some of my favourite versions of you. Scroll slowly.</p>
+  </div>
+</section>
+<section class="track" id="portraits" style="height:calc(7 * 80svh + 100svh)" data-where="Sheet 03 · You">
+  <div class="sticky">
+    <canvas aria-label="Seven photos of Sakshi in 3D, stepping out of their frames"></canvas>
+    <div class="pt-intro"><span class="pt-count" id="pt-count">01 / 07</span></div>
+    <div class="pt-cap" id="pt-cap" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- SHEET 04: CLOCK -->
+<section class="sec wrap" style="padding-bottom:3rem" data-where="Sheet 04 · Our clock">
+  <p class="sheet">Sheet 04 · Our clock</p>
+  <div class="read">
+    <h2 data-rv>A version of you for almost every hour.</h2>
+    <p data-rv style="--d:.15s">Screenshots from our calls. I take them quietly while you're talking, because I never want to forget a single version of you.</p>
+  </div>
+</section>
+<section class="track" id="clock" style="height:calc(10 * 52svh + 100svh)" data-where="Sheet 04 · Our clock">
+  <div class="sticky">
+    <svg class="dial" viewBox="0 0 200 200" aria-hidden="true">
+      <defs><radialGradient id="dialG" cx="50%" cy="45%"><stop offset="0" stop-color="#fffaf3"/><stop offset="1" stop-color="#f6e4dc"/></radialGradient></defs>
+      <circle cx="100" cy="100" r="96" fill="url(#dialG)" stroke="#e9c9c4" stroke-width="1.2"/>
+      <circle cx="100" cy="100" r="90" fill="none" stroke="#efd6d2" stroke-width=".6"/>
+      <g id="ticks"></g>
+      <line class="hand" id="hh" x1="100" y1="104" x2="100" y2="58" stroke="#9a4f5c" stroke-width="3.2"/>
+      <line class="hand" id="mh" x1="100" y1="108" x2="100" y2="22" stroke="#c9727f" stroke-width="1.8"/>
+      <circle cx="100" cy="100" r="3.6" fill="#c9a15f"/>
+    </svg>
+    <div class="phone" id="phone">
+      <div class="screen" id="screen">
+        <div class="notch"></div>
+        <div class="sbar"><span id="sb-time">1:09</span><span class="batt" id="sb-batt"><span class="bolt">⚡</span><span id="sb-pct">9%</span><i><b></b></i></span></div>
+      </div>
+    </div>
+    <div class="clock-cap" id="clock-cap" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- SHEET 05: THE CRACK -->
+<section class="sec wrap" id="crack" data-where="Sheet 05 · The crack">
+  <p class="sheet">Sheet 05 · The crack</p>
+  <div class="kin">
+    <div class="read">
+      <h2 data-rv>I won't say I ain't hurt.</h2>
+      <p data-rv>A lot happened which I never expected from your end.</p>
+      <p data-rv>When I got to know that you intentionally shut the doors on me, wanted to teach me a lesson, or win from me, or break the cycle, and whatever you wrote in your answers, it broke me and made me feel super small somehow.</p>
+      <p data-rv>I never tried to blame you, attack you, or even target you anyhow.</p>
+      <p class="inner-big" data-rv style="font-size:clamp(1.7rem,5.4vw,2.5rem)"><span class="hing">Tumhe nicha dikha ke, ya attack krke mai kahan jaunga yaar?</span>Mujhe bus ye chahiye tha ki tum samajh lo mujhe.</p>
+      <p data-rv>I just wanted you on my side, hearing me out. Nothing else. Literally, nothing else.</p>
+      <figure class="scrap" data-rv style="--r:.8deg"><div class="paper"><img src="h/h_hear.jpg" alt="Her handwriting: And, I hear you now and I heard you back then when you were telling me repeatedly."></div><figcaption>your letter, page 13</figcaption></figure>
+      <figure class="scrap" data-rv style="--r:-.9deg"><div class="paper"><img src="h/h_guilty.jpg" alt="Her handwriting: first pain was caused when joke landed harsh on you and then it kept on dwelling when I ignored your concern. I was thinking you are saying and doing to make me feel guilty but you were literally saying to hear you out."></div><figcaption>your letter, page 13</figcaption></figure>
+      <p data-rv>Yes. That's all it ever was. You heard me, and thank you for that, from the bottom of my heart.</p>
+      <p data-rv>In Japan, a cracked bowl is mended with gold, and the mended line becomes the most beautiful part of it. Your poem already knew this: enough forgiveness to repair the little cracks.</p>
+      <p class="lede" data-rv>Watch it mend.</p>
+    </div>
+    <div class="plate-wrap">
+      <svg class="plate" id="plate" viewBox="0 0 400 400" role="img" aria-label="A cracked pink ceramic plate being mended with a line of gold">
+        <defs>
+          <radialGradient id="glaze" cx="45%" cy="40%" r="62%"><stop offset="0" stop-color="#fffaf4"/><stop offset=".55" stop-color="#f9e4e0"/><stop offset=".9" stop-color="#efcfc9"/><stop offset="1" stop-color="#e6bfb8"/></radialGradient>
+          <radialGradient id="well" cx="48%" cy="44%" r="55%"><stop offset="0" stop-color="#fffbf6"/><stop offset="1" stop-color="#f6dcd6"/></radialGradient>
+          <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e2a8"/><stop offset=".35" stop-color="#c9a15f"/><stop offset=".6" stop-color="#f3d892"/><stop offset="1" stop-color="#b58a43"/></linearGradient>
+          <filter id="gglow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <clipPath id="pieceA"><path d="M0 0H292L270 92L282 120L246 168L258 196L214 236L222 262L176 300L184 330L150 372L150 400H0Z"/></clipPath>
+          <clipPath id="pieceB"><path d="M292 0H400V400H150L150 372L184 330L176 300L222 262L214 236L258 196L246 168L282 120L270 92L292 40Z"/></clipPath>
+          <g id="plateArt">
+            <ellipse cx="206" cy="214" rx="176" ry="176" fill="rgba(91,49,57,.12)"/>
+            <circle cx="200" cy="200" r="178" fill="url(#glaze)"/>
+            <circle cx="200" cy="200" r="122" fill="url(#well)" stroke="#ecd0ca" stroke-width="1.5"/>
+            <circle cx="200" cy="200" r="150" fill="none" stroke="#f2b9c1" stroke-width="1" stroke-dasharray="2 7" opacity=".9"/>
+            <ellipse cx="150" cy="120" rx="70" ry="26" fill="#fff" opacity=".35" transform="rotate(-30 150 120)"/>
+          </g>
+        </defs>
+        <g id="pA" clip-path="url(#pieceA)"><use href="#plateArt"/></g>
+        <g id="pB" clip-path="url(#pieceB)"><use href="#plateArt"/></g>
+        <path id="crackDark" d="M292 40L270 92L282 120L246 168L258 196L214 236L222 262L176 300L184 330L150 372M246 168L212 150L196 124" fill="none" stroke="rgba(91,49,57,.55)" stroke-width="1.4" stroke-linejoin="round"/>
+        <path id="crackGold" d="M292 40L270 92L282 120L246 168L258 196L214 236L222 262L176 300L184 330L150 372M246 168L212 150L196 124" fill="none" stroke="url(#goldG)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" filter="url(#gglow)"/>
+        <path id="crackGlint" class="glint" d="M292 40L270 92L282 120L246 168L258 196L214 236L222 262L176 300L184 330L150 372" fill="none" stroke="#fffbe6" stroke-width="2" stroke-linecap="round" opacity="0"/>
+      </svg>
+      <p class="plate-cap">kintsugi · 金継ぎ · mended with gold</p>
+    </div>
+  </div>
+</section>
+
+<!-- SHEET 06: REVISIONS -->
+<section class="sec wrap" id="revisions" data-where="Sheet 06 · Revisions">
+  <p class="sheet">Sheet 06 · Revisions</p>
+  <div class="read">
+    <h2 data-rv>Things I'll never be to you.</h2>
+    <p class="arch" data-rv>Removed from the drawing. Permanently.</p>
+  </div>
+  <ul class="revs" id="revs">
+    <li><span class="x">Someone who teaches you a lesson.</span></li>
+    <li><span class="x">A door you have to shut.</span></li>
+    <li><span class="x">Someone who attacks you.</span></li>
+    <li><span class="x">Someone who blames you.</span></li>
+    <li><span class="x">Someone you have to protect yourself from.</span></li>
+    <li><span class="x">Someone you have to run from.</span></li>
+    <li><span class="x">Someone you have to compete with.</span></li>
+  </ul>
+  <div class="read">
+    <p class="stays">One line stays in the drawing.</p>
+    <svg class="hw yp" id="yp" data-path="yourPerson" data-dur="2.4s" aria-label="Your person."></svg>
+    <svg class="gold-ul" viewBox="0 0 360 14" preserveAspectRatio="none" aria-hidden="true"><path d="M4 9C80 3 160 12 240 6S330 5 356 8"/></svg>
+    <p class="lede" data-rv>I would be the last person on this earth who'd ever try to make you feel small. Never forget that.</p>
+    <p data-rv><span class="hing">Mere liye sab se pehle tum ho.</span></p>
+  </div>
+</section>
+
+<!-- SHEET 07: TERMS -->
+<section class="sec wrap" id="terms" data-where="Sheet 07 · Terms">
+  <p class="sheet">Sheet 07 · Terms</p>
+  <div class="terms">
+    <div class="read">
+      <h2 data-rv>You can win every single time.</h2>
+      <p data-rv>With you, I'm most vulnerable. I don't want to win from you. You can win every single time and I'd be the happiest.</p>
+      <p data-rv>So here are the terms for every argument we'll ever have.</p>
+    </div>
+    <div class="coin-card" data-rv>
+      <p class="rule">Heads, you win. Tails, I lose.</p>
+      <div class="coin-stage"><div class="coin" id="coin"><div class="face"><div>YOU<span>win</span></div></div><div class="face t"><div>I<span>lose</span></div></div></div></div>
+      <button class="btn" id="toss" type="button">Toss the coin</button>
+      <p class="result" id="result" aria-live="polite"></p>
+      <div class="score"><div><span>You</span><b id="ys">0</b><svg class="tally" id="tally" viewBox="0 0 120 26" aria-hidden="true"></svg></div><div><span>Me</span><b>0</b><svg class="tally" viewBox="0 0 120 26" aria-hidden="true"></svg></div></div>
+      <p class="me-note" id="me-note">I was never playing against you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SHEET 08: HOUSE -->
+<section class="sec wrap" style="padding-bottom:2rem" data-where="Sheet 08 · The house">
+  <p class="sheet">Sheet 08 · The house</p>
+  <div class="read">
+    <h2 data-rv>With you, all I felt was home.</h2>
+    <p data-rv>I just never use my brain with you. So here is our home, the way you wrote it. Your words, my notes, and every brick laid by hand.</p>
+  </div>
+</section>
+<section class="track" id="house" data-where="Sheet 08 · The house">
+  <div class="sticky">
+    <canvas aria-label="A pastel 3D dollhouse being built brick by brick, room by room, with a garden and a rising sun"></canvas>
+    <div class="hud"><span id="h-stage">Foundation</span><span>bricks laid <b id="h-bricks">0</b></span></div>
+  </div>
+  <div class="hsteps">
+    <div class="hstep" data-s="1"><div class="card" style="--r:-.7deg"><p class="no">01 · Foundation</p><p class="h">I want us to begin with the foundation, deep, honest, and strong. Made of trust, held together by patience, with enough forgiveness to repair the little cracks that life will inevitably make.</p><p class="n">Trust, patience, forgiveness. And the three bricks I only ever asked for: don't shout at me, take me seriously, respect me. I'll lay the same three for you, every single day.</p></div></div>
+    <div class="hstep" data-s="2"><div class="card" style="--r:.6deg"><p class="no">02 · Walls</p><p class="h">not all at once, but slowly, brick by brick, day by day, choice by choice.</p><p class="n">No rush. One brick at a time. I'm not going anywhere.</p></div></div>
+    <div class="hstep" data-s="3"><div class="card" style="--r:-.5deg"><p class="no">03 · Rooms</p><p class="h">A room for your dreams, and one for my dreams. A room where we work beside each other, lost in our own little worlds, but still comforted by the presence of the other.</p><p class="n">Room 01 for your dreams, with your photo on the wall. Room 02 for mine, with a drafting table and a photo of us, because that's my dream.</p></div></div>
+    <div class="hstep" data-s="4"><div class="card" style="--r:.7deg"><p class="no">04 · Kitchen</p><p class="h">A kitchen filled with experiments, half-followed recipes, and “taste this!” before dinner is even ready.</p><p class="n">I'll taste everything. Even the experiments. Especially the experiments.</p></div></div>
+    <div class="hstep" data-s="5"><div class="card" style="--r:-.8deg"><p class="no">05 · Living room</p><p class="h">A room for dancing badly, singing loudly, watching the same things for the hundredth time, talking until we forget what we were talking about.</p><p class="n">Built for loud singing, and for your laugh at 2:40.</p></div></div>
+    <div class="hstep" data-s="6"><div class="card" style="--r:.5deg"><p class="no">06 · Windows</p><p class="h">I want big windows. Let there be air. Let there be honesty. Let there be space to breathe.</p><p class="n">Big ones, everywhere, and every light inside switched on. No door in this house ever gets shut on the other person.</p></div></div>
+    <div class="hstep" data-s="7"><div class="card" style="--r:-.6deg"><p class="no">07 · Staircase</p><p class="h">Sometimes you will climb before me. Sometimes I will reach back for you.</p><figure class="scrap" style="--r:.8deg"><div class="paper"><img src="h/h_behind.jpg" alt="Her handwriting: I don't mind being left behind as long as I am left with you."></div><figcaption>your letter, page 16</figcaption></figure><p class="n">You'll never be left behind. Look closely, my hand is already reaching back for yours.</p></div></div>
+    <div class="hstep" data-s="8"><div class="card" style="--r:.6deg"><p class="no">08 · Garden</p><p class="h">We plant. We water. We nurture. We wait. … choosing to care for it again and again and again.</p><p class="n">Again and again and again. I'll keep choosing you.</p></div></div>
+    <div class="hstep" data-s="9"><div class="card" style="--r:-.6deg"><p class="no">09 · The little things</p><p class="h">Thank you for making coffee. Thank you for listening. Thank you for staying. Thank you for being you.</p><p class="n">Thank you for listening. Thank you for staying. I'm staying too.</p></div></div>
+  </div>
+</section>
+
+<!-- SHEET 09: SUNRISE -->
+<section class="sec wrap" id="choose" data-where="Sheet 09 · Sunrise">
+  <p class="sheet">Sheet 09 · Sunrise</p>
+  <div class="choose-grid">
+    <div class="read">
+      <figure class="scrap" data-rv style="--r:-.8deg"><div class="paper"><img src="h/h_sun.jpg" alt="Her handwriting: as far as sun exists you will be always loved by me. Whether you choose me or not, I will love you. I got on my knees when I read that you felt alone. It was like a sword passing through my stomach."></div><figcaption>your letter, page 17</figcaption></figure>
+      <svg class="hw ichoose" data-path="iChoose" data-dur="2.6s" aria-label="I choose you."></svg>
+      <p class="lede" data-rv>Today, and on the hard days, and on all the ordinary days after. I choose you.</p>
+      <figure class="scrap" data-rv style="--r:.8deg"><div class="paper"><img src="h/h_real.jpg" alt="Her handwriting: You don't have to be okay, if you are not okay, this is not for a show, you are real, I am real, and the love is real."></div><figcaption>your letter, page 16</figcaption></figure>
+      <p data-rv>It is. Every bit of it.</p>
+    </div>
+    <figure class="oof" id="oof" style="--ft:.37">
+      <div class="mat"></div>
+      <div class="bgimg" style="background-image:url(a/mirror_bg.jpg)"></div>
+      <img class="fg" src="a/mirror_fg.webp" alt="A blurry mirror selfie of Abhi kissing Sakshi's head" loading="lazy">
+      <figcaption>Blurry. Most of my favourite moments with you are.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="dawn" id="hand" data-where="Sheet 09 · Sunrise">
+  <div class="sunrise" aria-hidden="true"></div>
+  <div class="wrap">
+    <h2 data-rv>All I ever wanted was your hand in mine.</h2>
+    <p class="sub" data-rv>Nothing else. Bas itna hi.</p>
+    <div class="torn" id="torn">
+      <div class="piece l" id="pl"></div>
+      <div class="piece r" id="pr"></div>
+      <svg class="seam" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="seamG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e2a8"/><stop offset=".5" stop-color="#c9a15f"/><stop offset="1" stop-color="#f3d892"/></linearGradient></defs><polyline id="seamLine" pathLength="1" points=""/></svg>
+    </div>
+    <p class="torn-cap">Same caps. Me grinning like an idiot, you pretending to be annoyed. Torn for a few days. Not anymore.</p>
+    <div class="holdrow">
+      <button class="hold" id="hold" type="button" aria-label="Press and hold to hold my hand"><svg viewBox="0 0 124 124" aria-hidden="true"><circle cx="62" cy="62" r="55"/></svg><span class="hh" aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34" style="position:static;transform:none"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 5 6.4 5c2 0 3.8 1.2 5.6 3.2C13.8 6.2 15.6 5 17.6 5 21 5 23.1 8.4 21.6 11.8 19.5 16.4 12 21 12 21z" fill="#fff7f2" opacity=".95"/></svg></span></button>
+      <p class="hold-lbl" id="hold-lbl">Press and hold to hold my hand</p>
+      <p class="there" id="there" aria-live="polite"></p>
+    </div>
+
+    <div class="final">
+      <svg class="hw ilove" data-path="iLove" data-dur="3s" aria-label="I love you the most."></svg>
+      <p data-rv>I just wanted my person by my side, to understand me, to just be with me when I needed her the most. I never wanted anything else.</p>
+      <p data-rv>In the end, all I wanted was you. Only you. Nothing else.</p>
+      <p data-rv>If winning makes you happy, win every time. I'll be right here, holding your hand, the happiest loser in the world.</p>
+      <p class="hing" data-rv>Main hamesha yahin hu.</p>
+      <p class="lede" data-rv>I love you, and I live you daily.</p>
+      <div class="sigs">
+        <div class="sign"><svg class="hw abhi" data-path="abhi" data-dur="1.8s" aria-label="Abhi"></svg><small>your bubu</small></div>
+        <figure class="scrap"><div class="paper"><img src="h/h_love.jpg" alt="Her handwriting: With love, Sakshi"></div><figcaption>and yours</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="tblock" aria-label="Drawing title block">
+      <div class="k">Project</div><div>Our home</div>
+      <div class="k">Client</div><div>Sakshi</div>
+      <div class="k">Architect</div><div>Abhi (bubu)</div>
+      <div class="k">Scale</div><div>1 : 1</div>
+      <div class="k">Sheet</div><div>09 of forever</div>
+      <div class="k">Date</div><div>03·10·2026</div>
+      <div class="k">Status</div><div>Under construction. Brick by brick.</div>
+    </div>
+    <div class="endseal" aria-hidden="true"><div class="seal-half" style="clip-path:none"><div class="wax"></div><div class="mark">A</div></div></div>
+  </div>
+</section>
+
+</main>
+
+
+<div class="pt-fallback" id="pt-fallback"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const PATHS = {"forSakshi": {"d": "M90 -294Q75 -298 56.0 -310.5Q37 -323 23.0 -342.5Q9 -362 9 -386Q9 -397 13 -408Q13 -409 13.5 -415.0Q14 -421 15 -425Q26 -475 66.0 -507.5Q106 -540 164.0 -558.0Q222 -576 285 -580Q298 -581 310.0 -581.5Q322 -582 333 -582Q396 -582 448.0 -573.5Q500 -565 551.0 -556.0Q602 -547 662 -545Q675 -561 687.5 -568.5Q700 -576 707 -577Q710 -578 715 -578Q725 -578 733.0 -573.0Q741 -568 741 -560Q741 -553 733 -545Q726 -538 713.0 -529.0Q700 -520 686 -506Q668 -489 653.5 -467.5Q639 -446 639 -425Q639 -409 647 -398Q648 -397 648 -395Q648 -388 640 -388Q634 -388 628 -395Q619 -406 619 -438Q619 -455 623.0 -474.0Q627 -493 635 -509Q639 -515 642.0 -520.5Q645 -526 649 -531Q576 -528 506.0 -536.5Q436 -545 365 -545Q325 -545 273.0 -537.0Q221 -529 171.0 -511.5Q121 -494 85.0 -463.5Q49 -433 39 -388Q38 -384 37.5 -381.0Q37 -378 37 -375Q37 -356 48.5 -343.0Q60 -330 75.0 -321.5Q90 -313 98 -306Q105 -302 105 -298Q105 -294 100.5 -293.0Q96 -292 90 -294ZM189 27Q186 27 177.0 25.0Q168 23 160.0 20.0Q152 17 151 13Q149 -7 161.5 -44.0Q174 -81 195.5 -126.0Q217 -171 240 -214Q213 -211 199 -211Q191 -211 182.5 -218.0Q174 -225 174 -237Q174 -247 185.0 -254.5Q196 -262 209.5 -266.0Q223 -270 229 -270Q242 -270 247.0 -260.5Q252 -251 257 -251H261Q276 -279 287.5 -301.0Q299 -323 306 -336Q314 -353 314 -364Q314 -369 313.5 -371.5Q313 -374 312 -376Q314 -388 327.0 -408.0Q340 -428 359.0 -448.0Q378 -468 399.5 -481.5Q421 -495 441 -495Q447 -495 462.0 -490.5Q477 -486 489.0 -476.0Q501 -466 499 -450Q492 -455 487 -455Q460 -455 428.0 -426.0Q396 -397 363.0 -350.5Q330 -304 300 -252Q317 -254 334.0 -256.0Q351 -258 368 -261Q404 -266 442.5 -271.0Q481 -276 516 -276Q522 -276 529.0 -274.5Q536 -273 536 -269Q536 -267 531.5 -263.5Q527 -260 515 -255Q499 -249 459.0 -242.0Q419 -235 370.5 -228.5Q322 -222 279 -217Q254 -170 234.0 -128.5Q214 -87 204 -62Q200 -52 198.0 -44.0Q196 -36 196 -31Q196 -17 206 -17Q213 -17 221.0 -22.5Q229 -28 236 -36Q247 -49 256.0 -60.5Q265 -72 272 -70Q273 -69 273 -67Q273 -61 267.0 -53.0Q261 -45 260 -44Q252 -34 240.5 -17.0Q229 0 216.0 13.5Q203 27 189 27ZM647 11Q619 11 598 -2Q563 -23 563 -78Q563 -101 571 -131Q578 -156 596.0 -185.5Q614 -215 638.5 -242.0Q663 -269 692.0 -286.0Q721 -303 750 -303Q762 -303 771 -300Q783 -296 791.5 -285.5Q800 -275 800 -259Q800 -242 791.5 -240.0Q783 -238 783 -244Q783 -246 783.5 -248.0Q784 -250 784 -251Q784 -259 779.5 -265.5Q775 -272 763 -272Q747 -272 723.5 -255.0Q700 -238 675.5 -209.5Q651 -181 632.5 -147.0Q614 -113 608 -79Q607 -74 606.5 -69.5Q606 -65 606 -60Q606 -37 616.5 -21.5Q627 -6 650 -6Q678 -6 704.0 -27.5Q730 -49 750.5 -79.0Q771 -109 781 -132Q789 -150 792.0 -163.0Q795 -176 795 -185Q795 -193 793.5 -199.0Q792 -205 790 -209Q788 -215 788 -218Q788 -226 794.5 -231.0Q801 -236 808 -236Q814 -236 821 -232Q829 -230 843.0 -229.0Q857 -228 873 -228Q890 -228 907.5 -229.0Q925 -230 938 -233Q940 -234 944 -234Q951 -234 951 -230Q951 -226 944 -223Q909 -207 881.5 -206.0Q854 -205 834 -205Q836 -180 823.0 -151.5Q810 -123 796 -101Q779 -76 757.0 -50.0Q735 -24 708.0 -6.5Q681 11 647 11ZM1048 12Q1031 12 1018.0 4.5Q1005 -3 1000 -24Q997 -35 997 -46Q997 -76 1012.5 -104.5Q1028 -133 1049.0 -157.5Q1070 -182 1085 -199Q1093 -207 1103.5 -220.0Q1114 -233 1114 -246Q1114 -254 1106.0 -261.5Q1098 -269 1077 -272Q1065 -274 1054.5 -275.5Q1044 -277 1033 -277Q1005 -239 978.5 -200.5Q952 -162 922 -125Q915 -118 910 -118Q904 -118 904 -124Q904 -130 910 -136Q964 -202 1003 -277Q998 -277 988.0 -277.5Q978 -278 972 -279Q965 -281 961.0 -285.0Q957 -289 957 -293Q957 -299 962 -300Q975 -304 990.0 -312.0Q1005 -320 1018 -333Q1032 -347 1044.0 -362.5Q1056 -378 1063 -386Q1070 -391 1078 -391Q1083 -391 1087.5 -388.0Q1092 -385 1092 -379Q1092 -372 1086 -361Q1077 -347 1066.5 -330.0Q1056 -313 1047 -299Q1065 -298 1083.0 -297.0Q1101 -296 1120 -296Q1130 -296 1139.5 -296.5Q1149 -297 1159 -297Q1189 -297 1189 -282Q1189 -272 1178.5 -257.5Q1168 -243 1153 -226Q1119 -187 1095.0 -144.0Q1071 -101 1063 -78Q1055 -54 1055 -42Q1055 -18 1074 -18Q1091 -18 1115.5 -35.0Q1140 -52 1166.0 -76.5Q1192 -101 1213.0 -124.5Q1234 -148 1243 -160Q1245 -163 1249 -163Q1253 -163 1256.0 -159.5Q1259 -156 1256 -151Q1245 -134 1224.0 -108.5Q1203 -83 1177.0 -58.0Q1151 -33 1126 -15Q1113 -5 1090.5 3.5Q1068 12 1048 12ZM1572 34Q1502 34 1462.0 10.5Q1422 -13 1422 -56Q1422 -100 1448.0 -137.5Q1474 -175 1515.5 -202.5Q1557 -230 1602.5 -245.5Q1648 -261 1687 -261Q1707 -261 1707 -255Q1707 -246 1686 -246Q1649 -246 1605.5 -228.0Q1562 -210 1528 -178Q1501 -154 1487.5 -129.5Q1474 -105 1474 -84Q1474 -53 1503.0 -32.5Q1532 -12 1590 -12Q1624 -12 1659.0 -17.5Q1694 -23 1722.5 -30.0Q1751 -37 1766 -41Q1803 -53 1840.5 -70.0Q1878 -87 1908.0 -108.5Q1938 -130 1952 -152Q1960 -164 1963.5 -175.0Q1967 -186 1967 -196Q1967 -224 1942.0 -243.5Q1917 -263 1878.0 -279.0Q1839 -295 1795.0 -309.5Q1751 -324 1712.0 -340.0Q1673 -356 1648.0 -376.5Q1623 -397 1623 -426Q1623 -459 1647.5 -485.5Q1672 -512 1710.5 -532.5Q1749 -553 1793.0 -566.5Q1837 -580 1877.0 -587.0Q1917 -594 1943 -594Q2053 -594 2053 -539Q2053 -517 2035 -488Q2027 -473 2012.0 -459.5Q1997 -446 1989 -446Q1983 -446 1983 -453Q1983 -456 1994.0 -465.5Q2005 -475 2016.0 -489.0Q2027 -503 2027 -517Q2027 -538 2003.5 -549.0Q1980 -560 1942 -560Q1924 -560 1890.0 -554.5Q1856 -549 1816.0 -537.0Q1776 -525 1739 -505Q1670 -467 1670 -440Q1670 -420 1709 -402Q1738 -389 1776.0 -375.0Q1814 -361 1853.0 -345.0Q1892 -329 1925.5 -309.0Q1959 -289 1979.5 -264.5Q2000 -240 2000 -209Q2000 -167 1954 -123Q1918 -89 1870.5 -60.0Q1823 -31 1770.5 -10.0Q1718 11 1667.0 22.5Q1616 34 1572 34ZM2319 10Q2302 10 2287.5 2.0Q2273 -6 2266 -28Q2263 -37 2263 -53Q2263 -75 2269.0 -102.0Q2275 -129 2282 -148Q2277 -146 2263.5 -130.5Q2250 -115 2230.5 -93.5Q2211 -72 2187.5 -50.5Q2164 -29 2139.0 -15.0Q2114 -1 2090 -1Q2074 -1 2056.0 -10.5Q2038 -20 2027 -35Q2012 -55 2012 -76Q2012 -103 2030.5 -132.0Q2049 -161 2078.5 -188.5Q2108 -216 2141.5 -238.5Q2175 -261 2205.5 -276.5Q2236 -292 2255 -297Q2275 -303 2300 -303Q2314 -303 2329.0 -299.5Q2344 -296 2354 -288Q2362 -284 2367.0 -277.0Q2372 -270 2372 -262Q2372 -254 2365 -257Q2357 -269 2343.5 -272.5Q2330 -276 2316 -276Q2276 -276 2228.0 -250.0Q2180 -224 2142 -189Q2130 -179 2109.5 -154.5Q2089 -130 2072.0 -101.0Q2055 -72 2055 -48Q2055 -35 2062 -25Q2066 -18 2075 -18Q2089 -18 2112.5 -33.0Q2136 -48 2161.0 -69.5Q2186 -91 2206.5 -111.0Q2227 -131 2236 -140Q2241 -145 2255.5 -160.5Q2270 -176 2287.0 -194.0Q2304 -212 2317.5 -225.0Q2331 -238 2335 -238Q2340 -238 2351.5 -235.5Q2363 -233 2371.0 -228.0Q2379 -223 2374 -215Q2348 -177 2332.5 -135.5Q2317 -94 2314 -70Q2313 -66 2313.0 -62.5Q2313 -59 2313 -55Q2313 -15 2341 -15Q2356 -15 2381.0 -33.0Q2406 -51 2432.0 -76.0Q2458 -101 2479.5 -124.5Q2501 -148 2509 -160Q2512 -163 2515 -163Q2519 -163 2522.0 -159.5Q2525 -156 2522 -151Q2511 -133 2490.0 -108.0Q2469 -83 2443.0 -58.0Q2417 -33 2392 -15Q2379 -5 2359.0 2.5Q2339 10 2319 10ZM2841 154Q2804 154 2770.5 127.5Q2737 101 2709.0 57.5Q2681 14 2661.5 -37.5Q2642 -89 2633 -138Q2599 -90 2574.5 -50.0Q2550 -10 2539 -4Q2534 -1 2516.0 6.0Q2498 13 2489 13Q2482 13 2485 6Q2487 2 2495.0 -19.5Q2503 -41 2514.0 -73.0Q2525 -105 2537.5 -140.0Q2550 -175 2562 -206Q2552 -195 2539.0 -178.5Q2526 -162 2509 -137Q2506 -132 2499 -132Q2492 -132 2492 -138Q2492 -144 2499 -152Q2513 -169 2529.0 -191.0Q2545 -213 2560.0 -234.0Q2575 -255 2584 -268Q2569 -276 2569 -289Q2569 -297 2575.5 -301.5Q2582 -306 2589 -301Q2593 -299 2596 -299Q2613 -344 2639.0 -396.5Q2665 -449 2699.0 -496.5Q2733 -544 2772.5 -574.0Q2812 -604 2856 -604Q2861 -604 2866.5 -603.5Q2872 -603 2877 -602Q2883 -601 2888.5 -598.0Q2894 -595 2899 -593Q2922 -580 2922 -555Q2922 -537 2912.0 -515.5Q2902 -494 2887.5 -473.0Q2873 -452 2859.0 -435.0Q2845 -418 2837 -409Q2788 -359 2731.5 -318.0Q2675 -277 2633 -260Q2617 -226 2603.0 -190.5Q2589 -155 2579.5 -125.5Q2570 -96 2565 -80Q2582 -101 2597.5 -122.5Q2613 -144 2629 -165Q2629 -169 2628.5 -173.0Q2628 -177 2628 -181Q2628 -187 2628.5 -192.5Q2629 -198 2630 -203Q2631 -209 2635.0 -215.0Q2639 -221 2643 -221Q2649 -221 2650 -209Q2651 -206 2652.0 -202.0Q2653 -198 2654 -194Q2667 -209 2686.5 -231.0Q2706 -253 2727.0 -273.0Q2748 -293 2765 -301Q2779 -308 2793 -308Q2807 -308 2816.0 -301.5Q2825 -295 2825 -286Q2825 -272 2804 -262Q2788 -255 2761.5 -242.0Q2735 -229 2707.0 -211.0Q2679 -193 2659 -172Q2674 -119 2688.5 -81.0Q2703 -43 2723.5 -8.5Q2744 26 2778 69Q2801 95 2825.0 111.0Q2849 127 2868 127Q2885 127 2891.5 119.5Q2898 112 2898 101Q2898 88 2891.5 72.5Q2885 57 2878 47Q2873 41 2873 36Q2873 33 2877 33Q2886 33 2896 41Q2901 47 2909.5 64.5Q2918 82 2918 95Q2918 115 2904.0 128.5Q2890 142 2872.0 148.0Q2854 154 2841 154ZM2645 -294Q2688 -313 2732.0 -346.0Q2776 -379 2814 -424Q2819 -430 2831.0 -446.5Q2843 -463 2857.5 -484.0Q2872 -505 2882.0 -526.0Q2892 -547 2892 -561Q2892 -571 2886 -575Q2883 -578 2877 -578Q2861 -578 2840 -561Q2773 -509 2728.5 -444.5Q2684 -380 2645 -294ZM2848 50Q2808 50 2808 28Q2808 12 2825 -5Q2838 -18 2854.0 -26.0Q2870 -34 2874 -34Q2879 -34 2879.5 -30.0Q2880 -26 2875 -24Q2865 -18 2852.5 -7.5Q2840 3 2840 15Q2840 31 2859 31Q2882 31 2907.0 17.5Q2932 4 2953.5 -17.0Q2975 -38 2988.5 -59.5Q3002 -81 3002 -97Q3002 -110 2993.0 -121.0Q2984 -132 2956 -147Q2937 -158 2919.5 -170.0Q2902 -182 2893 -199Q2885 -185 2872.5 -165.5Q2860 -146 2843 -125Q2837 -119 2831 -119Q2825 -119 2825 -124Q2825 -127 2830 -134Q2857 -166 2870.0 -193.0Q2883 -220 2888 -234Q2892 -263 2915.0 -289.0Q2938 -315 2971.0 -334.5Q3004 -354 3038.5 -365.0Q3073 -376 3100 -376Q3127 -376 3148.0 -366.0Q3169 -356 3169 -334Q3169 -322 3162 -308Q3153 -289 3132 -274Q3131 -273 3129 -273Q3121 -273 3121 -280Q3121 -285 3126 -290Q3134 -297 3139.0 -307.0Q3144 -317 3144 -326Q3144 -344 3123 -344Q3101 -344 3065.5 -332.0Q3030 -320 3000 -301Q2966 -279 2943.0 -253.0Q2920 -227 2920 -207Q2920 -197 2926.5 -188.5Q2933 -180 2952 -169Q2962 -163 2980.0 -153.5Q2998 -144 3011 -136Q3052 -111 3052 -83Q3052 -60 3032.0 -36.5Q3012 -13 2980.5 6.5Q2949 26 2914.0 38.0Q2879 50 2848 50ZM3141 13Q3133 13 3137 6Q3139 0 3147.5 -24.0Q3156 -48 3168.0 -82.0Q3180 -116 3193.0 -151.5Q3206 -187 3217 -215Q3210 -206 3195.5 -189.0Q3181 -172 3165.0 -153.0Q3149 -134 3135 -120Q3132 -117 3131 -117Q3128 -117 3128 -123Q3128 -135 3134 -145Q3156 -173 3176.5 -197.5Q3197 -222 3214 -244Q3204 -250 3204 -259Q3204 -273 3218 -273Q3224 -273 3227 -271Q3228 -270 3229.0 -270.0Q3230 -270 3231 -268Q3236 -275 3239.5 -281.0Q3243 -287 3246 -294Q3250 -303 3262.5 -328.5Q3275 -354 3294.0 -389.0Q3313 -424 3337.5 -461.5Q3362 -499 3390.5 -531.5Q3419 -564 3449.5 -584.0Q3480 -604 3512 -604Q3516 -604 3520.0 -603.5Q3524 -603 3528 -602Q3553 -597 3563.0 -584.5Q3573 -572 3573 -555Q3573 -543 3568.5 -529.5Q3564 -516 3556 -503Q3536 -468 3503.0 -432.5Q3470 -397 3429.5 -362.5Q3389 -328 3348.5 -295.5Q3308 -263 3273 -234Q3249 -183 3236.0 -143.5Q3223 -104 3216 -80Q3227 -94 3249.0 -120.0Q3271 -146 3299.0 -176.0Q3327 -206 3357.0 -233.5Q3387 -261 3414.0 -278.5Q3441 -296 3460 -296Q3484 -296 3484 -271Q3484 -247 3467.0 -218.0Q3450 -189 3439 -169Q3425 -140 3416.5 -113.5Q3408 -87 3406 -70Q3405 -66 3405.0 -62.5Q3405 -59 3405 -55Q3405 -15 3433 -15Q3448 -15 3473.0 -33.0Q3498 -51 3524.0 -76.0Q3550 -101 3571.5 -124.5Q3593 -148 3601 -160Q3604 -163 3608 -163Q3612 -163 3614.0 -160.0Q3616 -157 3614 -152Q3604 -135 3583.0 -109.5Q3562 -84 3536.0 -58.5Q3510 -33 3485 -15Q3472 -5 3451.5 2.5Q3431 10 3411 10Q3395 10 3380.0 2.0Q3365 -6 3358 -28Q3355 -37 3355 -53Q3355 -58 3355.0 -63.5Q3355 -69 3356 -75Q3360 -107 3377.5 -142.5Q3395 -178 3410 -206Q3414 -214 3416.5 -220.0Q3419 -226 3419 -230Q3419 -238 3412 -238Q3405 -238 3390.0 -229.0Q3375 -220 3350 -198Q3328 -179 3303.5 -148.5Q3279 -118 3255.5 -86.0Q3232 -54 3214.5 -31.0Q3197 -8 3190 -4Q3185 -1 3167.0 6.0Q3149 13 3141 13ZM3292 -279Q3332 -306 3379.0 -346.5Q3426 -387 3467.5 -433.5Q3509 -480 3531 -522Q3543 -545 3543 -560Q3543 -577 3528 -577Q3521 -577 3512.0 -573.5Q3503 -570 3491 -561Q3424 -509 3378.0 -437.5Q3332 -366 3292 -279ZM3746 -348Q3733 -348 3719.0 -350.5Q3705 -353 3705 -369Q3705 -372 3718.5 -383.0Q3732 -394 3746.5 -405.5Q3761 -417 3764 -419Q3781 -433 3785 -433Q3790 -433 3785.0 -420.0Q3780 -407 3780 -397Q3780 -392 3774.0 -380.0Q3768 -368 3760.0 -358.0Q3752 -348 3746 -348ZM3637 10Q3619 10 3604.5 2.0Q3590 -6 3583 -28Q3582 -31 3581.5 -34.0Q3581 -37 3581 -41Q3581 -61 3590.0 -91.0Q3599 -121 3612 -149Q3606 -141 3598.0 -129.5Q3590 -118 3575 -100Q3571 -96 3566 -96Q3559 -96 3559 -104Q3559 -110 3563 -114Q3589 -147 3609.5 -173.0Q3630 -199 3640 -217Q3640 -218 3639.5 -218.5Q3639 -219 3639 -220Q3639 -223 3642 -229Q3650 -253 3658.5 -269.5Q3667 -286 3677 -288Q3679 -288 3681.0 -288.5Q3683 -289 3685 -289Q3696 -289 3705.0 -284.0Q3714 -279 3714 -269Q3714 -260 3707.5 -247.0Q3701 -234 3691 -215Q3669 -169 3651.5 -131.5Q3634 -94 3632 -70Q3631 -66 3631.0 -62.5Q3631 -59 3631 -55Q3631 -15 3657 -15Q3673 -15 3698.0 -32.5Q3723 -50 3749.0 -75.5Q3775 -101 3796.5 -124.5Q3818 -148 3826 -160Q3829 -163 3832 -163Q3836 -163 3838.5 -160.0Q3841 -157 3839 -152Q3830 -135 3808.5 -109.5Q3787 -84 3760.5 -58.5Q3734 -33 3709 -15Q3696 -5 3676.5 2.5Q3657 10 3637 10Z", "vb": [-31, -644, 3911, 838]}, "helloYou": {"d": "M-3 134Q-34 134 -58.5 118.5Q-83 103 -91 72Q-92 70 -92.0 67.0Q-92 64 -92 62Q-92 47 -85 47Q-79 47 -74 66Q-65 91 -44.5 98.5Q-24 106 -1 106Q42 106 82.0 78.5Q122 51 156.5 6.5Q191 -38 219.5 -89.0Q248 -140 269.0 -187.5Q290 -235 303 -268Q290 -270 277.0 -270.5Q264 -271 251 -272Q244 -272 238.0 -272.5Q232 -273 225 -273Q193 -273 161.5 -266.5Q130 -260 105.5 -242.5Q81 -225 69 -191Q64 -179 64 -170Q64 -162 69 -152Q72 -148 72 -144Q72 -136 62 -136Q55 -136 51 -143Q46 -154 43.0 -170.5Q40 -187 41 -205Q45 -251 65.5 -275.5Q86 -300 117.5 -309.0Q149 -318 185 -318Q218 -318 251.0 -314.0Q284 -310 317 -305Q334 -350 348.0 -394.5Q362 -439 374 -477Q346 -451 310.5 -438.0Q275 -425 244 -421H243Q234 -421 234 -428Q234 -437 246 -438Q275 -441 305.0 -460.5Q335 -480 361.5 -510.5Q388 -541 403 -577Q405 -582 417.0 -585.5Q429 -589 441 -589Q452 -589 460.0 -586.0Q468 -583 466 -577Q447 -529 419.0 -454.5Q391 -380 356 -297Q417 -285 478.0 -271.0Q539 -257 596 -250Q616 -293 637.0 -336.0Q658 -379 675 -424Q680 -434 681.0 -441.0Q682 -448 682 -452Q682 -457 681.5 -459.5Q681 -462 680 -464Q681 -476 692.0 -496.0Q703 -516 721.0 -536.0Q739 -556 760.0 -569.5Q781 -583 800 -583Q806 -583 821.0 -578.5Q836 -574 849.0 -564.5Q862 -555 861 -539Q858 -540 854.5 -542.0Q851 -544 849 -544Q827 -544 802.0 -520.0Q777 -496 752.0 -458.0Q727 -420 704.5 -378.5Q682 -337 665.0 -301.5Q648 -266 639 -246Q656 -246 679.0 -249.0Q702 -252 723.0 -259.5Q744 -267 754 -282Q757 -286 760 -286Q764 -286 766.0 -281.5Q768 -277 764 -271Q752 -252 728.0 -242.5Q704 -233 678.0 -230.5Q652 -228 631 -228Q621 -204 610.0 -172.0Q599 -140 591.5 -108.0Q584 -76 584 -51Q584 -32 590.5 -19.5Q597 -7 613 -7Q634 -7 662.0 -24.5Q690 -42 717.5 -68.0Q745 -94 768.5 -119.5Q792 -145 804 -161Q806 -163 810 -163Q813 -163 815.5 -160.5Q818 -158 816 -152Q814 -148 797.0 -125.0Q780 -102 750 -70Q722 -38 683.5 -13.0Q645 12 601 12Q567 12 554.0 -9.0Q541 -30 541 -59Q541 -91 551.0 -126.0Q561 -161 568 -180Q573 -193 578.5 -205.5Q584 -218 589 -231Q526 -236 465.0 -246.0Q404 -256 342 -263Q325 -226 300.5 -174.5Q276 -123 244.0 -69.5Q212 -16 173.5 30.5Q135 77 90.5 105.5Q46 134 -3 134ZM881 15Q836 15 803.0 -6.0Q770 -27 770 -70Q770 -93 784 -126Q794 -149 821.0 -179.0Q848 -209 884.0 -237.5Q920 -266 957.0 -284.5Q994 -303 1024 -303Q1035 -303 1044 -300Q1061 -294 1067.5 -281.0Q1074 -268 1074 -254Q1074 -241 1070.0 -229.0Q1066 -217 1060 -208Q1042 -181 1008.5 -160.0Q975 -139 940.5 -127.0Q906 -115 884 -113H882Q869 -113 869 -121Q869 -126 877 -126Q901 -128 937.5 -148.5Q974 -169 1002 -191Q1014 -201 1030.5 -219.0Q1047 -237 1047 -254Q1047 -272 1030 -272Q1021 -272 1011.5 -268.0Q1002 -264 996 -262Q967 -248 932.0 -218.5Q897 -189 868.5 -152.5Q840 -116 829 -79Q826 -71 825.0 -63.5Q824 -56 824 -49Q824 -25 839.5 -15.0Q855 -5 877 -5Q910 -5 945.0 -19.5Q980 -34 1013.0 -57.0Q1046 -80 1073.5 -106.5Q1101 -133 1120 -158Q1123 -162 1127.0 -162.5Q1131 -163 1132 -161Q1136 -160 1136.0 -155.5Q1136 -151 1134 -147Q1106 -108 1066.5 -71.0Q1027 -34 979.5 -9.5Q932 15 881 15ZM1173 10Q1131 10 1114.5 -11.0Q1098 -32 1098 -63Q1098 -92 1111.5 -136.0Q1125 -180 1147.0 -231.0Q1169 -282 1194.5 -332.5Q1220 -383 1245.5 -425.5Q1271 -468 1290 -494Q1309 -519 1331.0 -544.0Q1353 -569 1380.0 -586.0Q1407 -603 1441 -603Q1464 -603 1480.5 -590.5Q1497 -578 1497 -553Q1497 -543 1493.5 -530.0Q1490 -517 1482 -503Q1421 -397 1336.5 -307.0Q1252 -217 1158 -140Q1154 -125 1150.5 -113.0Q1147 -101 1145 -94Q1144 -89 1144.0 -83.5Q1144 -78 1144 -73Q1144 -49 1152.0 -31.0Q1160 -13 1179 -13Q1197 -13 1223.5 -30.5Q1250 -48 1277.0 -73.5Q1304 -99 1326.0 -123.0Q1348 -147 1357 -160Q1360 -163 1363 -163Q1367 -163 1369.5 -159.0Q1372 -155 1369 -149Q1359 -132 1337.0 -107.0Q1315 -82 1288.0 -56.5Q1261 -31 1236 -12Q1205 10 1173 10ZM1172 -180Q1210 -206 1251.0 -247.5Q1292 -289 1331.5 -338.0Q1371 -387 1403.5 -435.0Q1436 -483 1456 -522Q1462 -533 1464.5 -541.5Q1467 -550 1467 -557Q1467 -576 1451 -576Q1437 -576 1416 -561Q1362 -519 1316.0 -453.5Q1270 -388 1234.0 -316.0Q1198 -244 1172 -180ZM1407 10Q1365 10 1348.5 -11.0Q1332 -32 1332 -63Q1332 -92 1345.5 -136.0Q1359 -180 1381.0 -231.0Q1403 -282 1428.5 -332.5Q1454 -383 1479.5 -425.5Q1505 -468 1524 -494Q1543 -519 1565.0 -544.0Q1587 -569 1614.0 -586.0Q1641 -603 1675 -603Q1698 -603 1714.5 -590.5Q1731 -578 1731 -553Q1731 -543 1727.5 -530.0Q1724 -517 1716 -503Q1655 -397 1570.5 -307.0Q1486 -217 1392 -140Q1388 -125 1384.5 -113.0Q1381 -101 1379 -94Q1378 -89 1378.0 -83.5Q1378 -78 1378 -73Q1378 -49 1386.0 -31.0Q1394 -13 1413 -13Q1431 -13 1457.5 -30.5Q1484 -48 1511.0 -73.5Q1538 -99 1560.0 -123.0Q1582 -147 1591 -160Q1594 -163 1597 -163Q1601 -163 1603.5 -159.0Q1606 -155 1603 -149Q1593 -132 1571.0 -107.0Q1549 -82 1522.0 -56.5Q1495 -31 1470 -12Q1439 10 1407 10ZM1406 -180Q1444 -206 1485.0 -247.5Q1526 -289 1565.5 -338.0Q1605 -387 1637.5 -435.0Q1670 -483 1690 -522Q1696 -533 1698.5 -541.5Q1701 -550 1701 -557Q1701 -576 1685 -576Q1671 -576 1650 -561Q1596 -519 1550.0 -453.5Q1504 -388 1468.0 -316.0Q1432 -244 1406 -180ZM1655 11Q1627 11 1606 -2Q1571 -23 1571 -78Q1571 -101 1579 -131Q1586 -156 1604.0 -185.5Q1622 -215 1646.5 -242.0Q1671 -269 1700.0 -286.0Q1729 -303 1758 -303Q1770 -303 1779 -300Q1791 -296 1799.5 -285.5Q1808 -275 1808 -259Q1808 -242 1799.5 -240.0Q1791 -238 1791 -244Q1791 -246 1791.5 -248.0Q1792 -250 1792 -251Q1792 -259 1787.5 -265.5Q1783 -272 1771 -272Q1755 -272 1731.5 -255.0Q1708 -238 1683.5 -209.5Q1659 -181 1640.5 -147.0Q1622 -113 1616 -79Q1615 -74 1614.5 -69.5Q1614 -65 1614 -60Q1614 -37 1624.5 -21.5Q1635 -6 1658 -6Q1686 -6 1712.0 -27.5Q1738 -49 1758.5 -79.0Q1779 -109 1789 -132Q1797 -150 1800.0 -163.0Q1803 -176 1803 -185Q1803 -193 1801.5 -199.0Q1800 -205 1798 -209Q1796 -215 1796 -218Q1796 -226 1802.5 -231.0Q1809 -236 1816 -236Q1822 -236 1829 -232Q1837 -230 1851.0 -229.0Q1865 -228 1881 -228Q1898 -228 1915.5 -229.0Q1933 -230 1946 -233Q1948 -234 1952 -234Q1959 -234 1959 -230Q1959 -226 1952 -223Q1917 -207 1889.5 -206.0Q1862 -205 1842 -205Q1844 -180 1831.0 -151.5Q1818 -123 1804 -101Q1787 -76 1765.0 -50.0Q1743 -24 1716.0 -6.5Q1689 11 1655 11ZM2101 367Q2089 364 2080 361Q2061 351 2053.0 338.5Q2045 326 2045 312Q2045 289 2060.5 262.5Q2076 236 2101 208Q2126 178 2164.5 147.0Q2203 116 2245.0 87.5Q2287 59 2319 38Q2336 3 2354.5 -37.0Q2373 -77 2390.0 -114.5Q2407 -152 2419.5 -183.0Q2432 -214 2438 -231Q2422 -212 2401.0 -183.5Q2380 -155 2355.0 -123.5Q2330 -92 2303.5 -64.0Q2277 -36 2249.0 -18.5Q2221 -1 2194 -1Q2154 -1 2138.5 -21.5Q2123 -42 2123 -70Q2123 -90 2128.5 -110.0Q2134 -130 2143 -147Q2149 -159 2162.0 -179.0Q2175 -199 2192.0 -220.0Q2209 -241 2226.5 -255.0Q2244 -269 2260 -269Q2279 -269 2289.0 -255.5Q2299 -242 2291 -237Q2275 -226 2251.5 -203.5Q2228 -181 2205 -152Q2199 -144 2190.5 -127.0Q2182 -110 2175.0 -90.5Q2168 -71 2168 -55Q2168 -48 2170.0 -41.5Q2172 -35 2177 -32Q2185 -26 2195 -26Q2209 -26 2226.5 -35.0Q2244 -44 2260 -58Q2316 -112 2360.0 -171.0Q2404 -230 2453 -288Q2456 -298 2470 -298Q2486 -298 2503.5 -288.5Q2521 -279 2518 -273Q2509 -253 2494.5 -220.0Q2480 -187 2463.0 -149.0Q2446 -111 2429.0 -73.5Q2412 -36 2398 -6Q2410 -12 2441.0 -36.0Q2472 -60 2509.0 -94.5Q2546 -129 2576 -166Q2582 -172 2585 -172Q2591 -172 2591 -164Q2591 -157 2585 -148Q2570 -128 2543.5 -101.0Q2517 -74 2486.5 -46.5Q2456 -19 2427.0 3.5Q2398 26 2377 38Q2346 104 2317.0 162.5Q2288 221 2264 257Q2248 282 2225.0 308.0Q2202 334 2175.0 351.5Q2148 369 2118 369Q2114 369 2110.0 368.5Q2106 368 2101 367ZM2104 345Q2112 345 2123.5 340.0Q2135 335 2148 324Q2186 293 2212.0 251.5Q2238 210 2258.5 164.0Q2279 118 2300 76Q2261 105 2212.0 144.5Q2163 184 2123 223Q2099 247 2088.0 270.5Q2077 294 2077 312Q2077 345 2104 345ZM2636 11Q2608 11 2587 -2Q2552 -23 2552 -78Q2552 -101 2560 -131Q2567 -156 2585.0 -185.5Q2603 -215 2627.5 -242.0Q2652 -269 2681.0 -286.0Q2710 -303 2739 -303Q2751 -303 2760 -300Q2772 -296 2780.5 -285.5Q2789 -275 2789 -259Q2789 -242 2780.5 -240.0Q2772 -238 2772 -244Q2772 -246 2772.5 -248.0Q2773 -250 2773 -251Q2773 -259 2768.5 -265.5Q2764 -272 2752 -272Q2736 -272 2712.5 -255.0Q2689 -238 2664.5 -209.5Q2640 -181 2621.5 -147.0Q2603 -113 2597 -79Q2596 -74 2595.5 -69.5Q2595 -65 2595 -60Q2595 -37 2605.5 -21.5Q2616 -6 2639 -6Q2667 -6 2693.0 -27.5Q2719 -49 2739.5 -79.0Q2760 -109 2770 -132Q2778 -150 2781.0 -163.0Q2784 -176 2784 -185Q2784 -193 2782.5 -199.0Q2781 -205 2779 -209Q2777 -215 2777 -218Q2777 -226 2783.5 -231.0Q2790 -236 2797 -236Q2803 -236 2810 -232Q2818 -230 2832.0 -229.0Q2846 -228 2862 -228Q2879 -228 2896.5 -229.0Q2914 -230 2927 -233Q2929 -234 2933 -234Q2940 -234 2940 -230Q2940 -226 2933 -223Q2898 -207 2870.5 -206.0Q2843 -205 2823 -205Q2825 -180 2812.0 -151.5Q2799 -123 2785 -101Q2768 -76 2746.0 -50.0Q2724 -24 2697.0 -6.5Q2670 11 2636 11ZM3140 10Q3122 10 3108.0 2.0Q3094 -6 3087 -28Q3086 -33 3084.5 -39.5Q3083 -46 3083 -53Q3083 -77 3089.5 -107.0Q3096 -137 3104 -157Q3100 -154 3090.0 -137.0Q3080 -120 3065.0 -97.5Q3050 -75 3031.5 -52.5Q3013 -30 2991.5 -15.5Q2970 -1 2946 -1Q2930 -1 2907.5 -10.0Q2885 -19 2875 -35Q2865 -51 2865 -75Q2865 -104 2878.0 -138.5Q2891 -173 2911 -203Q2918 -213 2927.0 -227.0Q2936 -241 2945.0 -251.5Q2954 -262 2958 -263Q2970 -267 2986 -267Q3003 -267 3011 -263Q3018 -260 3018 -256Q3018 -251 3010 -243Q2999 -233 2980.0 -213.0Q2961 -193 2942.5 -165.0Q2924 -137 2912 -103Q2902 -76 2902 -56Q2902 -21 2930 -21Q2954 -21 2981.0 -41.0Q3008 -61 3033.5 -90.0Q3059 -119 3079.5 -147.5Q3100 -176 3111 -193Q3121 -207 3133.5 -229.0Q3146 -251 3158.0 -272.0Q3170 -293 3177 -303Q3184 -303 3198.5 -300.5Q3213 -298 3223.5 -292.0Q3234 -286 3229 -277Q3223 -267 3210.5 -246.0Q3198 -225 3185.5 -203.5Q3173 -182 3166 -169Q3142 -123 3135 -70Q3134 -66 3134.0 -62.5Q3134 -59 3134 -55Q3134 -15 3161 -15Q3176 -15 3201.0 -33.0Q3226 -51 3252.5 -76.0Q3279 -101 3300.5 -124.5Q3322 -148 3330 -160Q3332 -163 3336 -163Q3340 -163 3342.5 -160.0Q3345 -157 3342 -152Q3333 -135 3311.5 -109.5Q3290 -84 3264.0 -58.5Q3238 -33 3213 -15Q3200 -5 3180.0 2.5Q3160 10 3140 10ZM3436 -143Q3424 -143 3424 -154Q3424 -156 3424.5 -158.0Q3425 -160 3426 -163Q3443 -209 3463.5 -262.0Q3484 -315 3506.0 -368.0Q3528 -421 3547 -466Q3565 -509 3578.5 -541.5Q3592 -574 3599 -582Q3602 -585 3607 -585Q3618 -585 3632.0 -573.0Q3646 -561 3646 -549Q3646 -539 3640.5 -521.5Q3635 -504 3623 -483Q3618 -474 3611.5 -470.5Q3605 -467 3600 -457Q3563 -385 3524.5 -309.5Q3486 -234 3460 -157Q3459 -152 3451.0 -147.5Q3443 -143 3436 -143ZM3404 0Q3394 0 3382.5 -2.0Q3371 -4 3371 -16Q3371 -21 3382.0 -31.5Q3393 -42 3406.0 -51.5Q3419 -61 3425 -61Q3432 -61 3431.5 -54.0Q3431 -47 3431 -39Q3431 -35 3426.0 -25.5Q3421 -16 3415.0 -8.0Q3409 0 3404 0ZM3599 -143Q3587 -143 3587 -154Q3587 -156 3587.5 -158.0Q3588 -160 3589 -163Q3606 -209 3626.5 -262.0Q3647 -315 3669.0 -368.0Q3691 -421 3710 -466Q3728 -509 3741.5 -541.5Q3755 -574 3762 -582Q3765 -585 3770 -585Q3781 -585 3795.0 -573.0Q3809 -561 3809 -549Q3809 -539 3803.5 -521.5Q3798 -504 3786 -483Q3781 -474 3774.5 -470.5Q3768 -467 3763 -457Q3726 -385 3687.5 -309.5Q3649 -234 3623 -157Q3622 -152 3614.0 -147.5Q3606 -143 3599 -143ZM3567 0Q3557 0 3545.5 -2.0Q3534 -4 3534 -16Q3534 -21 3545.0 -31.5Q3556 -42 3569.0 -51.5Q3582 -61 3588 -61Q3595 -61 3594.5 -54.0Q3594 -47 3594 -39Q3594 -35 3589.0 -25.5Q3584 -16 3578.0 -8.0Q3572 0 3567 0Z", "vb": [-132, -643, 3981, 1052]}, "yourPerson": {"d": "M87 370Q51 370 29.5 349.5Q8 329 8 295Q8 269 22.5 235.5Q37 202 70 165Q138 87 221.5 37.0Q305 -13 402 -44Q408 -61 419.0 -100.0Q430 -139 444.0 -191.0Q458 -243 473 -297Q434 -237 389.0 -180.5Q344 -124 296.5 -78.5Q249 -33 202.5 -6.5Q156 20 114 20Q89 20 69.5 5.0Q50 -10 45 -45Q44 -52 43.5 -58.5Q43 -65 43 -72Q43 -116 58.0 -164.0Q73 -212 95.5 -260.5Q118 -309 141.5 -356.0Q165 -403 181 -443Q183 -446 183.0 -448.5Q183 -451 183 -452Q183 -456 180 -456Q174 -456 158 -443Q124 -415 88.0 -395.0Q52 -375 21 -373H20Q11 -373 11 -379Q11 -388 24 -390Q41 -392 65.5 -405.5Q90 -419 117.0 -439.0Q144 -459 168.5 -480.5Q193 -502 210.5 -520.0Q228 -538 233 -548Q235 -553 247.5 -557.0Q260 -561 272 -561Q283 -561 291.0 -558.0Q299 -555 297 -548Q290 -537 270.5 -504.5Q251 -472 225.5 -426.0Q200 -380 174.5 -328.5Q149 -277 129.5 -226.5Q110 -176 102 -135Q100 -122 99.0 -110.5Q98 -99 98 -88Q98 -48 112.0 -31.5Q126 -15 147 -15Q181 -15 221.0 -42.5Q261 -70 303.5 -116.5Q346 -163 386.0 -220.5Q426 -278 461.5 -339.0Q497 -400 523 -455Q531 -472 536.5 -486.5Q542 -501 549 -513Q553 -521 556.0 -526.5Q559 -532 563 -534Q575 -554 597.0 -561.5Q619 -569 641 -569Q660 -569 673.5 -566.5Q687 -564 693 -563Q703 -562 703 -554Q703 -550 699.0 -546.5Q695 -543 688 -543Q649 -547 624.5 -518.0Q600 -489 578 -432Q570 -413 557.5 -373.5Q545 -334 530.0 -286.5Q515 -239 500.5 -192.0Q486 -145 474.5 -109.0Q463 -73 458 -58Q508 -72 535 -72Q546 -72 550 -69Q553 -66 553 -62Q553 -58 551.0 -55.5Q549 -53 545 -55Q541 -57 533 -57Q520 -57 500.5 -52.5Q481 -48 464.5 -41.0Q448 -34 444 -24Q387 121 321.5 207.5Q256 294 194.5 332.0Q133 370 87 370ZM115 344Q152 344 188.0 315.5Q224 287 257.0 242.0Q290 197 317.5 146.0Q345 95 365.5 49.0Q386 3 396 -25Q314 2 244.0 47.0Q174 92 119 160Q88 197 75.0 229.5Q62 262 62 286Q62 313 76.5 328.5Q91 344 115 344ZM644 11Q616 11 595 -2Q560 -23 560 -78Q560 -101 568 -131Q575 -156 593.0 -185.5Q611 -215 635.5 -242.0Q660 -269 689.0 -286.0Q718 -303 747 -303Q759 -303 768 -300Q780 -296 788.5 -285.5Q797 -275 797 -259Q797 -242 788.5 -240.0Q780 -238 780 -244Q780 -246 780.5 -248.0Q781 -250 781 -251Q781 -259 776.5 -265.5Q772 -272 760 -272Q744 -272 720.5 -255.0Q697 -238 672.5 -209.5Q648 -181 629.5 -147.0Q611 -113 605 -79Q604 -74 603.5 -69.5Q603 -65 603 -60Q603 -37 613.5 -21.5Q624 -6 647 -6Q675 -6 701.0 -27.5Q727 -49 747.5 -79.0Q768 -109 778 -132Q786 -150 789.0 -163.0Q792 -176 792 -185Q792 -193 790.5 -199.0Q789 -205 787 -209Q785 -215 785 -218Q785 -226 791.5 -231.0Q798 -236 805 -236Q811 -236 818 -232Q826 -230 840.0 -229.0Q854 -228 870 -228Q887 -228 904.5 -229.0Q922 -230 935 -233Q937 -234 941 -234Q948 -234 948 -230Q948 -226 941 -223Q906 -207 878.5 -206.0Q851 -205 831 -205Q833 -180 820.0 -151.5Q807 -123 793 -101Q776 -76 754.0 -50.0Q732 -24 705.0 -6.5Q678 11 644 11ZM1148 10Q1130 10 1116.0 2.0Q1102 -6 1095 -28Q1094 -33 1092.5 -39.5Q1091 -46 1091 -53Q1091 -77 1097.5 -107.0Q1104 -137 1112 -157Q1108 -154 1098.0 -137.0Q1088 -120 1073.0 -97.5Q1058 -75 1039.5 -52.5Q1021 -30 999.5 -15.5Q978 -1 954 -1Q938 -1 915.5 -10.0Q893 -19 883 -35Q873 -51 873 -75Q873 -104 886.0 -138.5Q899 -173 919 -203Q926 -213 935.0 -227.0Q944 -241 953.0 -251.5Q962 -262 966 -263Q978 -267 994 -267Q1011 -267 1019 -263Q1026 -260 1026 -256Q1026 -251 1018 -243Q1007 -233 988.0 -213.0Q969 -193 950.5 -165.0Q932 -137 920 -103Q910 -76 910 -56Q910 -21 938 -21Q962 -21 989.0 -41.0Q1016 -61 1041.5 -90.0Q1067 -119 1087.5 -147.5Q1108 -176 1119 -193Q1129 -207 1141.5 -229.0Q1154 -251 1166.0 -272.0Q1178 -293 1185 -303Q1192 -303 1206.5 -300.5Q1221 -298 1231.5 -292.0Q1242 -286 1237 -277Q1231 -267 1218.5 -246.0Q1206 -225 1193.5 -203.5Q1181 -182 1174 -169Q1150 -123 1143 -70Q1142 -66 1142.0 -62.5Q1142 -59 1142 -55Q1142 -15 1169 -15Q1184 -15 1209.0 -33.0Q1234 -51 1260.5 -76.0Q1287 -101 1308.5 -124.5Q1330 -148 1338 -160Q1340 -163 1344 -163Q1348 -163 1350.5 -160.0Q1353 -157 1350 -152Q1341 -135 1319.5 -109.5Q1298 -84 1272.0 -58.5Q1246 -33 1221 -15Q1208 -5 1188.0 2.5Q1168 10 1148 10ZM1457 12Q1440 12 1427.0 4.5Q1414 -3 1409 -24Q1406 -35 1406 -46Q1406 -76 1421.5 -104.5Q1437 -133 1458.0 -157.5Q1479 -182 1494 -199Q1502 -207 1512.5 -220.0Q1523 -233 1523 -246Q1523 -254 1515.0 -261.5Q1507 -269 1486 -272Q1474 -274 1463.5 -275.5Q1453 -277 1442 -277Q1414 -239 1387.5 -200.5Q1361 -162 1331 -125Q1324 -118 1319 -118Q1313 -118 1313 -124Q1313 -130 1319 -136Q1373 -202 1412 -277Q1407 -277 1397.0 -277.5Q1387 -278 1381 -279Q1374 -281 1370.0 -285.0Q1366 -289 1366 -293Q1366 -299 1371 -300Q1384 -304 1399.0 -312.0Q1414 -320 1427 -333Q1441 -347 1453.0 -362.5Q1465 -378 1472 -386Q1479 -391 1487 -391Q1492 -391 1496.5 -388.0Q1501 -385 1501 -379Q1501 -372 1495 -361Q1486 -347 1475.5 -330.0Q1465 -313 1456 -299Q1474 -298 1492.0 -297.0Q1510 -296 1529 -296Q1539 -296 1548.5 -296.5Q1558 -297 1568 -297Q1598 -297 1598 -282Q1598 -272 1587.5 -257.5Q1577 -243 1562 -226Q1528 -187 1504.0 -144.0Q1480 -101 1472 -78Q1464 -54 1464 -42Q1464 -18 1483 -18Q1500 -18 1524.5 -35.0Q1549 -52 1575.0 -76.5Q1601 -101 1622.0 -124.5Q1643 -148 1652 -160Q1654 -163 1658 -163Q1662 -163 1665.0 -159.5Q1668 -156 1665 -151Q1654 -134 1633.0 -108.5Q1612 -83 1586.0 -58.0Q1560 -33 1535 -15Q1522 -5 1499.5 3.5Q1477 12 1457 12ZM1690 342Q1678 342 1678 332Q1678 328 1681 321Q1693 295 1715.0 243.5Q1737 192 1763.5 125.5Q1790 59 1817 -11Q1841 -73 1863.5 -132.0Q1886 -191 1901.0 -238.5Q1916 -286 1916 -312Q1916 -320 1927.0 -321.5Q1938 -323 1948 -323Q1981 -323 1981 -301Q1981 -283 1961 -254Q1943 -225 1930.0 -194.5Q1917 -164 1904 -132Q1928 -164 1949.0 -195.0Q1970 -226 1998 -248Q2020 -265 2041.5 -275.5Q2063 -286 2088 -286Q2114 -286 2140.0 -273.5Q2166 -261 2170 -234Q2171 -231 2171.0 -227.5Q2171 -224 2171 -221Q2171 -186 2150.5 -152.5Q2130 -119 2102.0 -93.0Q2074 -67 2050 -51Q2030 -39 2001.5 -25.0Q1973 -11 1941.5 -1.0Q1910 9 1881 9Q1863 9 1851 5Q1838 35 1821.0 82.5Q1804 130 1789 176Q1782 196 1784.0 208.5Q1786 221 1779 240Q1773 260 1766.0 278.5Q1759 297 1750 314Q1748 318 1737.5 325.0Q1727 332 1713.5 337.0Q1700 342 1690 342ZM1859 -11Q1891 -11 1926.0 -26.0Q1961 -41 1995.0 -66.0Q2029 -91 2056.5 -120.5Q2084 -150 2101 -178Q2121 -210 2121 -237Q2121 -268 2094 -268Q2087 -268 2077.0 -265.5Q2067 -263 2054 -256Q2001 -228 1967.0 -190.5Q1933 -153 1909.0 -108.0Q1885 -63 1859 -11ZM2318 15Q2273 15 2240.0 -6.0Q2207 -27 2207 -70Q2207 -93 2221 -126Q2231 -149 2258.0 -179.0Q2285 -209 2321.0 -237.5Q2357 -266 2394.0 -284.5Q2431 -303 2461 -303Q2472 -303 2481 -300Q2498 -294 2504.5 -281.0Q2511 -268 2511 -254Q2511 -241 2507.0 -229.0Q2503 -217 2497 -208Q2479 -181 2445.5 -160.0Q2412 -139 2377.5 -127.0Q2343 -115 2321 -113H2319Q2306 -113 2306 -121Q2306 -126 2314 -126Q2338 -128 2374.5 -148.5Q2411 -169 2439 -191Q2451 -201 2467.5 -219.0Q2484 -237 2484 -254Q2484 -272 2467 -272Q2458 -272 2448.5 -268.0Q2439 -264 2433 -262Q2404 -248 2369.0 -218.5Q2334 -189 2305.5 -152.5Q2277 -116 2266 -79Q2263 -71 2262.0 -63.5Q2261 -56 2261 -49Q2261 -25 2276.5 -15.0Q2292 -5 2314 -5Q2347 -5 2382.0 -19.5Q2417 -34 2450.0 -57.0Q2483 -80 2510.5 -106.5Q2538 -133 2557 -158Q2560 -162 2564.0 -162.5Q2568 -163 2569 -161Q2573 -160 2573.0 -155.5Q2573 -151 2571 -147Q2543 -108 2503.5 -71.0Q2464 -34 2416.5 -9.5Q2369 15 2318 15ZM2678 12Q2661 12 2648.0 4.5Q2635 -3 2630 -24Q2627 -35 2627 -46Q2627 -76 2642.5 -104.5Q2658 -133 2679.0 -157.5Q2700 -182 2715 -199Q2723 -207 2733.5 -220.0Q2744 -233 2744 -246Q2744 -254 2736.0 -261.5Q2728 -269 2707 -272Q2695 -274 2684.5 -275.5Q2674 -277 2663 -277Q2635 -239 2608.5 -200.5Q2582 -162 2552 -125Q2545 -118 2540 -118Q2534 -118 2534 -124Q2534 -130 2540 -136Q2594 -202 2633 -277Q2628 -277 2618.0 -277.5Q2608 -278 2602 -279Q2595 -281 2591.0 -285.0Q2587 -289 2587 -293Q2587 -299 2592 -300Q2605 -304 2620.0 -312.0Q2635 -320 2648 -333Q2662 -347 2674.0 -362.5Q2686 -378 2693 -386Q2700 -391 2708 -391Q2713 -391 2717.5 -388.0Q2722 -385 2722 -379Q2722 -372 2716 -361Q2707 -347 2696.5 -330.0Q2686 -313 2677 -299Q2695 -298 2713.0 -297.0Q2731 -296 2750 -296Q2760 -296 2769.5 -296.5Q2779 -297 2789 -297Q2819 -297 2819 -282Q2819 -272 2808.5 -257.5Q2798 -243 2783 -226Q2749 -187 2725.0 -144.0Q2701 -101 2693 -78Q2685 -54 2685 -42Q2685 -18 2704 -18Q2721 -18 2745.5 -35.0Q2770 -52 2796.0 -76.5Q2822 -101 2843.0 -124.5Q2864 -148 2873 -160Q2875 -163 2879 -163Q2883 -163 2886.0 -159.5Q2889 -156 2886 -151Q2875 -134 2854.0 -108.5Q2833 -83 2807.0 -58.0Q2781 -33 2756 -15Q2743 -5 2720.5 3.5Q2698 12 2678 12ZM2871 50Q2831 50 2831 28Q2831 12 2848 -5Q2861 -18 2877.0 -26.0Q2893 -34 2897 -34Q2902 -34 2902.5 -30.0Q2903 -26 2898 -24Q2888 -18 2875.5 -7.5Q2863 3 2863 15Q2863 31 2882 31Q2905 31 2930.0 17.5Q2955 4 2976.5 -17.0Q2998 -38 3011.5 -59.5Q3025 -81 3025 -97Q3025 -110 3016.0 -121.0Q3007 -132 2979 -147Q2960 -158 2942.5 -170.0Q2925 -182 2916 -199Q2908 -185 2895.5 -165.5Q2883 -146 2866 -125Q2860 -119 2854 -119Q2848 -119 2848 -124Q2848 -127 2853 -134Q2880 -166 2893.0 -193.0Q2906 -220 2911 -234Q2915 -263 2938.0 -289.0Q2961 -315 2994.0 -334.5Q3027 -354 3061.5 -365.0Q3096 -376 3123 -376Q3150 -376 3171.0 -366.0Q3192 -356 3192 -334Q3192 -322 3185 -308Q3176 -289 3155 -274Q3154 -273 3152 -273Q3144 -273 3144 -280Q3144 -285 3149 -290Q3157 -297 3162.0 -307.0Q3167 -317 3167 -326Q3167 -344 3146 -344Q3124 -344 3088.5 -332.0Q3053 -320 3023 -301Q2989 -279 2966.0 -253.0Q2943 -227 2943 -207Q2943 -197 2949.5 -188.5Q2956 -180 2975 -169Q2985 -163 3003.0 -153.5Q3021 -144 3034 -136Q3075 -111 3075 -83Q3075 -60 3055.0 -36.5Q3035 -13 3003.5 6.5Q2972 26 2937.0 38.0Q2902 50 2871 50ZM3234 11Q3206 11 3185 -2Q3150 -23 3150 -78Q3150 -101 3158 -131Q3165 -156 3183.0 -185.5Q3201 -215 3225.5 -242.0Q3250 -269 3279.0 -286.0Q3308 -303 3337 -303Q3349 -303 3358 -300Q3370 -296 3378.5 -285.5Q3387 -275 3387 -259Q3387 -242 3378.5 -240.0Q3370 -238 3370 -244Q3370 -246 3370.5 -248.0Q3371 -250 3371 -251Q3371 -259 3366.5 -265.5Q3362 -272 3350 -272Q3334 -272 3310.5 -255.0Q3287 -238 3262.5 -209.5Q3238 -181 3219.5 -147.0Q3201 -113 3195 -79Q3194 -74 3193.5 -69.5Q3193 -65 3193 -60Q3193 -37 3203.5 -21.5Q3214 -6 3237 -6Q3265 -6 3291.0 -27.5Q3317 -49 3337.5 -79.0Q3358 -109 3368 -132Q3376 -150 3379.0 -163.0Q3382 -176 3382 -185Q3382 -193 3380.5 -199.0Q3379 -205 3377 -209Q3375 -215 3375 -218Q3375 -226 3381.5 -231.0Q3388 -236 3395 -236Q3401 -236 3408 -232Q3416 -230 3430.0 -229.0Q3444 -228 3460 -228Q3477 -228 3494.5 -229.0Q3512 -230 3525 -233Q3527 -234 3531 -234Q3538 -234 3538 -230Q3538 -226 3531 -223Q3496 -207 3468.5 -206.0Q3441 -205 3421 -205Q3423 -180 3410.0 -151.5Q3397 -123 3383 -101Q3366 -76 3344.0 -50.0Q3322 -24 3295.0 -6.5Q3268 11 3234 11ZM3461 13Q3454 13 3457 6Q3460 0 3468.0 -21.5Q3476 -43 3486.5 -73.0Q3497 -103 3508.0 -135.0Q3519 -167 3528.5 -195.0Q3538 -223 3544 -239Q3546 -245 3548.0 -256.5Q3550 -268 3556.5 -277.5Q3563 -287 3579 -287Q3609 -287 3609 -273Q3609 -268 3604 -256Q3592 -229 3578.0 -194.0Q3564 -159 3553.0 -128.0Q3542 -97 3536 -80Q3546 -94 3568.5 -120.0Q3591 -146 3619.0 -176.0Q3647 -206 3677.5 -234.0Q3708 -262 3734.5 -279.5Q3761 -297 3780 -297Q3804 -297 3804 -271Q3804 -262 3799 -244Q3790 -219 3776.0 -195.5Q3762 -172 3751 -146Q3732 -99 3729 -70Q3728 -66 3728.0 -62.5Q3728 -59 3728 -55Q3728 -15 3755 -15Q3770 -15 3795.0 -33.0Q3820 -51 3846.5 -76.0Q3873 -101 3894.0 -124.5Q3915 -148 3923 -160Q3926 -163 3929 -163Q3933 -163 3935.5 -160.0Q3938 -157 3936 -152Q3927 -135 3905.5 -109.5Q3884 -84 3858.0 -58.5Q3832 -33 3807 -15Q3792 -5 3770.0 3.0Q3748 11 3726 10Q3698 7 3686.0 -9.5Q3674 -26 3674 -49Q3674 -76 3684.5 -106.5Q3695 -137 3708.0 -164.0Q3721 -191 3729 -205Q3737 -221 3737 -230Q3737 -238 3730 -238Q3723 -238 3709.0 -229.0Q3695 -220 3671 -198Q3649 -179 3624.0 -148.5Q3599 -118 3575.5 -86.0Q3552 -54 3534.5 -31.0Q3517 -8 3510 -4Q3505 -1 3487.5 6.0Q3470 13 3461 13ZM3994 0Q3984 0 3972.5 -2.0Q3961 -4 3961 -16Q3961 -21 3972.0 -31.5Q3983 -42 3996.0 -51.5Q4009 -61 4015 -61Q4022 -61 4021.5 -54.0Q4021 -47 4021 -39Q4021 -35 4016.0 -25.5Q4011 -16 4005.0 -8.0Q3999 0 3994 0Z", "vb": [-32, -609, 4094, 1019]}, "iChoose": {"d": "M52 9Q31 9 19.5 5.5Q8 2 8 -11Q8 -16 9.0 -21.5Q10 -27 13 -34Q18 -45 30.0 -50.5Q42 -56 52 -56Q62 -56 70 -51Q84 -41 103.0 -33.5Q122 -26 143 -26Q167 -26 192.0 -37.5Q217 -49 239 -80Q269 -119 295.0 -177.5Q321 -236 342.5 -301.0Q364 -366 381.0 -427.5Q398 -489 409 -534Q357 -530 308.0 -516.5Q259 -503 227.5 -478.5Q196 -454 196 -418Q196 -398 207.0 -385.5Q218 -373 232.5 -366.0Q247 -359 256 -354Q263 -350 263 -347Q263 -341 254 -345Q242 -348 223.5 -358.5Q205 -369 190.5 -387.0Q176 -405 175 -428Q175 -430 173.5 -434.0Q172 -438 172 -441Q170 -479 191.5 -505.0Q213 -531 249.5 -547.5Q286 -564 330.5 -571.5Q375 -579 420 -579L424 -589Q426 -594 435.5 -597.5Q445 -601 455 -601Q465 -601 471.5 -598.0Q478 -595 478 -590Q478 -585 473 -577Q506 -574 533.5 -567.0Q561 -560 580 -550Q587 -547 596.5 -537.5Q606 -528 606 -522Q606 -517 598 -517Q594 -517 588.0 -518.0Q582 -519 574 -522Q555 -529 524.5 -532.0Q494 -535 459 -535Q444 -489 423.5 -426.0Q403 -363 377.5 -295.5Q352 -228 322.0 -166.5Q292 -105 259 -63Q249 -53 239.5 -43.0Q230 -33 221 -25Q276 -24 321.5 -26.0Q367 -28 398 -29H404Q415 -29 415 -24Q415 -19 409.0 -13.0Q403 -7 399 -5Q394 -3 364.5 -0.5Q335 2 291.5 3.5Q248 5 201.0 6.5Q154 8 114.0 8.5Q74 9 52 9ZM807 11Q789 14 771 14Q727 14 698.0 -7.0Q669 -28 669 -68Q669 -92 683 -126Q693 -149 720.0 -179.0Q747 -209 783.0 -237.5Q819 -266 856.0 -284.5Q893 -303 923 -303Q934 -303 943 -300Q954 -296 962.0 -289.0Q970 -282 970 -268Q970 -265 970.0 -262.0Q970 -259 968 -255Q968 -252 963.5 -242.0Q959 -232 953.5 -224.5Q948 -217 944 -221Q940 -224 940 -229Q940 -234 942.5 -240.5Q945 -247 945 -252Q945 -259 941.5 -265.5Q938 -272 930 -272Q911 -272 881.0 -255.0Q851 -238 819.5 -209.5Q788 -181 763.0 -147.0Q738 -113 728 -79Q725 -71 724.0 -63.5Q723 -56 723 -49Q723 -27 737.5 -17.5Q752 -8 773 -8Q796 -8 820 -15Q888 -35 930.5 -70.0Q973 -105 1016 -160Q1020 -165 1023.0 -164.0Q1026 -163 1028 -163Q1031 -162 1031 -157Q1031 -155 1030.0 -152.0Q1029 -149 1028 -147Q985 -89 933.0 -45.5Q881 -2 807 11ZM1009 13Q1001 13 1005 6Q1007 0 1015.5 -24.0Q1024 -48 1036.0 -82.0Q1048 -116 1061.0 -151.5Q1074 -187 1085 -215Q1078 -206 1063.5 -189.0Q1049 -172 1033.0 -153.0Q1017 -134 1003 -120Q1000 -117 999 -117Q996 -117 996 -123Q996 -135 1002 -145Q1024 -173 1044.5 -197.5Q1065 -222 1082 -244Q1072 -250 1072 -259Q1072 -273 1086 -273Q1092 -273 1095 -271Q1096 -270 1097.0 -270.0Q1098 -270 1099 -268Q1104 -275 1107.5 -281.0Q1111 -287 1114 -294Q1118 -303 1130.5 -328.5Q1143 -354 1162.0 -389.0Q1181 -424 1205.5 -461.5Q1230 -499 1258.5 -531.5Q1287 -564 1317.5 -584.0Q1348 -604 1380 -604Q1384 -604 1388.0 -603.5Q1392 -603 1396 -602Q1421 -597 1431.0 -584.5Q1441 -572 1441 -555Q1441 -543 1436.5 -529.5Q1432 -516 1424 -503Q1404 -468 1371.0 -432.5Q1338 -397 1297.5 -362.5Q1257 -328 1216.5 -295.5Q1176 -263 1141 -234Q1117 -183 1104.0 -143.5Q1091 -104 1084 -80Q1095 -94 1117.0 -120.0Q1139 -146 1167.0 -176.0Q1195 -206 1225.0 -233.5Q1255 -261 1282.0 -278.5Q1309 -296 1328 -296Q1352 -296 1352 -271Q1352 -247 1335.0 -218.0Q1318 -189 1307 -169Q1293 -140 1284.5 -113.5Q1276 -87 1274 -70Q1273 -66 1273.0 -62.5Q1273 -59 1273 -55Q1273 -15 1301 -15Q1316 -15 1341.0 -33.0Q1366 -51 1392.0 -76.0Q1418 -101 1439.5 -124.5Q1461 -148 1469 -160Q1472 -163 1476 -163Q1480 -163 1482.0 -160.0Q1484 -157 1482 -152Q1472 -135 1451.0 -109.5Q1430 -84 1404.0 -58.5Q1378 -33 1353 -15Q1340 -5 1319.5 2.5Q1299 10 1279 10Q1263 10 1248.0 2.0Q1233 -6 1226 -28Q1223 -37 1223 -53Q1223 -58 1223.0 -63.5Q1223 -69 1224 -75Q1228 -107 1245.5 -142.5Q1263 -178 1278 -206Q1282 -214 1284.5 -220.0Q1287 -226 1287 -230Q1287 -238 1280 -238Q1273 -238 1258.0 -229.0Q1243 -220 1218 -198Q1196 -179 1171.5 -148.5Q1147 -118 1123.5 -86.0Q1100 -54 1082.5 -31.0Q1065 -8 1058 -4Q1053 -1 1035.0 6.0Q1017 13 1009 13ZM1160 -279Q1200 -306 1247.0 -346.5Q1294 -387 1335.5 -433.5Q1377 -480 1399 -522Q1411 -545 1411 -560Q1411 -577 1396 -577Q1389 -577 1380.0 -573.5Q1371 -570 1359 -561Q1292 -509 1246.0 -437.5Q1200 -366 1160 -279ZM1534 11Q1506 11 1485 -2Q1450 -23 1450 -78Q1450 -101 1458 -131Q1465 -156 1483.0 -185.5Q1501 -215 1525.5 -242.0Q1550 -269 1579.0 -286.0Q1608 -303 1637 -303Q1649 -303 1658 -300Q1670 -296 1678.5 -285.5Q1687 -275 1687 -259Q1687 -242 1678.5 -240.0Q1670 -238 1670 -244Q1670 -246 1670.5 -248.0Q1671 -250 1671 -251Q1671 -259 1666.5 -265.5Q1662 -272 1650 -272Q1634 -272 1610.5 -255.0Q1587 -238 1562.5 -209.5Q1538 -181 1519.5 -147.0Q1501 -113 1495 -79Q1494 -74 1493.5 -69.5Q1493 -65 1493 -60Q1493 -37 1503.5 -21.5Q1514 -6 1537 -6Q1565 -6 1591.0 -27.5Q1617 -49 1637.5 -79.0Q1658 -109 1668 -132Q1676 -150 1679.0 -163.0Q1682 -176 1682 -185Q1682 -193 1680.5 -199.0Q1679 -205 1677 -209Q1675 -215 1675 -218Q1675 -226 1681.5 -231.0Q1688 -236 1695 -236Q1701 -236 1708 -232Q1716 -230 1730.0 -229.0Q1744 -228 1760 -228Q1777 -228 1794.5 -229.0Q1812 -230 1825 -233Q1827 -234 1831 -234Q1838 -234 1838 -230Q1838 -226 1831 -223Q1796 -207 1768.5 -206.0Q1741 -205 1721 -205Q1723 -180 1710.0 -151.5Q1697 -123 1683 -101Q1666 -76 1644.0 -50.0Q1622 -24 1595.0 -6.5Q1568 11 1534 11ZM1881 11Q1853 11 1832 -2Q1797 -23 1797 -78Q1797 -101 1805 -131Q1812 -156 1830.0 -185.5Q1848 -215 1872.5 -242.0Q1897 -269 1926.0 -286.0Q1955 -303 1984 -303Q1996 -303 2005 -300Q2017 -296 2025.5 -285.5Q2034 -275 2034 -259Q2034 -242 2025.5 -240.0Q2017 -238 2017 -244Q2017 -246 2017.5 -248.0Q2018 -250 2018 -251Q2018 -259 2013.5 -265.5Q2009 -272 1997 -272Q1981 -272 1957.5 -255.0Q1934 -238 1909.5 -209.5Q1885 -181 1866.5 -147.0Q1848 -113 1842 -79Q1841 -74 1840.5 -69.5Q1840 -65 1840 -60Q1840 -37 1850.5 -21.5Q1861 -6 1884 -6Q1912 -6 1938.0 -27.5Q1964 -49 1984.5 -79.0Q2005 -109 2015 -132Q2023 -150 2026.0 -163.0Q2029 -176 2029 -185Q2029 -193 2027.5 -199.0Q2026 -205 2024 -209Q2022 -215 2022 -218Q2022 -226 2028.5 -231.0Q2035 -236 2042 -236Q2048 -236 2055 -232Q2063 -230 2077.0 -229.0Q2091 -228 2107 -228Q2124 -228 2141.5 -229.0Q2159 -230 2172 -233Q2174 -234 2178 -234Q2185 -234 2185 -230Q2185 -226 2178 -223Q2143 -207 2115.5 -206.0Q2088 -205 2068 -205Q2070 -180 2057.0 -151.5Q2044 -123 2030 -101Q2013 -76 1991.0 -50.0Q1969 -24 1942.0 -6.5Q1915 11 1881 11ZM2161 50Q2121 50 2121 28Q2121 12 2138 -5Q2151 -18 2167.0 -26.0Q2183 -34 2187 -34Q2192 -34 2192.5 -30.0Q2193 -26 2188 -24Q2178 -18 2165.5 -7.5Q2153 3 2153 15Q2153 31 2172 31Q2195 31 2220.0 17.5Q2245 4 2266.5 -17.0Q2288 -38 2301.5 -59.5Q2315 -81 2315 -97Q2315 -110 2306.0 -121.0Q2297 -132 2269 -147Q2250 -158 2232.5 -170.0Q2215 -182 2206 -199Q2198 -185 2185.5 -165.5Q2173 -146 2156 -125Q2150 -119 2144 -119Q2138 -119 2138 -124Q2138 -127 2143 -134Q2170 -166 2183.0 -193.0Q2196 -220 2201 -234Q2205 -263 2228.0 -289.0Q2251 -315 2284.0 -334.5Q2317 -354 2351.5 -365.0Q2386 -376 2413 -376Q2440 -376 2461.0 -366.0Q2482 -356 2482 -334Q2482 -322 2475 -308Q2466 -289 2445 -274Q2444 -273 2442 -273Q2434 -273 2434 -280Q2434 -285 2439 -290Q2447 -297 2452.0 -307.0Q2457 -317 2457 -326Q2457 -344 2436 -344Q2414 -344 2378.5 -332.0Q2343 -320 2313 -301Q2279 -279 2256.0 -253.0Q2233 -227 2233 -207Q2233 -197 2239.5 -188.5Q2246 -180 2265 -169Q2275 -163 2293.0 -153.5Q2311 -144 2324 -136Q2365 -111 2365 -83Q2365 -60 2345.0 -36.5Q2325 -13 2293.5 6.5Q2262 26 2227.0 38.0Q2192 50 2161 50ZM2537 15Q2492 15 2459.0 -6.0Q2426 -27 2426 -70Q2426 -93 2440 -126Q2450 -149 2477.0 -179.0Q2504 -209 2540.0 -237.5Q2576 -266 2613.0 -284.5Q2650 -303 2680 -303Q2691 -303 2700 -300Q2717 -294 2723.5 -281.0Q2730 -268 2730 -254Q2730 -241 2726.0 -229.0Q2722 -217 2716 -208Q2698 -181 2664.5 -160.0Q2631 -139 2596.5 -127.0Q2562 -115 2540 -113H2538Q2525 -113 2525 -121Q2525 -126 2533 -126Q2557 -128 2593.5 -148.5Q2630 -169 2658 -191Q2670 -201 2686.5 -219.0Q2703 -237 2703 -254Q2703 -272 2686 -272Q2677 -272 2667.5 -268.0Q2658 -264 2652 -262Q2623 -248 2588.0 -218.5Q2553 -189 2524.5 -152.5Q2496 -116 2485 -79Q2482 -71 2481.0 -63.5Q2480 -56 2480 -49Q2480 -25 2495.5 -15.0Q2511 -5 2533 -5Q2566 -5 2601.0 -19.5Q2636 -34 2669.0 -57.0Q2702 -80 2729.5 -106.5Q2757 -133 2776 -158Q2779 -162 2783.0 -162.5Q2787 -163 2788 -161Q2792 -160 2792.0 -155.5Q2792 -151 2790 -147Q2762 -108 2722.5 -71.0Q2683 -34 2635.5 -9.5Q2588 15 2537 15ZM2942 367Q2930 364 2921 361Q2902 351 2894.0 338.5Q2886 326 2886 312Q2886 289 2901.5 262.5Q2917 236 2942 208Q2967 178 3005.5 147.0Q3044 116 3086.0 87.5Q3128 59 3160 38Q3177 3 3195.5 -37.0Q3214 -77 3231.0 -114.5Q3248 -152 3260.5 -183.0Q3273 -214 3279 -231Q3263 -212 3242.0 -183.5Q3221 -155 3196.0 -123.5Q3171 -92 3144.5 -64.0Q3118 -36 3090.0 -18.5Q3062 -1 3035 -1Q2995 -1 2979.5 -21.5Q2964 -42 2964 -70Q2964 -90 2969.5 -110.0Q2975 -130 2984 -147Q2990 -159 3003.0 -179.0Q3016 -199 3033.0 -220.0Q3050 -241 3067.5 -255.0Q3085 -269 3101 -269Q3120 -269 3130.0 -255.5Q3140 -242 3132 -237Q3116 -226 3092.5 -203.5Q3069 -181 3046 -152Q3040 -144 3031.5 -127.0Q3023 -110 3016.0 -90.5Q3009 -71 3009 -55Q3009 -48 3011.0 -41.5Q3013 -35 3018 -32Q3026 -26 3036 -26Q3050 -26 3067.5 -35.0Q3085 -44 3101 -58Q3157 -112 3201.0 -171.0Q3245 -230 3294 -288Q3297 -298 3311 -298Q3327 -298 3344.5 -288.5Q3362 -279 3359 -273Q3350 -253 3335.5 -220.0Q3321 -187 3304.0 -149.0Q3287 -111 3270.0 -73.5Q3253 -36 3239 -6Q3251 -12 3282.0 -36.0Q3313 -60 3350.0 -94.5Q3387 -129 3417 -166Q3423 -172 3426 -172Q3432 -172 3432 -164Q3432 -157 3426 -148Q3411 -128 3384.5 -101.0Q3358 -74 3327.5 -46.5Q3297 -19 3268.0 3.5Q3239 26 3218 38Q3187 104 3158.0 162.5Q3129 221 3105 257Q3089 282 3066.0 308.0Q3043 334 3016.0 351.5Q2989 369 2959 369Q2955 369 2951.0 368.5Q2947 368 2942 367ZM2945 345Q2953 345 2964.5 340.0Q2976 335 2989 324Q3027 293 3053.0 251.5Q3079 210 3099.5 164.0Q3120 118 3141 76Q3102 105 3053.0 144.5Q3004 184 2964 223Q2940 247 2929.0 270.5Q2918 294 2918 312Q2918 345 2945 345ZM3477 11Q3449 11 3428 -2Q3393 -23 3393 -78Q3393 -101 3401 -131Q3408 -156 3426.0 -185.5Q3444 -215 3468.5 -242.0Q3493 -269 3522.0 -286.0Q3551 -303 3580 -303Q3592 -303 3601 -300Q3613 -296 3621.5 -285.5Q3630 -275 3630 -259Q3630 -242 3621.5 -240.0Q3613 -238 3613 -244Q3613 -246 3613.5 -248.0Q3614 -250 3614 -251Q3614 -259 3609.5 -265.5Q3605 -272 3593 -272Q3577 -272 3553.5 -255.0Q3530 -238 3505.5 -209.5Q3481 -181 3462.5 -147.0Q3444 -113 3438 -79Q3437 -74 3436.5 -69.5Q3436 -65 3436 -60Q3436 -37 3446.5 -21.5Q3457 -6 3480 -6Q3508 -6 3534.0 -27.5Q3560 -49 3580.5 -79.0Q3601 -109 3611 -132Q3619 -150 3622.0 -163.0Q3625 -176 3625 -185Q3625 -193 3623.5 -199.0Q3622 -205 3620 -209Q3618 -215 3618 -218Q3618 -226 3624.5 -231.0Q3631 -236 3638 -236Q3644 -236 3651 -232Q3659 -230 3673.0 -229.0Q3687 -228 3703 -228Q3720 -228 3737.5 -229.0Q3755 -230 3768 -233Q3770 -234 3774 -234Q3781 -234 3781 -230Q3781 -226 3774 -223Q3739 -207 3711.5 -206.0Q3684 -205 3664 -205Q3666 -180 3653.0 -151.5Q3640 -123 3626 -101Q3609 -76 3587.0 -50.0Q3565 -24 3538.0 -6.5Q3511 11 3477 11ZM3981 10Q3963 10 3949.0 2.0Q3935 -6 3928 -28Q3927 -33 3925.5 -39.5Q3924 -46 3924 -53Q3924 -77 3930.5 -107.0Q3937 -137 3945 -157Q3941 -154 3931.0 -137.0Q3921 -120 3906.0 -97.5Q3891 -75 3872.5 -52.5Q3854 -30 3832.5 -15.5Q3811 -1 3787 -1Q3771 -1 3748.5 -10.0Q3726 -19 3716 -35Q3706 -51 3706 -75Q3706 -104 3719.0 -138.5Q3732 -173 3752 -203Q3759 -213 3768.0 -227.0Q3777 -241 3786.0 -251.5Q3795 -262 3799 -263Q3811 -267 3827 -267Q3844 -267 3852 -263Q3859 -260 3859 -256Q3859 -251 3851 -243Q3840 -233 3821.0 -213.0Q3802 -193 3783.5 -165.0Q3765 -137 3753 -103Q3743 -76 3743 -56Q3743 -21 3771 -21Q3795 -21 3822.0 -41.0Q3849 -61 3874.5 -90.0Q3900 -119 3920.5 -147.5Q3941 -176 3952 -193Q3962 -207 3974.5 -229.0Q3987 -251 3999.0 -272.0Q4011 -293 4018 -303Q4025 -303 4039.5 -300.5Q4054 -298 4064.5 -292.0Q4075 -286 4070 -277Q4064 -267 4051.5 -246.0Q4039 -225 4026.5 -203.5Q4014 -182 4007 -169Q3983 -123 3976 -70Q3975 -66 3975.0 -62.5Q3975 -59 3975 -55Q3975 -15 4002 -15Q4017 -15 4042.0 -33.0Q4067 -51 4093.5 -76.0Q4120 -101 4141.5 -124.5Q4163 -148 4171 -160Q4173 -163 4177 -163Q4181 -163 4183.5 -160.0Q4186 -157 4183 -152Q4174 -135 4152.5 -109.5Q4131 -84 4105.0 -58.5Q4079 -33 4054 -15Q4041 -5 4021.0 2.5Q4001 10 3981 10ZM4245 0Q4235 0 4223.5 -2.0Q4212 -4 4212 -16Q4212 -21 4223.0 -31.5Q4234 -42 4247.0 -51.5Q4260 -61 4266 -61Q4273 -61 4272.5 -54.0Q4272 -47 4272 -39Q4272 -35 4267.0 -25.5Q4262 -16 4256.0 -8.0Q4250 0 4245 0Z", "vb": [-32, -644, 4345, 1053]}, "iLove": {"d": "M52 9Q31 9 19.5 5.5Q8 2 8 -11Q8 -16 9.0 -21.5Q10 -27 13 -34Q18 -45 30.0 -50.5Q42 -56 52 -56Q62 -56 70 -51Q84 -41 103.0 -33.5Q122 -26 143 -26Q167 -26 192.0 -37.5Q217 -49 239 -80Q269 -119 295.0 -177.5Q321 -236 342.5 -301.0Q364 -366 381.0 -427.5Q398 -489 409 -534Q357 -530 308.0 -516.5Q259 -503 227.5 -478.5Q196 -454 196 -418Q196 -398 207.0 -385.5Q218 -373 232.5 -366.0Q247 -359 256 -354Q263 -350 263 -347Q263 -341 254 -345Q242 -348 223.5 -358.5Q205 -369 190.5 -387.0Q176 -405 175 -428Q175 -430 173.5 -434.0Q172 -438 172 -441Q170 -479 191.5 -505.0Q213 -531 249.5 -547.5Q286 -564 330.5 -571.5Q375 -579 420 -579L424 -589Q426 -594 435.5 -597.5Q445 -601 455 -601Q465 -601 471.5 -598.0Q478 -595 478 -590Q478 -585 473 -577Q506 -574 533.5 -567.0Q561 -560 580 -550Q587 -547 596.5 -537.5Q606 -528 606 -522Q606 -517 598 -517Q594 -517 588.0 -518.0Q582 -519 574 -522Q555 -529 524.5 -532.0Q494 -535 459 -535Q444 -489 423.5 -426.0Q403 -363 377.5 -295.5Q352 -228 322.0 -166.5Q292 -105 259 -63Q249 -53 239.5 -43.0Q230 -33 221 -25Q276 -24 321.5 -26.0Q367 -28 398 -29H404Q415 -29 415 -24Q415 -19 409.0 -13.0Q403 -7 399 -5Q394 -3 364.5 -0.5Q335 2 291.5 3.5Q248 5 201.0 6.5Q154 8 114.0 8.5Q74 9 52 9ZM753 10Q711 10 694.5 -11.0Q678 -32 678 -63Q678 -92 691.5 -136.0Q705 -180 727.0 -231.0Q749 -282 774.5 -332.5Q800 -383 825.5 -425.5Q851 -468 870 -494Q889 -519 911.0 -544.0Q933 -569 960.0 -586.0Q987 -603 1021 -603Q1044 -603 1060.5 -590.5Q1077 -578 1077 -553Q1077 -543 1073.5 -530.0Q1070 -517 1062 -503Q1001 -397 916.5 -307.0Q832 -217 738 -140Q734 -125 730.5 -113.0Q727 -101 725 -94Q724 -89 724.0 -83.5Q724 -78 724 -73Q724 -49 732.0 -31.0Q740 -13 759 -13Q777 -13 803.5 -30.5Q830 -48 857.0 -73.5Q884 -99 906.0 -123.0Q928 -147 937 -160Q940 -163 943 -163Q947 -163 949.5 -159.0Q952 -155 949 -149Q939 -132 917.0 -107.0Q895 -82 868.0 -56.5Q841 -31 816 -12Q785 10 753 10ZM752 -180Q790 -206 831.0 -247.5Q872 -289 911.5 -338.0Q951 -387 983.5 -435.0Q1016 -483 1036 -522Q1042 -533 1044.5 -541.5Q1047 -550 1047 -557Q1047 -576 1031 -576Q1017 -576 996 -561Q942 -519 896.0 -453.5Q850 -388 814.0 -316.0Q778 -244 752 -180ZM1001 11Q973 11 952 -2Q917 -23 917 -78Q917 -101 925 -131Q932 -156 950.0 -185.5Q968 -215 992.5 -242.0Q1017 -269 1046.0 -286.0Q1075 -303 1104 -303Q1116 -303 1125 -300Q1137 -296 1145.5 -285.5Q1154 -275 1154 -259Q1154 -242 1145.5 -240.0Q1137 -238 1137 -244Q1137 -246 1137.5 -248.0Q1138 -250 1138 -251Q1138 -259 1133.5 -265.5Q1129 -272 1117 -272Q1101 -272 1077.5 -255.0Q1054 -238 1029.5 -209.5Q1005 -181 986.5 -147.0Q968 -113 962 -79Q961 -74 960.5 -69.5Q960 -65 960 -60Q960 -37 970.5 -21.5Q981 -6 1004 -6Q1032 -6 1058.0 -27.5Q1084 -49 1104.5 -79.0Q1125 -109 1135 -132Q1143 -150 1146.0 -163.0Q1149 -176 1149 -185Q1149 -193 1147.5 -199.0Q1146 -205 1144 -209Q1142 -215 1142 -218Q1142 -226 1148.5 -231.0Q1155 -236 1162 -236Q1168 -236 1175 -232Q1183 -230 1197.0 -229.0Q1211 -228 1227 -228Q1244 -228 1261.5 -229.0Q1279 -230 1292 -233Q1294 -234 1298 -234Q1305 -234 1305 -230Q1305 -226 1298 -223Q1263 -207 1235.5 -206.0Q1208 -205 1188 -205Q1190 -180 1177.0 -151.5Q1164 -123 1150 -101Q1133 -76 1111.0 -50.0Q1089 -24 1062.0 -6.5Q1035 11 1001 11ZM1302 32Q1283 32 1276.0 16.0Q1269 0 1270 -16Q1275 -45 1284.5 -75.5Q1294 -106 1303 -136Q1305 -143 1308.0 -154.0Q1311 -165 1314 -178Q1307 -168 1298.5 -156.0Q1290 -144 1281 -131Q1277 -126 1272 -126Q1268 -126 1266.0 -130.5Q1264 -135 1268 -140Q1291 -172 1304.0 -196.5Q1317 -221 1322 -236Q1324 -256 1317.5 -269.5Q1311 -283 1294 -283Q1291 -283 1288.0 -282.5Q1285 -282 1281 -281Q1280 -281 1279.5 -280.5Q1279 -280 1278 -280Q1275 -280 1275 -283Q1275 -286 1281 -294Q1285 -297 1296.0 -298.5Q1307 -300 1317.0 -301.0Q1327 -302 1329 -302Q1343 -302 1355.0 -300.0Q1367 -298 1375 -288Q1380 -283 1383.0 -275.0Q1386 -267 1384 -259Q1384 -253 1378.5 -238.5Q1373 -224 1366.5 -207.0Q1360 -190 1354.5 -176.5Q1349 -163 1348 -158Q1338 -130 1328.0 -96.0Q1318 -62 1320 -44Q1367 -106 1416.0 -168.0Q1465 -230 1522 -283Q1545 -306 1569.0 -325.5Q1593 -345 1623 -357Q1636 -362 1647 -362Q1663 -362 1675.0 -356.0Q1687 -350 1691 -342Q1695 -339 1695 -331Q1695 -319 1687 -319Q1685 -319 1679 -323Q1674 -328 1664.0 -328.0Q1654 -328 1645 -328Q1624 -328 1592.5 -307.0Q1561 -286 1524.5 -252.0Q1488 -218 1452.0 -178.0Q1416 -138 1385.5 -98.0Q1355 -58 1335.5 -26.0Q1316 6 1314 23Q1314 28 1309.0 30.0Q1304 32 1302 32ZM1675 15Q1630 15 1597.0 -6.0Q1564 -27 1564 -70Q1564 -93 1578 -126Q1588 -149 1615.0 -179.0Q1642 -209 1678.0 -237.5Q1714 -266 1751.0 -284.5Q1788 -303 1818 -303Q1829 -303 1838 -300Q1855 -294 1861.5 -281.0Q1868 -268 1868 -254Q1868 -241 1864.0 -229.0Q1860 -217 1854 -208Q1836 -181 1802.5 -160.0Q1769 -139 1734.5 -127.0Q1700 -115 1678 -113H1676Q1663 -113 1663 -121Q1663 -126 1671 -126Q1695 -128 1731.5 -148.5Q1768 -169 1796 -191Q1808 -201 1824.5 -219.0Q1841 -237 1841 -254Q1841 -272 1824 -272Q1815 -272 1805.5 -268.0Q1796 -264 1790 -262Q1761 -248 1726.0 -218.5Q1691 -189 1662.5 -152.5Q1634 -116 1623 -79Q1620 -71 1619.0 -63.5Q1618 -56 1618 -49Q1618 -25 1633.5 -15.0Q1649 -5 1671 -5Q1704 -5 1739.0 -19.5Q1774 -34 1807.0 -57.0Q1840 -80 1867.5 -106.5Q1895 -133 1914 -158Q1917 -162 1921.0 -162.5Q1925 -163 1926 -161Q1930 -160 1930.0 -155.5Q1930 -151 1928 -147Q1900 -108 1860.5 -71.0Q1821 -34 1773.5 -9.5Q1726 15 1675 15ZM2080 367Q2068 364 2059 361Q2040 351 2032.0 338.5Q2024 326 2024 312Q2024 289 2039.5 262.5Q2055 236 2080 208Q2105 178 2143.5 147.0Q2182 116 2224.0 87.5Q2266 59 2298 38Q2315 3 2333.5 -37.0Q2352 -77 2369.0 -114.5Q2386 -152 2398.5 -183.0Q2411 -214 2417 -231Q2401 -212 2380.0 -183.5Q2359 -155 2334.0 -123.5Q2309 -92 2282.5 -64.0Q2256 -36 2228.0 -18.5Q2200 -1 2173 -1Q2133 -1 2117.5 -21.5Q2102 -42 2102 -70Q2102 -90 2107.5 -110.0Q2113 -130 2122 -147Q2128 -159 2141.0 -179.0Q2154 -199 2171.0 -220.0Q2188 -241 2205.5 -255.0Q2223 -269 2239 -269Q2258 -269 2268.0 -255.5Q2278 -242 2270 -237Q2254 -226 2230.5 -203.5Q2207 -181 2184 -152Q2178 -144 2169.5 -127.0Q2161 -110 2154.0 -90.5Q2147 -71 2147 -55Q2147 -48 2149.0 -41.5Q2151 -35 2156 -32Q2164 -26 2174 -26Q2188 -26 2205.5 -35.0Q2223 -44 2239 -58Q2295 -112 2339.0 -171.0Q2383 -230 2432 -288Q2435 -298 2449 -298Q2465 -298 2482.5 -288.5Q2500 -279 2497 -273Q2488 -253 2473.5 -220.0Q2459 -187 2442.0 -149.0Q2425 -111 2408.0 -73.5Q2391 -36 2377 -6Q2389 -12 2420.0 -36.0Q2451 -60 2488.0 -94.5Q2525 -129 2555 -166Q2561 -172 2564 -172Q2570 -172 2570 -164Q2570 -157 2564 -148Q2549 -128 2522.5 -101.0Q2496 -74 2465.5 -46.5Q2435 -19 2406.0 3.5Q2377 26 2356 38Q2325 104 2296.0 162.5Q2267 221 2243 257Q2227 282 2204.0 308.0Q2181 334 2154.0 351.5Q2127 369 2097 369Q2093 369 2089.0 368.5Q2085 368 2080 367ZM2083 345Q2091 345 2102.5 340.0Q2114 335 2127 324Q2165 293 2191.0 251.5Q2217 210 2237.5 164.0Q2258 118 2279 76Q2240 105 2191.0 144.5Q2142 184 2102 223Q2078 247 2067.0 270.5Q2056 294 2056 312Q2056 345 2083 345ZM2615 11Q2587 11 2566 -2Q2531 -23 2531 -78Q2531 -101 2539 -131Q2546 -156 2564.0 -185.5Q2582 -215 2606.5 -242.0Q2631 -269 2660.0 -286.0Q2689 -303 2718 -303Q2730 -303 2739 -300Q2751 -296 2759.5 -285.5Q2768 -275 2768 -259Q2768 -242 2759.5 -240.0Q2751 -238 2751 -244Q2751 -246 2751.5 -248.0Q2752 -250 2752 -251Q2752 -259 2747.5 -265.5Q2743 -272 2731 -272Q2715 -272 2691.5 -255.0Q2668 -238 2643.5 -209.5Q2619 -181 2600.5 -147.0Q2582 -113 2576 -79Q2575 -74 2574.5 -69.5Q2574 -65 2574 -60Q2574 -37 2584.5 -21.5Q2595 -6 2618 -6Q2646 -6 2672.0 -27.5Q2698 -49 2718.5 -79.0Q2739 -109 2749 -132Q2757 -150 2760.0 -163.0Q2763 -176 2763 -185Q2763 -193 2761.5 -199.0Q2760 -205 2758 -209Q2756 -215 2756 -218Q2756 -226 2762.5 -231.0Q2769 -236 2776 -236Q2782 -236 2789 -232Q2797 -230 2811.0 -229.0Q2825 -228 2841 -228Q2858 -228 2875.5 -229.0Q2893 -230 2906 -233Q2908 -234 2912 -234Q2919 -234 2919 -230Q2919 -226 2912 -223Q2877 -207 2849.5 -206.0Q2822 -205 2802 -205Q2804 -180 2791.0 -151.5Q2778 -123 2764 -101Q2747 -76 2725.0 -50.0Q2703 -24 2676.0 -6.5Q2649 11 2615 11ZM3119 10Q3101 10 3087.0 2.0Q3073 -6 3066 -28Q3065 -33 3063.5 -39.5Q3062 -46 3062 -53Q3062 -77 3068.5 -107.0Q3075 -137 3083 -157Q3079 -154 3069.0 -137.0Q3059 -120 3044.0 -97.5Q3029 -75 3010.5 -52.5Q2992 -30 2970.5 -15.5Q2949 -1 2925 -1Q2909 -1 2886.5 -10.0Q2864 -19 2854 -35Q2844 -51 2844 -75Q2844 -104 2857.0 -138.5Q2870 -173 2890 -203Q2897 -213 2906.0 -227.0Q2915 -241 2924.0 -251.5Q2933 -262 2937 -263Q2949 -267 2965 -267Q2982 -267 2990 -263Q2997 -260 2997 -256Q2997 -251 2989 -243Q2978 -233 2959.0 -213.0Q2940 -193 2921.5 -165.0Q2903 -137 2891 -103Q2881 -76 2881 -56Q2881 -21 2909 -21Q2933 -21 2960.0 -41.0Q2987 -61 3012.5 -90.0Q3038 -119 3058.5 -147.5Q3079 -176 3090 -193Q3100 -207 3112.5 -229.0Q3125 -251 3137.0 -272.0Q3149 -293 3156 -303Q3163 -303 3177.5 -300.5Q3192 -298 3202.5 -292.0Q3213 -286 3208 -277Q3202 -267 3189.5 -246.0Q3177 -225 3164.5 -203.5Q3152 -182 3145 -169Q3121 -123 3114 -70Q3113 -66 3113.0 -62.5Q3113 -59 3113 -55Q3113 -15 3140 -15Q3155 -15 3180.0 -33.0Q3205 -51 3231.5 -76.0Q3258 -101 3279.5 -124.5Q3301 -148 3309 -160Q3311 -163 3315 -163Q3319 -163 3321.5 -160.0Q3324 -157 3321 -152Q3312 -135 3290.5 -109.5Q3269 -84 3243.0 -58.5Q3217 -33 3192 -15Q3179 -5 3159.0 2.5Q3139 10 3119 10ZM3564 10Q3546 10 3531.5 2.0Q3517 -6 3510 -28Q3509 -31 3508.5 -34.0Q3508 -37 3508 -41Q3508 -61 3517.0 -91.0Q3526 -121 3539 -149Q3533 -141 3525.0 -129.5Q3517 -118 3502 -100Q3498 -96 3493 -96Q3486 -96 3486 -104Q3486 -110 3490 -114Q3516 -147 3536.5 -173.0Q3557 -199 3567 -217Q3567 -219 3573.0 -229.5Q3579 -240 3589 -259Q3581 -258 3575.5 -257.5Q3570 -257 3566 -257Q3559 -257 3554.0 -263.0Q3549 -269 3553 -278Q3558 -292 3575.0 -294.0Q3592 -296 3605 -297Q3606 -299 3609 -299Q3621 -321 3632.0 -342.0Q3643 -363 3650.5 -377.0Q3658 -391 3658 -392Q3678 -424 3684.0 -434.5Q3690 -445 3700 -447Q3711 -448 3723.5 -446.0Q3736 -444 3740 -437Q3743 -433 3743 -427Q3743 -418 3739.0 -409.5Q3735 -401 3731 -396Q3727 -389 3720.5 -386.5Q3714 -384 3709 -374Q3699 -355 3687.0 -333.0Q3675 -311 3662 -291L3674 -292Q3698 -294 3719.5 -297.0Q3741 -300 3769 -299Q3774 -299 3779.5 -297.5Q3785 -296 3785 -293Q3785 -289 3759 -282Q3749 -278 3715.5 -273.5Q3682 -269 3647 -265Q3637 -246 3629.0 -233.5Q3621 -221 3618 -215Q3596 -169 3578.5 -131.5Q3561 -94 3559 -70Q3558 -66 3558.0 -62.5Q3558 -59 3558 -55Q3558 -15 3584 -15Q3600 -15 3625.0 -32.5Q3650 -50 3676.0 -75.5Q3702 -101 3723.5 -124.5Q3745 -148 3753 -160Q3756 -163 3759 -163Q3763 -163 3765.5 -160.0Q3768 -157 3766 -152Q3757 -135 3735.5 -109.5Q3714 -84 3687.5 -58.5Q3661 -33 3636 -15Q3623 -5 3603.5 2.5Q3584 10 3564 10ZM3749 13Q3741 13 3745 6Q3747 0 3755.5 -24.0Q3764 -48 3776.0 -82.0Q3788 -116 3801.0 -151.5Q3814 -187 3825 -215Q3818 -206 3803.5 -189.0Q3789 -172 3773.0 -153.0Q3757 -134 3743 -120Q3740 -117 3739 -117Q3736 -117 3736 -123Q3736 -135 3742 -145Q3764 -173 3784.5 -197.5Q3805 -222 3822 -244Q3812 -250 3812 -259Q3812 -273 3826 -273Q3832 -273 3835 -271Q3836 -270 3837.0 -270.0Q3838 -270 3839 -268Q3844 -275 3847.5 -281.0Q3851 -287 3854 -294Q3858 -303 3870.5 -328.5Q3883 -354 3902.0 -389.0Q3921 -424 3945.5 -461.5Q3970 -499 3998.5 -531.5Q4027 -564 4057.5 -584.0Q4088 -604 4120 -604Q4124 -604 4128.0 -603.5Q4132 -603 4136 -602Q4161 -597 4171.0 -584.5Q4181 -572 4181 -555Q4181 -543 4176.5 -529.5Q4172 -516 4164 -503Q4144 -468 4111.0 -432.5Q4078 -397 4037.5 -362.5Q3997 -328 3956.5 -295.5Q3916 -263 3881 -234Q3857 -183 3844.0 -143.5Q3831 -104 3824 -80Q3835 -94 3857.0 -120.0Q3879 -146 3907.0 -176.0Q3935 -206 3965.0 -233.5Q3995 -261 4022.0 -278.5Q4049 -296 4068 -296Q4092 -296 4092 -271Q4092 -247 4075.0 -218.0Q4058 -189 4047 -169Q4033 -140 4024.5 -113.5Q4016 -87 4014 -70Q4013 -66 4013.0 -62.5Q4013 -59 4013 -55Q4013 -15 4041 -15Q4056 -15 4081.0 -33.0Q4106 -51 4132.0 -76.0Q4158 -101 4179.5 -124.5Q4201 -148 4209 -160Q4212 -163 4216 -163Q4220 -163 4222.0 -160.0Q4224 -157 4222 -152Q4212 -135 4191.0 -109.5Q4170 -84 4144.0 -58.5Q4118 -33 4093 -15Q4080 -5 4059.5 2.5Q4039 10 4019 10Q4003 10 3988.0 2.0Q3973 -6 3966 -28Q3963 -37 3963 -53Q3963 -58 3963.0 -63.5Q3963 -69 3964 -75Q3968 -107 3985.5 -142.5Q4003 -178 4018 -206Q4022 -214 4024.5 -220.0Q4027 -226 4027 -230Q4027 -238 4020 -238Q4013 -238 3998.0 -229.0Q3983 -220 3958 -198Q3936 -179 3911.5 -148.5Q3887 -118 3863.5 -86.0Q3840 -54 3822.5 -31.0Q3805 -8 3798 -4Q3793 -1 3775.0 6.0Q3757 13 3749 13ZM3900 -279Q3940 -306 3987.0 -346.5Q4034 -387 4075.5 -433.5Q4117 -480 4139 -522Q4151 -545 4151 -560Q4151 -577 4136 -577Q4129 -577 4120.0 -573.5Q4111 -570 4099 -561Q4032 -509 3986.0 -437.5Q3940 -366 3900 -279ZM4287 15Q4242 15 4209.0 -6.0Q4176 -27 4176 -70Q4176 -93 4190 -126Q4200 -149 4227.0 -179.0Q4254 -209 4290.0 -237.5Q4326 -266 4363.0 -284.5Q4400 -303 4430 -303Q4441 -303 4450 -300Q4467 -294 4473.5 -281.0Q4480 -268 4480 -254Q4480 -241 4476.0 -229.0Q4472 -217 4466 -208Q4448 -181 4414.5 -160.0Q4381 -139 4346.5 -127.0Q4312 -115 4290 -113H4288Q4275 -113 4275 -121Q4275 -126 4283 -126Q4307 -128 4343.5 -148.5Q4380 -169 4408 -191Q4420 -201 4436.5 -219.0Q4453 -237 4453 -254Q4453 -272 4436 -272Q4427 -272 4417.5 -268.0Q4408 -264 4402 -262Q4373 -248 4338.0 -218.5Q4303 -189 4274.5 -152.5Q4246 -116 4235 -79Q4232 -71 4231.0 -63.5Q4230 -56 4230 -49Q4230 -25 4245.5 -15.0Q4261 -5 4283 -5Q4316 -5 4351.0 -19.5Q4386 -34 4419.0 -57.0Q4452 -80 4479.5 -106.5Q4507 -133 4526 -158Q4529 -162 4533.0 -162.5Q4537 -163 4538 -161Q4542 -160 4542.0 -155.5Q4542 -151 4540 -147Q4512 -108 4472.5 -71.0Q4433 -34 4385.5 -9.5Q4338 15 4287 15ZM4717 13Q4709 13 4712 6Q4716 -1 4726.5 -29.5Q4737 -58 4750.5 -97.0Q4764 -136 4777 -172Q4767 -157 4755.5 -143.0Q4744 -129 4736 -120Q4733 -117 4732 -117Q4729 -117 4729 -123Q4729 -135 4735 -145Q4756 -172 4767.0 -187.5Q4778 -203 4785.5 -215.5Q4793 -228 4801 -244Q4803 -255 4808.5 -271.0Q4814 -287 4835 -287Q4866 -287 4866 -274Q4866 -270 4864.0 -265.5Q4862 -261 4860 -256Q4848 -229 4834.0 -194.0Q4820 -159 4808.5 -128.0Q4797 -97 4791 -80Q4802 -94 4824.0 -119.5Q4846 -145 4874.5 -175.5Q4903 -206 4933.5 -233.5Q4964 -261 4991.0 -279.0Q5018 -297 5037 -297Q5060 -297 5060 -271Q5060 -251 5044 -219Q5037 -204 5025.0 -178.5Q5013 -153 5006 -140Q5024 -156 5047.0 -175.5Q5070 -195 5095.5 -212.0Q5121 -229 5143 -237Q5148 -239 5163.0 -243.5Q5178 -248 5189 -248Q5204 -248 5204 -238Q5204 -231 5197 -223Q5180 -197 5166.5 -167.5Q5153 -138 5145.0 -112.0Q5137 -86 5135 -70Q5134 -66 5134.0 -62.5Q5134 -59 5134 -55Q5134 -15 5160 -15Q5176 -15 5201.0 -32.5Q5226 -50 5252.0 -75.5Q5278 -101 5299.5 -124.5Q5321 -148 5329 -160Q5332 -163 5335 -163Q5339 -163 5341.5 -160.0Q5344 -157 5342 -152Q5333 -135 5311.5 -109.5Q5290 -84 5263.5 -58.5Q5237 -33 5212 -15Q5199 -5 5179.5 2.5Q5160 10 5140 10Q5122 10 5107.5 2.0Q5093 -6 5086 -28Q5083 -37 5083 -51Q5083 -73 5089.0 -101.0Q5095 -129 5102 -148Q5107 -162 5115.5 -179.5Q5124 -197 5131 -209Q5100 -197 5071.0 -173.0Q5042 -149 5018.5 -124.5Q4995 -100 4979 -84Q4975 -73 4963.5 -66.0Q4952 -59 4942 -59Q4927 -59 4927 -72Q4927 -77 4930 -84Q4940 -108 4952.5 -133.5Q4965 -159 4975.5 -180.0Q4986 -201 4990 -209Q4998 -223 4998 -231Q4998 -239 4991 -239Q4984 -239 4968.0 -230.0Q4952 -221 4926 -198Q4905 -179 4880.0 -148.5Q4855 -118 4832.0 -86.0Q4809 -54 4791.5 -31.0Q4774 -8 4767 -4Q4761 -1 4743.5 6.0Q4726 13 4717 13ZM5395 11Q5367 11 5346 -2Q5311 -23 5311 -78Q5311 -101 5319 -131Q5326 -156 5344.0 -185.5Q5362 -215 5386.5 -242.0Q5411 -269 5440.0 -286.0Q5469 -303 5498 -303Q5510 -303 5519 -300Q5531 -296 5539.5 -285.5Q5548 -275 5548 -259Q5548 -242 5539.5 -240.0Q5531 -238 5531 -244Q5531 -246 5531.5 -248.0Q5532 -250 5532 -251Q5532 -259 5527.5 -265.5Q5523 -272 5511 -272Q5495 -272 5471.5 -255.0Q5448 -238 5423.5 -209.5Q5399 -181 5380.5 -147.0Q5362 -113 5356 -79Q5355 -74 5354.5 -69.5Q5354 -65 5354 -60Q5354 -37 5364.5 -21.5Q5375 -6 5398 -6Q5426 -6 5452.0 -27.5Q5478 -49 5498.5 -79.0Q5519 -109 5529 -132Q5537 -150 5540.0 -163.0Q5543 -176 5543 -185Q5543 -193 5541.5 -199.0Q5540 -205 5538 -209Q5536 -215 5536 -218Q5536 -226 5542.5 -231.0Q5549 -236 5556 -236Q5562 -236 5569 -232Q5577 -230 5591.0 -229.0Q5605 -228 5621 -228Q5638 -228 5655.5 -229.0Q5673 -230 5686 -233Q5688 -234 5692 -234Q5699 -234 5699 -230Q5699 -226 5692 -223Q5657 -207 5629.5 -206.0Q5602 -205 5582 -205Q5584 -180 5571.0 -151.5Q5558 -123 5544 -101Q5527 -76 5505.0 -50.0Q5483 -24 5456.0 -6.5Q5429 11 5395 11ZM5675 50Q5635 50 5635 28Q5635 12 5652 -5Q5665 -18 5681.0 -26.0Q5697 -34 5701 -34Q5706 -34 5706.5 -30.0Q5707 -26 5702 -24Q5692 -18 5679.5 -7.5Q5667 3 5667 15Q5667 31 5686 31Q5709 31 5734.0 17.5Q5759 4 5780.5 -17.0Q5802 -38 5815.5 -59.5Q5829 -81 5829 -97Q5829 -110 5820.0 -121.0Q5811 -132 5783 -147Q5764 -158 5746.5 -170.0Q5729 -182 5720 -199Q5712 -185 5699.5 -165.5Q5687 -146 5670 -125Q5664 -119 5658 -119Q5652 -119 5652 -124Q5652 -127 5657 -134Q5684 -166 5697.0 -193.0Q5710 -220 5715 -234Q5719 -263 5742.0 -289.0Q5765 -315 5798.0 -334.5Q5831 -354 5865.5 -365.0Q5900 -376 5927 -376Q5954 -376 5975.0 -366.0Q5996 -356 5996 -334Q5996 -322 5989 -308Q5980 -289 5959 -274Q5958 -273 5956 -273Q5948 -273 5948 -280Q5948 -285 5953 -290Q5961 -297 5966.0 -307.0Q5971 -317 5971 -326Q5971 -344 5950 -344Q5928 -344 5892.5 -332.0Q5857 -320 5827 -301Q5793 -279 5770.0 -253.0Q5747 -227 5747 -207Q5747 -197 5753.5 -188.5Q5760 -180 5779 -169Q5789 -163 5807.0 -153.5Q5825 -144 5838 -136Q5879 -111 5879 -83Q5879 -60 5859.0 -36.5Q5839 -13 5807.5 6.5Q5776 26 5741.0 38.0Q5706 50 5675 50ZM6009 10Q5991 10 5976.5 2.0Q5962 -6 5955 -28Q5954 -31 5953.5 -34.0Q5953 -37 5953 -41Q5953 -61 5962.0 -91.0Q5971 -121 5984 -149Q5978 -141 5970.0 -129.5Q5962 -118 5947 -100Q5943 -96 5938 -96Q5931 -96 5931 -104Q5931 -110 5935 -114Q5961 -147 5981.5 -173.0Q6002 -199 6012 -217Q6012 -219 6018.0 -229.5Q6024 -240 6034 -259Q6026 -258 6020.5 -257.5Q6015 -257 6011 -257Q6004 -257 5999.0 -263.0Q5994 -269 5998 -278Q6003 -292 6020.0 -294.0Q6037 -296 6050 -297Q6051 -299 6054 -299Q6066 -321 6077.0 -342.0Q6088 -363 6095.5 -377.0Q6103 -391 6103 -392Q6123 -424 6129.0 -434.5Q6135 -445 6145 -447Q6156 -448 6168.5 -446.0Q6181 -444 6185 -437Q6188 -433 6188 -427Q6188 -418 6184.0 -409.5Q6180 -401 6176 -396Q6172 -389 6165.5 -386.5Q6159 -384 6154 -374Q6144 -355 6132.0 -333.0Q6120 -311 6107 -291L6119 -292Q6143 -294 6164.5 -297.0Q6186 -300 6214 -299Q6219 -299 6224.5 -297.5Q6230 -296 6230 -293Q6230 -289 6204 -282Q6194 -278 6160.5 -273.5Q6127 -269 6092 -265Q6082 -246 6074.0 -233.5Q6066 -221 6063 -215Q6041 -169 6023.5 -131.5Q6006 -94 6004 -70Q6003 -66 6003.0 -62.5Q6003 -59 6003 -55Q6003 -15 6029 -15Q6045 -15 6070.0 -32.5Q6095 -50 6121.0 -75.5Q6147 -101 6168.5 -124.5Q6190 -148 6198 -160Q6201 -163 6204 -163Q6208 -163 6210.5 -160.0Q6213 -157 6211 -152Q6202 -135 6180.5 -109.5Q6159 -84 6132.5 -58.5Q6106 -33 6081 -15Q6068 -5 6048.5 2.5Q6029 10 6009 10ZM6273 0Q6263 0 6251.5 -2.0Q6240 -4 6240 -16Q6240 -21 6251.0 -31.5Q6262 -42 6275.0 -51.5Q6288 -61 6294 -61Q6301 -61 6300.5 -54.0Q6300 -47 6300 -39Q6300 -35 6295.0 -25.5Q6290 -16 6284.0 -8.0Q6278 0 6273 0Z", "vb": [-32, -644, 6373, 1053]}, "abhi": {"d": "M133 -274Q133 -249 224 -226Q276 -214 350 -206Q257 -289 166 -289Q133 -289 133 -274ZM529 -7Q550 -7 633 -172Q521 -170 493.5 -170.0Q466 -170 416 -172Q475 -101 512 -21Q518 -7 529 -7ZM842 -684Q809 -684 754.0 -613.5Q699 -543 608.5 -414.0Q518 -285 440 -200Q510 -198 562.5 -198.0Q615 -198 647 -200Q718 -340 785.5 -496.0Q853 -652 853 -675Q853 -684 842 -684ZM701 -202 909 -217Q917 -217 917.0 -209.0Q917 -201 903.5 -192.0Q890 -183 851.0 -180.0Q812 -177 686 -174Q584 25 542 25Q514 25 502 0Q458 -89 399 -156L370 -128Q222 10 25 10Q-25 10 -62.5 2.5Q-100 -5 -100 -18Q-100 -27 -89 -27Q-82 -27 -72 -23Q-42 -11 41 -11Q190 -11 323 -128Q371 -173 372 -174Q278 -181 214 -199Q100 -231 100 -275Q100 -290 116.5 -300.0Q133 -310 160 -310Q279 -310 386 -203Q395 -203 399 -202Q488 -298 616 -474Q661 -535 706 -592Q800 -710 860 -710Q899 -710 899 -676Q899 -653 834.5 -496.5Q770 -340 701 -202ZM1226 -162H1249Q1156 -78 1065 -66Q1043 -34 1013.5 -11.0Q984 12 964 12Q940 12 940.0 -16.0Q940 -44 965 -96Q921 -135 921 -183Q921 -209 939.0 -225.0Q957 -241 990.0 -241.0Q1023 -241 1043 -231Q1141 -383 1268 -552L1311 -609Q1321 -620 1331 -620Q1346 -620 1348 -605V-598Q1348 -596 1343 -589Q1146 -330 1068 -215Q1094 -189 1094.0 -154.0Q1094 -119 1077 -85Q1145 -93 1226 -162ZM951 -181Q951 -151 978 -122Q997 -157 1033 -214Q1019 -222 1002 -222Q951 -222 951 -181ZM1001 -103Q1025 -88 1050 -85Q1068 -117 1068.0 -144.0Q1068 -171 1054 -193Q1020 -143 1001 -103ZM997 -32Q1014 -32 1038 -65Q1014 -65 990 -78Q985 -61 985 -53Q985 -32 997 -32ZM1554 -167Q1561 -172 1567.0 -172.0Q1573 -172 1573 -166V-163Q1494 -97 1418 -45Q1342 13 1312.5 13.0Q1283 13 1283 -11Q1283 -37 1321.0 -99.0Q1359 -161 1359.0 -165.5Q1359 -170 1355 -170Q1342 -170 1275.5 -112.5Q1209 -55 1159 -6Q1140 11 1132.5 11.0Q1125 11 1125.0 0.0Q1125 -11 1138 -28L1487 -560Q1498 -577 1516.5 -577.0Q1535 -577 1535 -565Q1535 -558 1529.5 -550.0Q1524 -542 1462.0 -454.5Q1400 -367 1390.5 -351.0Q1381 -335 1303.5 -219.0Q1226 -103 1221.5 -96.5Q1217 -90 1217.0 -86.0Q1217 -82 1220.5 -82.0Q1224 -82 1225 -83Q1257 -115 1312.5 -157.5Q1368 -200 1389 -200Q1397 -200 1403.0 -194.5Q1409 -189 1409.0 -176.5Q1409 -164 1370.0 -108.5Q1331 -53 1331.0 -36.5Q1331 -20 1341.5 -20.0Q1352 -20 1394 -48Q1469 -98 1532 -149ZM1660.5 -302.0Q1670 -302 1675.5 -296.0Q1681 -290 1681.0 -279.0Q1681 -268 1666.0 -251.0Q1651 -234 1640.0 -234.0Q1629 -234 1624.0 -240.5Q1619 -247 1619.0 -255.5Q1619 -264 1635.0 -283.0Q1651 -302 1660.5 -302.0ZM1743 -167Q1751 -172 1755.5 -172.0Q1760 -172 1760 -166V-163Q1764 -163 1706.5 -119.0Q1649 -75 1583.5 -31.0Q1518 13 1501 13Q1472 13 1472 -11Q1472 -40 1522.0 -120.5Q1572 -201 1595 -201Q1612 -201 1612.0 -188.0Q1612 -175 1566.0 -117.0Q1520 -59 1520 -34Q1520 -20 1530.5 -20.0Q1541 -20 1583 -48Q1658 -98 1721 -149Z", "vb": [-140, -750, 1940, 815]}};
+</script>
+<script>
+(() => {
+'use strict';
+const root = document.documentElement;
+root.classList.add('js');
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const clamp = (v, a = 0, b = 1) => v < a ? a : v > b ? b : v;
+const lerp = (a, b, t) => a + (b - a) * t;
+const sm = t => t * t * (3 - 2 * t);
+const E = {
+  out: t => 1 - Math.pow(1 - t, 3),
+  inOut: t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2,
+  back: t => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2); },
+  bounce: t => { const n = 7.5625, d = 2.75; if (t < 1 / d) return n * t * t; if (t < 2 / d) return n * (t -= 1.5 / d) * t + .75; if (t < 2.5 / d) return n * (t -= 2.25 / d) * t + .9375; return n * (t -= 2.625 / d) * t + .984375; },
+  elastic: t => t === 0 || t === 1 ? t : Math.pow(2, -9 * t) * Math.sin((t * 10 - .75) * (2 * Math.PI) / 3.2) + 1
+};
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const wait = ms => new Promise(r => setTimeout(r, ms));
+const NS = 'http://www.w3.org/2000/svg';
+function trackProg(el) { const r = el.getBoundingClientRect(); const tot = r.height - innerHeight; return tot > 0 ? clamp(-r.top / tot) : 0; }
+function visible(el, m = 0) { const r = el.getBoundingClientRect(); return r.bottom > -m && r.top < innerHeight + m; }
+
+/* ---------------- handwriting ---------------- */
+$$('.hw').forEach(svg => {
+  const P = PATHS[svg.dataset.path]; if (!P) return;
+  svg.setAttribute('viewBox', P.vb.join(' '));
+  svg.setAttribute('role', 'img');
+  const p = document.createElementNS(NS, 'path');
+  p.setAttribute('d', P.d);
+  svg.appendChild(p);
+  let L = 20000; try { L = Math.ceil(p.getTotalLength()); } catch (e) {}
+  svg.style.setProperty('--len', L);
+  if (svg.dataset.dur) svg.style.setProperty('--dur', svg.dataset.dur);
+});
+
+/* ---------------- reveals ---------------- */
+const rvIO = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); rvIO.unobserve(e.target); }
+}), { threshold: .2, rootMargin: '0px 0px -6% 0px' });
+$$('[data-rv], .hw, .print').forEach(el => { if (el.id !== 'yp') rvIO.observe(el); });
+
+/* ---------------- music box ---------------- */
+const Sound = (() => {
+  let ctx = null, master, wet, on = false, timer = null, loopStart = 0, idx = 0, noiseBuf = null;
+  const BPM = 78, B = 60 / BPM, LOOP = 48;
+  const mel = [[69,1],[72,1],[77,1],[76,2],[74,1],[72,1],[69,1],[65,1],[67,3],[69,1],[72,1],[77,1],[79,2],[77,1],[76,1],[72,1],[74,1],[72,3],[74,1],[77,1],[81,1],[79,2],[76,1],[77,1],[74,1],[70,1],[69,3],[70,1],[74,1],[79,1],[77,2],[76,1],[74,1],[72,1],[76,1],[77,3]];
+  const bars = [[53,16],[48,16],[53,16],[48,16],[53,16],[48,16],[48,16],[53,16],[50,15],[48,16],[46,16],[53,16],[55,15],[53,16],[48,16],[53,16]];
+  const ev = []; let b = 0;
+  for (const [n, d] of mel) { ev.push({ t: b, n, d, v: .42 }); b += d; }
+  bars.forEach(([r, third], i) => { const t = i * 3; ev.push({ t, n: r, d: 2, v: .2 }); ev.push({ t: t + 1, n: r + 7, d: 1, v: .1 }); ev.push({ t: t + 2, n: r + third, d: 1, v: .09 }); });
+  ev.sort((a, c) => a.t - c.t);
+  function note(n, t, v, len) {
+    const f = 440 * Math.pow(2, (n - 69) / 12);
+    const o1 = ctx.createOscillator(), o2 = ctx.createOscillator(), g = ctx.createGain(), g2 = ctx.createGain();
+    o1.type = 'sine'; o2.type = 'sine'; o1.frequency.value = f; o2.frequency.value = f * 4.008;
+    g2.gain.value = .16;
+    const dec = Math.min(3, .8 + len);
+    g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(v, t + .005); g.gain.exponentialRampToValueAtTime(.0001, t + dec);
+    o1.connect(g); o2.connect(g2); g2.connect(g); g.connect(master);
+    o1.start(t); o2.start(t); o1.stop(t + dec + .05); o2.stop(t + dec + .05);
+  }
+  function init() {
+    const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return false;
+    ctx = new AC();
+    master = ctx.createGain(); master.gain.value = 0;
+    const conv = ctx.createConvolver(); const len = ctx.sampleRate * 2.8; const ir = ctx.createBuffer(2, len, ctx.sampleRate);
+    for (let c = 0; c < 2; c++) { const d = ir.getChannelData(c); for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.6); }
+    conv.buffer = ir; wet = ctx.createGain(); wet.gain.value = .45;
+    master.connect(ctx.destination); master.connect(conv); conv.connect(wet); wet.connect(ctx.destination);
+    noiseBuf = ctx.createBuffer(1, ctx.sampleRate * .4, ctx.sampleRate); const nd = noiseBuf.getChannelData(0); for (let i = 0; i < nd.length; i++) nd[i] = Math.random() * 2 - 1;
+    return true;
+  }
+  function sched() {
+    const ahead = ctx.currentTime + .3;
+    while (true) {
+      if (idx >= ev.length) { idx = 0; loopStart += LOOP * B; }
+      const e = ev[idx]; const t = loopStart + e.t * B;
+      if (t > ahead) break;
+      if (t > ctx.currentTime - .05) note(e.n, t, e.v, e.d * B);
+      idx++;
+    }
+  }
+  function start() {
+    if (!ctx && !init()) return;
+    if (ctx.state === 'suspended') ctx.resume();
+    if (on) return; on = true;
+    loopStart = ctx.currentTime + .15; idx = 0;
+    master.gain.cancelScheduledValues(ctx.currentTime); master.gain.setValueAtTime(master.gain.value, ctx.currentTime); master.gain.linearRampToValueAtTime(.17, ctx.currentTime + 2.5);
+    sched(); timer = setInterval(sched, 60);
+    btn.classList.add('on'); btn.setAttribute('aria-pressed', 'true');
+  }
+  function stop() {
+    if (!ctx || !on) return; on = false;
+    master.gain.cancelScheduledValues(ctx.currentTime); master.gain.setValueAtTime(master.gain.value, ctx.currentTime); master.gain.linearRampToValueAtTime(0, ctx.currentTime + .6);
+    clearInterval(timer);
+    btn.classList.remove('on'); btn.setAttribute('aria-pressed', 'false');
+  }
+  function noise(t, dur, freq, q, v, type = 'bandpass') {
+    const s = ctx.createBufferSource(); s.buffer = noiseBuf; const f = ctx.createBiquadFilter(); f.type = type; f.frequency.value = freq; f.Q.value = q;
+    const g = ctx.createGain(); g.gain.setValueAtTime(v, t); g.gain.exponentialRampToValueAtTime(.0001, t + dur);
+    s.connect(f); f.connect(g); g.connect(ctx.destination); s.start(t); s.stop(t + dur + .02);
+  }
+  function sfx(name) {
+    if (!ctx || !on) return; const t = ctx.currentTime + .01;
+    if (name === 'crack') { noise(t, .09, 2400, 1.1, .5); noise(t + .05, .12, 1300, 1.4, .35); const o = ctx.createOscillator(), g = ctx.createGain(); o.frequency.setValueAtTime(140, t); o.frequency.exponentialRampToValueAtTime(55, t + .15); g.gain.setValueAtTime(.4, t); g.gain.exponentialRampToValueAtTime(.0001, t + .2); o.connect(g); g.connect(ctx.destination); o.start(t); o.stop(t + .22); }
+    if (name === 'chime') { note(84, t, .3, .8); note(91, t + .09, .22, .8); }
+    if (name === 'pencil') { noise(t, .22, 4200, .7, .05, 'highpass'); }
+    if (name === 'flip') { noise(t, .05, 3000, 2, .12); }
+    if (name === 'join') { [65, 69, 72, 77, 81, 84, 89].forEach((n, i) => note(n, t + i * .11, .34, 2)); }
+  }
+  const btn = $('#music');
+  btn.addEventListener('click', () => on ? stop() : start());
+  return { start, stop, sfx, get on() { return on; } };
+})();
+
+/* ---------------- petals & dust (fx canvas) ---------------- */
+const FX = (() => {
+  const c = $('#fx'), x = c.getContext('2d');
+  let W = 0, H = 0, parts = [], running = false, last = 0;
+  function size() { const d = Math.min(devicePixelRatio || 1, 2); W = innerWidth; H = innerHeight; c.width = W * d; c.height = H * d; x.setTransform(d, 0, 0, d, 0, 0); }
+  size(); addEventListener('resize', size);
+  const cols = ['#f4b6bf', '#efa2ae', '#f8cdd3', '#fbe0e3', '#e8a0ab', '#f3d08f', '#fff3f0'];
+  function go() { if (!running) { running = true; last = performance.now(); requestAnimationFrame(tick); } }
+  function burst(px, py, n = 40, o = {}) {
+    if (reduce) return;
+    for (let i = 0; i < n; i++) {
+      const a = o.up ? -Math.PI / 2 + (Math.random() - .5) * 2.4 : Math.random() * Math.PI * 2;
+      const sp = (o.speed || 4) * (.4 + Math.random() * .9);
+      parts.push({ x: px + (Math.random() - .5) * (o.spread || 10), y: py + (Math.random() - .5) * (o.spread || 10), vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - (o.lift || 1), r: 4 + Math.random() * 5, rot: Math.random() * 6.28, vr: (Math.random() - .5) * .18, life: 0, max: 2 + Math.random() * 1.6, col: cols[(Math.random() * cols.length) | 0], g: .045, drag: .975, kind: 'petal', sw: Math.random() * 6.28 });
+    }
+    go();
+  }
+  function dust(list) {
+    if (reduce) return;
+    for (const p of list) parts.push({ x: p.x, y: p.y, vx: .4 + Math.random() * 1.1, vy: -(.3 + Math.random() * 1.1), r: 1.5, rot: Math.random() * 6.28, vr: (Math.random() - .5) * .2, life: -p.delay, max: 1.6 + Math.random() * .9, col: Math.random() < .5 ? '#efa2ae' : '#f6c3ca', ink: '#5b3139', g: -.006, drag: .992, kind: 'dust', sw: Math.random() * 6.28 });
+    go();
+  }
+  function tick(t) {
+    const dt = Math.min(.05, (t - last) / 1000); last = t;
+    x.clearRect(0, 0, W, H);
+    for (let i = parts.length - 1; i >= 0; i--) {
+      const p = parts[i]; p.life += dt;
+      if (p.kind === 'dust' && p.life < 0) { x.globalAlpha = 1; x.fillStyle = p.ink; x.fillRect(p.x, p.y, 1.6, 1.6); continue; }
+      if (p.life > p.max) { parts.splice(i, 1); continue; }
+      const k = p.life / p.max;
+      p.vx *= p.drag; p.vy = p.vy * p.drag + p.g; p.x += p.vx + Math.sin(p.life * 3 + p.sw) * .35; p.y += p.vy; p.rot += p.vr;
+      x.globalAlpha = Math.min(1, (1 - k) * 1.6);
+      if (p.kind === 'dust') {
+        const grow = Math.min(1, p.life * 2.2);
+        x.fillStyle = grow < .35 ? p.ink : p.col;
+        x.save(); x.translate(p.x, p.y); x.rotate(p.rot); x.beginPath(); x.ellipse(0, 0, 1 + grow * 2.6, .8 + grow * 1.3, 0, 0, 6.283); x.fill(); x.restore();
+      } else {
+        x.fillStyle = p.col; x.save(); x.translate(p.x, p.y); x.rotate(p.rot); x.beginPath(); x.ellipse(0, 0, p.r, p.r * .58, 0, 0, 6.283); x.fill();
+        x.globalAlpha *= .35; x.fillStyle = '#fff'; x.beginPath(); x.ellipse(-p.r * .25, -p.r * .1, p.r * .45, p.r * .18, 0, 0, 6.283); x.fill(); x.restore();
+      }
+    }
+    x.globalAlpha = 1;
+    if (parts.length) requestAnimationFrame(tick); else { running = false; x.clearRect(0, 0, W, H); }
+  }
+  return { burst, dust };
+})();
+
+/* ---------------- envelope ---------------- */
+const env = $('#env'); let opened = false;
+function openEnv() {
+  if (opened) return; opened = true;
+  Sound.start(); Sound.sfx('crack');
+  env.classList.add('crack'); document.body.classList.add('opened');
+  $('#music').classList.add('show');
+  setTimeout(() => env.classList.add('open'), reduce ? 0 : 420);
+  setTimeout(() => { env.classList.add('rise'); const r = env.getBoundingClientRect(); FX.burst(r.left + r.width / 2, r.top + r.height * .3, 34, { up: true, speed: 5 }); }, reduce ? 0 : 1050);
+  setTimeout(() => $('#letter').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }), reduce ? 200 : 2500);
+}
+env.addEventListener('click', openEnv);
+env.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openEnv(); } });
+
+/* ---------------- webgl check ---------------- */
+let GL_OK = false;
+try { const c = document.createElement('canvas'); GL_OK = !!(window.THREE && (c.getContext('webgl') || c.getContext('experimental-webgl'))); } catch (e) {}
+
+function canvasTex(w, h, draw) { const c = document.createElement('canvas'); c.width = w; c.height = h; draw(c.getContext('2d'), w, h); const t = new THREE.CanvasTexture(c); return t; }
+
+/* ---------------- 3D portraits ---------------- */
+const PD = [
+  { k: 'candle', w: 1200, h: 675, ft: 0, c: 'Chole, rotis, one candle, and this smile. I\'d eat by candlelight every night for it.' },
+  { k: 'mug', w: 760, h: 1351, ft: .53, c: 'You, a pink mug, and that grin. Thank you for making coffee.' },
+  { k: 'forest', w: 760, h: 1351, ft: .52, c: 'The face you make at nature. The trees never stood a chance.' },
+  { k: 'clip', w: 760, h: 1351, ft: .57, c: 'Hair clip in your mouth and that look. I\'d know it anywhere.' },
+  { k: 'chin', w: 760, h: 1351, ft: .46, c: 'This face. I know exactly what it means, and I still melt.' },
+  { k: 'sitting', w: 760, h: 1351, ft: .47, c: 'Just you, being you. My favourite view in any room.' },
+  { k: 'vigeland', w: 760, h: 1351, ft: 0, c: 'The fountain, the whole sky, and somehow I only see you.' }
+];
+const capBox = $('#pt-cap');
+PD.forEach((d, i) => { const p = document.createElement('p'); p.textContent = d.c; if (i === 0) p.classList.add('on'); capBox.appendChild(p); });
+
+function Portraits() {
+  const sec = $('#portraits'), st = sec.querySelector('.sticky'), canvas = st.querySelector('canvas');
+  const R = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  R.setPixelRatio(Math.min(devicePixelRatio || 1, 1.75));
+  const S = new THREE.Scene(); S.fog = new THREE.Fog(0xf3e2dc, 10, 32);
+  const cam = new THREE.PerspectiveCamera(36, 1, .1, 120);
+  const TL = new THREE.TextureLoader();
+  const GAP = 13;
+  const shadowTex = canvasTex(256, 256, (x, w, h) => { x.shadowColor = 'rgba(91,49,57,.55)'; x.shadowBlur = 38; x.fillStyle = 'rgba(91,49,57,.55)'; x.fillRect(48, 48, w - 96, h - 96); });
+  const items = PD.map((d, i) => {
+    const g = new THREE.Group(); const side = i % 2 ? 1 : -1;
+    g.position.set(side * 1.15, [0, .25, -.15][i % 3], -i * GAP); g.rotation.y = -side * .16; S.add(g);
+    const asp = d.w / d.h; const PH = asp > 1 ? 2.35 : 3.1, PW = PH * asp, ft = d.ft;
+    const iTop = PH / 2 - ft * PH, iBot = -PH / 2, iH = iTop - iBot, iCy = (iTop + iBot) / 2, Bd = .17;
+    const sh = new THREE.Mesh(new THREE.PlaneGeometry(PW + Bd * 2 + .9, iH + Bd * 2 + .9), new THREE.MeshBasicMaterial({ map: shadowTex, transparent: true, depthWrite: false, opacity: .55 }));
+    sh.position.set(.22, iCy - .26, -.2); g.add(sh);
+    const fw = PW + Bd * 2, fh = iH + Bd * 2;
+    const front = canvasTex(Math.round(fw * 120), Math.round(fh * 120), (x, w, h) => {
+      const gr = x.createLinearGradient(0, 0, w, h); gr.addColorStop(0, '#fffcf7'); gr.addColorStop(1, '#f7ece2'); x.fillStyle = gr; x.fillRect(0, 0, w, h);
+      const b = Bd * 120; x.strokeStyle = 'rgba(201,114,127,.45)'; x.lineWidth = 3; x.strokeRect(b - 5, b - 5, w - 2 * b + 10, h - 2 * b + 10);
+      x.fillStyle = 'rgba(154,79,92,.6)'; x.font = '22px "Architects Daughter", cursive'; x.textAlign = 'right'; x.fillText('0' + (i + 1), w - 14, h - 10);
+    });
+    const edge = new THREE.MeshBasicMaterial({ color: 0xe6d2c4 });
+    const frame = new THREE.Mesh(new THREE.BoxGeometry(fw, fh, .09), [edge, edge, edge, edge, new THREE.MeshBasicMaterial({ map: front }), edge]);
+    frame.position.set(0, iCy, 0); g.add(frame);
+    const bgT = TL.load(`a/${d.k}_bg.jpg`); bgT.repeat.set(1, 1 - ft);
+    const bg = new THREE.Mesh(new THREE.PlaneGeometry(PW, iH), new THREE.MeshBasicMaterial({ map: bgT }));
+    bg.position.set(0, iCy, .05); g.add(bg);
+    const seg = asp > 1 ? [140, 80] : [84, 150];
+    const geo = new THREE.PlaneGeometry(PW, PH, seg[0], seg[1]);
+    const fgT = TL.load(`a/${d.k}_fg.webp`);
+    const fg = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ map: fgT, transparent: true, alphaTest: .06 }));
+    fg.position.set(0, 0, .085); g.add(fg);
+    const img = new Image();
+    img.onload = () => {
+      const c = document.createElement('canvas'); c.width = img.width; c.height = img.height; const x = c.getContext('2d'); x.drawImage(img, 0, 0);
+      const px = x.getImageData(0, 0, c.width, c.height).data; const pos = geo.attributes.position, uv = geo.attributes.uv;
+      for (let j = 0; j < pos.count; j++) {
+        const u = uv.getX(j), v = uv.getY(j);
+        const ix = Math.min(c.width - 1, Math.round(u * (c.width - 1))), iy = Math.min(c.height - 1, Math.round((1 - v) * (c.height - 1)));
+        pos.setZ(j, (px[(iy * c.width + ix) * 4] / 255) * .55 * sm(clamp(v / .07)) * sm(clamp((1 - v) / .04)));
+      }
+      pos.needsUpdate = true;
+    };
+    img.src = `a/${d.k}_d.jpg`;
+    return { g, PW, PH, iCy, fg, base: g.position.y, ph: Math.random() * 6 };
+  });
+  const petalTex = canvasTex(64, 64, (x) => { x.translate(32, 32); x.rotate(.6); const gr = x.createRadialGradient(-4, -4, 2, 0, 0, 28); gr.addColorStop(0, '#fff1f3'); gr.addColorStop(1, '#eea3ae'); x.fillStyle = gr; x.beginPath(); x.ellipse(0, 0, 26, 14, 0, 0, 6.283); x.fill(); });
+  const PN = 170, pp = new Float32Array(PN * 3), pph = [];
+  for (let i = 0; i < PN; i++) { pp[i * 3] = (Math.random() - .5) * 12; pp[i * 3 + 1] = (Math.random() - .5) * 7 + .5; pp[i * 3 + 2] = 3 - Math.random() * (GAP * PD.length + 6); pph.push(Math.random() * 6.28); }
+  const pg = new THREE.BufferGeometry(); pg.setAttribute('position', new THREE.BufferAttribute(pp, 3));
+  const ptsMat = new THREE.ShaderMaterial({ transparent: true, depthWrite: false, uniforms: { map: { value: petalTex }, uScale: { value: 400 } },
+    vertexShader: 'uniform float uScale; varying float vA; void main(){ vec4 mv = modelViewMatrix * vec4(position, 1.0); float d = -mv.z; gl_PointSize = min(.17 * uScale / max(d, .1), 26.0); vA = smoothstep(1.2, 3.0, d) * (1.0 - smoothstep(18.0, 30.0, d)); gl_Position = projectionMatrix * mv; }',
+    fragmentShader: 'uniform sampler2D map; varying float vA; void main(){ vec4 c = texture2D(map, gl_PointCoord); gl_FragColor = vec4(c.rgb, c.a * vA * .9); if (gl_FragColor.a < .01) discard; }' });
+  const pts = new THREE.Points(pg, ptsMat);
+  S.add(pts);
+  let views = [], target = 0, cur = 0, active = 0, live = false, last = 0, mx = 0, my = 0;
+  const caps = $$('p', capBox), count = $('#pt-count');
+  function resize() {
+    const w = st.clientWidth, h = st.clientHeight; if (!w || !h) return;
+    R.setSize(w, h, false); cam.aspect = w / h; cam.fov = w < 760 ? 40 : 34; cam.clearViewOffset(); ptsMat.uniforms.uScale.value = h * R.getPixelRatio() / (2 * Math.tan(cam.fov * Math.PI / 360));
+    if (w < 760) cam.setViewOffset(w, h, 0, h * .07, w, h);
+    cam.updateProjectionMatrix();
+    const vf = cam.fov * Math.PI / 180, hf = 2 * Math.atan(Math.tan(vf / 2) * cam.aspect);
+    views = items.map(it => {
+      const n = new THREE.Vector3(Math.sin(it.g.rotation.y), 0, Math.cos(it.g.rotation.y));
+      const tgt = new THREE.Vector3(it.g.position.x, it.g.position.y + .1, it.g.position.z);
+      const dist = Math.max((it.PH * .64) / Math.tan(vf / 2), (it.PW * .6 + .3) / Math.tan(hf / 2));
+      return { pos: tgt.clone().add(n.multiplyScalar(dist + .2)), tgt };
+    });
+  }
+  resize();
+  addEventListener('pointermove', e => { if (e.pointerType === 'mouse') { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; } });
+  const P = new THREE.Vector3(), T = new THREE.Vector3(); 
+  function scroll() {
+    live = visible(sec, 200);
+    target = trackProg(sec) * (items.length - 1);
+  }
+  function frame(t) {
+    if (!live) return;
+    const dt = Math.min(.05, t - last || .016); last = t;
+    cur += (target - cur) * Math.min(1, dt * (reduce ? 30 : 5));
+    const i = Math.min(items.length - 2, Math.floor(cur)), fr = cur - i;
+    const e = sm(clamp((fr - .18) / .64));
+    const a = views[i], b = views[i + 1];
+    P.lerpVectors(a.pos, b.pos, e); T.lerpVectors(a.tgt, b.tgt, e);
+    P.y += Math.sin(e * Math.PI) * .45;
+    if (!reduce) { P.x += Math.sin(t * .45) * .26 + mx * .9; P.y += Math.cos(t * .34) * .13 - my * .5; }
+    cam.position.copy(P); cam.lookAt(T);
+    items.forEach(it => { if (!reduce) it.g.position.y = it.base + Math.sin(t * .6 + it.ph) * .05; });
+    const pa = pg.attributes.position.array;
+    if (!reduce) for (let k = 0; k < PN; k++) { pa[k * 3 + 1] -= dt * .2; pa[k * 3] += Math.sin(t * .7 + pph[k]) * dt * .2; if (pa[k * 3 + 1] < -3.2) pa[k * 3 + 1] = 3.8; }
+    pg.attributes.position.needsUpdate = true;
+    const na = Math.round(cur);
+    if (na !== active) { active = na; caps.forEach((p, k) => p.classList.toggle('on', k === na)); count.textContent = String(na + 1).padStart(2, '0') + ' / 0' + items.length; }
+    R.render(S, cam);
+  }
+  return { resize, scroll, frame };
+}
+
+/* ---------------- clock ---------------- */
+const CL = [
+  { t: '1:09', m: 69, k: 'husky', b: 9, chg: 1, c: 'The husky joined the call. Neither of us hung up.' },
+  { t: '1:33', m: 93, k: 'plain', b: 56, c: 'No smile, no filter. Still the face I want to see first, every day.' },
+  { t: '2:03', m: 123, k: 'duck', b: 27, c: 'I don\'t know what this face is. I love it anyway.' },
+  { t: '2:40', m: 160, k: 'laugh', b: 12, chg: 1, c: 'You laughing at something I said. Twelve percent battery. Worth it.' },
+  { t: '2:40', m: 160.5, k: 'scrunch', b: 12, chg: 1, c: 'Same minute. This scrunch should be illegal.' },
+  { t: '3:19', m: 199, k: 'story', b: 44, c: 'Mid-story, eyes closed. I heard every word.', contain: 1 },
+  { t: '5:11', m: 311, k: 'hoodie', b: 81, c: 'Rain on your hoodie, still on the call with me.' },
+  { t: '6:18', m: 378, k: 'sun', b: 78, c: 'Sun on your face. I didn\'t want to blink.' },
+  { t: '7:02', m: 422, k: 'cookie', b: 30, c: 'The cookie announcement. Breaking news, apparently.' },
+  { t: '8:04', m: 484, k: 'passport', b: 71, c: 'Five passport photos and one very serious face. My favourite photoshoot.' }
+];
+const Clock = (() => {
+  const sec = $('#clock'), screen = $('#screen'), capEl = $('#clock-cap'), phone = $('#phone');
+  const ticks = $('#ticks');
+  for (let i = 0; i < 60; i++) { const a = i * 6 * Math.PI / 180, r1 = i % 5 ? 86 : 82, r2 = 90; const l = document.createElementNS(NS, 'line'); l.setAttribute('x1', 100 + Math.sin(a) * r1); l.setAttribute('y1', 100 - Math.cos(a) * r1); l.setAttribute('x2', 100 + Math.sin(a) * r2); l.setAttribute('y2', 100 - Math.cos(a) * r2); l.setAttribute('class', 'tick' + (i % 5 ? '' : ' h')); ticks.appendChild(l); }
+  for (let h = 1; h <= 12; h++) { const a = h * 30 * Math.PI / 180; const tx = document.createElementNS(NS, 'text'); tx.setAttribute('x', 100 + Math.sin(a) * 71); tx.setAttribute('y', 100 - Math.cos(a) * 71 + 4.5); tx.setAttribute('text-anchor', 'middle'); tx.setAttribute('class', 'num'); tx.textContent = h; ticks.appendChild(tx); }
+  const imgs = CL.map((d, i) => { const im = document.createElement('img'); im.src = `img/${d.k}.jpg`; im.alt = `Sakshi on a video call at ${d.t}`; im.loading = 'lazy'; if (d.contain) im.classList.add('contain'); if (!i) im.classList.add('on'); screen.appendChild(im); return im; });
+  const capsE = CL.map((d, i) => { const p = document.createElement('p'); p.innerHTML = `<b>${d.t}</b>`; p.append(d.c); if (!i) p.classList.add('on'); capEl.appendChild(p); return p; });
+  const hh = $('#hh'), mh = $('#mh'), sbT = $('#sb-time'), sbP = $('#sb-pct'), batt = $('#sb-batt');
+  let act = -1;
+  function upd() {
+    if (!visible(sec, 100)) return;
+    const p = trackProg(sec), f = p * (CL.length - 1), i = Math.min(CL.length - 2, Math.floor(f)), fr = f - i;
+    const m = lerp(CL[i].m, CL[i + 1].m, sm(clamp((fr - .35) / .5)));
+    mh.setAttribute('transform', `rotate(${m * 6} 100 100)`); hh.setAttribute('transform', `rotate(${m * .5} 100 100)`);
+    const n = Math.round(f);
+    phone.style.setProperty('--ry', ((fr - .5) * -12).toFixed(2) + 'deg'); phone.style.setProperty('--rx', (Math.sin(f * 1.3) * 3).toFixed(2) + 'deg');
+    if (n !== act) {
+      act = n; const d = CL[n];
+      imgs.forEach((im, k) => im.classList.toggle('on', k === n)); capsE.forEach((c, k) => c.classList.toggle('on', k === n));
+      sbT.textContent = d.t; sbP.textContent = d.b + '%'; batt.style.setProperty('--b', d.b); batt.classList.toggle('low', d.b < 15); batt.classList.toggle('chg', !!d.chg);
+    }
+  }
+  return { upd };
+})();
+
+/* ---------------- kintsugi ---------------- */
+const Kin = (() => {
+  const sec = $('#crack'), wrap = $('.plate-wrap'), pA = $('#pA'), pB = $('#pB'), gold = $('#crackGold'), dark = $('#crackDark'), gl = $('#crackGlint');
+  const L = gold.getTotalLength(); gold.style.strokeDasharray = L; gold.style.strokeDashoffset = L;
+  const GLL = gl.getTotalLength(); gl.style.strokeDasharray = `30 ${GLL}`; gl.style.setProperty('--gl', GLL + 30);
+  let done = false;
+  function upd() {
+    if (!visible(sec, 100)) return;
+    let p;
+    if (innerWidth >= 900) { const r = sec.getBoundingClientRect(); p = clamp((innerHeight * .55 - r.top) / (r.height * .7)); }
+    else { const r = wrap.getBoundingClientRect(); p = clamp((innerHeight * .95 - r.top) / (innerHeight * .65)); }
+    const e = E.inOut(p), k = 1 - e;
+    gold.style.strokeDashoffset = L * k;
+    pA.setAttribute('transform', `translate(${-9 * k} ${-6 * k}) rotate(${-2 * k} 200 200)`);
+    pB.setAttribute('transform', `translate(${9 * k} ${6 * k}) rotate(${1.6 * k} 200 200)`);
+    dark.style.opacity = 1 - e;
+    gl.style.opacity = p > .985 ? 1 : 0;
+    if (p > .985 && !done) { done = true; Sound.sfx('chime'); const r = wrap.getBoundingClientRect(); FX.burst(r.left + r.width * .55, r.top + r.width * .5, 18, { speed: 3 }); }
+  }
+  return { upd };
+})();
+
+
+/* ---------------- her handwriting scraps: torn edges ---------------- */
+$$('.scrap .paper').forEach(p => {
+  const top = [], bot = []; const n = 22;
+  for (let i = 0; i <= n; i++) { const x = (i / n * 100).toFixed(1); top.push(`${x}% ${(Math.random() * 5).toFixed(1)}px`); bot.push(`${x}% calc(100% - ${(Math.random() * 5).toFixed(1)}px)`); }
+  p.style.clipPath = `polygon(${top.join(',')},${bot.reverse().join(',')})`;
+});
+
+/* ---------------- childhood prints: slow parallax ---------------- */
+const prints = $$('.print');
+function updPrints() { prints.forEach(pr => { if (!visible(pr, 40)) return; const r = pr.getBoundingClientRect(); const p = clamp((innerHeight - r.top) / (innerHeight + r.height)); pr.style.setProperty('--sh', ((p - .5) * 16).toFixed(1) + 'px'); }); }
+
+/* ---------------- her letter: page stack ---------------- */
+(() => {
+  const stack = $('#stack'), hint = $('#stack-hint'); if (!stack) return;
+  let order = $$('.pg', stack), busy = false;
+  function layout() { order.forEach((p, i) => { p.style.zIndex = String(20 - i); p.style.setProperty('--i', i); }); hint.textContent = 'Page ' + order[0].dataset.n + ' · tap to turn'; }
+  layout();
+  stack.addEventListener('click', () => {
+    if (busy) return; busy = true; const top = order[0];
+    top.classList.add('out'); Sound.sfx('flip');
+    setTimeout(() => { order.push(order.shift()); layout(); top.classList.remove('out'); busy = false; }, reduce ? 30 : 480);
+  });
+})();
+
+/* ---------------- revisions dissolve ---------------- */
+const revs = $('#revs');
+$$('.x', revs).forEach(x => { const words = x.textContent.split(' '); x.textContent = ''; words.forEach((w, i) => { const s = document.createElement('span'); s.className = 'w'; s.textContent = w; x.appendChild(s); if (i < words.length - 1) x.appendChild(document.createTextNode(' ')); }); });
+function sampleText(li) {
+  const cs = getComputedStyle(li); const font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+  const r = li.getBoundingClientRect(); const w = Math.ceil(r.width), h = Math.ceil(r.height); if (!w || !h) return [];
+  const oc = document.createElement('canvas'); oc.width = w; oc.height = h; const o = oc.getContext('2d');
+  o.font = font; o.fillStyle = '#000'; o.textBaseline = 'alphabetic';
+  $$('.w', li).forEach(s => { const sr = s.getBoundingClientRect(); const m = o.measureText(s.textContent); const asc = m.fontBoundingBoxAscent || parseFloat(cs.fontSize) * .82; o.fillText(s.textContent, sr.left - r.left, sr.top - r.top + asc); });
+  const d = o.getImageData(0, 0, w, h).data, out = []; const step = 2;
+  for (let y = 0; y < h; y += step) for (let x = 0; x < w; x += step) if (d[(y * w + x) * 4 + 3] > 120) out.push({ x: r.left + x, y: r.top + y, delay: (x / w) * .55 + Math.random() * .08 });
+  return out;
+}
+let revRan = false;
+const revIO = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !revRan) { revRan = true; revIO.disconnect(); runRevs(); } }), { threshold: .55 });
+revIO.observe(revs);
+async function runRevs() {
+  const lis = $$('li', revs);
+  await (document.fonts ? document.fonts.ready : Promise.resolve());
+  for (let i = 0; i < lis.length; i++) {
+    const li = lis[i];
+    await wait(i ? 380 : 250);
+    li.classList.add('struck'); Sound.sfx('pencil');
+    await wait(reduce ? 50 : 620);
+    if (!reduce && visible(li)) FX.dust(sampleText(li));
+    li.classList.add('gone');
+  }
+  await wait(reduce ? 0 : 700);
+  $('#yp').classList.add('in');
+}
+
+/* ---------------- coin ---------------- */
+(() => {
+  const coin = $('#coin'), res = $('#result'), ys = $('#ys'), note = $('#me-note'), tally = $('#tally'), btn = $('#toss');
+  let deg = 0, wins = 0, busy = false;
+  const notes = [[1, 'Me: 0, and smiling.'], [3, 'Still 0. Still the happiest one here.'], [6, 'You can keep tossing. It won\'t change.'], [10, 'Forever for you, 0 for me. Perfect.'], [20, 'Still on your side of the board.']];
+  function drawTally(n) {
+    tally.innerHTML = ''; const show = Math.min(n, 25);
+    for (let i = 0; i < show; i++) {
+      const g = Math.floor(i / 5), k = i % 5, x0 = g * 24 + 4; const l = document.createElementNS(NS, 'line');
+      if (k < 4) { l.setAttribute('x1', x0 + k * 4.5); l.setAttribute('y1', 4); l.setAttribute('x2', x0 + k * 4.5 - 1); l.setAttribute('y2', 22); }
+      else { l.setAttribute('x1', x0 - 3); l.setAttribute('y1', 18); l.setAttribute('x2', x0 + 16); l.setAttribute('y2', 7); }
+      tally.appendChild(l);
+    }
+  }
+  btn.addEventListener('click', () => {
+    if (busy) return; busy = true;
+    const tails = Math.random() < .5;
+    deg = deg - (deg % 360) + 360 * 5 + (tails ? 180 : 0);
+    coin.style.transform = `rotateY(${deg}deg)`; res.textContent = ''; Sound.sfx('flip');
+    setTimeout(() => {
+      wins++; ys.textContent = wins; drawTally(wins);
+      res.textContent = tails ? 'Tails. I lose. So you win.' : 'Heads. You win.';
+      let n = note.textContent; for (const [k, t] of notes) if (wins >= k) n = t; note.textContent = n;
+      const r = coin.getBoundingClientRect(); FX.burst(r.left + r.width / 2, r.top + r.height / 2, 26, { up: true, speed: 5 }); Sound.sfx('chime');
+      busy = false;
+    }, reduce ? 60 : 1600);
+  });
+})();
+
+/* ---------------- 3D house ---------------- */
+function House() {
+  const sec = $('#house'), st = sec.querySelector('.sticky'), canvas = st.querySelector('canvas');
+  const R = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  R.setPixelRatio(Math.min(devicePixelRatio || 1, 1.75)); R.shadowMap.enabled = true; R.shadowMap.type = THREE.PCFSoftShadowMap;
+  const S = new THREE.Scene();
+  const cam = new THREE.PerspectiveCamera(36, 1, .1, 200);
+  const hemi = new THREE.HemisphereLight(0xfff1ee, 0xd9c1ab, .78); S.add(hemi);
+  const sunL = new THREE.DirectionalLight(0xfff0e2, .66); sunL.position.set(6, 12, 8); sunL.castShadow = true;
+  sunL.shadow.mapSize.set(1024, 1024); Object.assign(sunL.shadow.camera, { left: -9, right: 9, top: 9, bottom: -9, near: 1, far: 40 }); sunL.shadow.bias = -.0008; S.add(sunL);
+  const M = (c, o = {}) => new THREE.MeshStandardMaterial(Object.assign({ color: new THREE.Color(c), roughness: .88, metalness: 0 }, o));
+  const mesh = (geo, mat) => { const m = new THREE.Mesh(geo, mat); m.castShadow = true; m.receiveShadow = true; return m; };
+  const box = (w, h, d, c, o) => mesh(new THREE.BoxGeometry(w, h, d), typeof c === 'string' ? M(c, o) : c);
+  const cyl = (rt, rb, h, c, seg = 24) => mesh(new THREE.CylinderGeometry(rt, rb, h, seg), typeof c === 'string' ? M(c) : c);
+  const sph = (r, c, seg = 18) => mesh(new THREE.SphereGeometry(r, seg, Math.round(seg * .7)), typeof c === 'string' ? M(c) : c);
+  const anims = [];
+  const A = (s0, s1, fn) => anims.push({ s0, s1, fn, last: -1 });
+  const pop = (obj, s0, s1, ease = E.back) => { obj.visible = false; const sc = obj.scale.clone(); A(s0, s1, e => { obj.visible = e > 0; const k = Math.max(.0001, ease(e)); obj.scale.set(sc.x * k, sc.y * k, sc.z * k); }); };
+  const popKids = (grp, s0, s1, ease = E.back) => { const kids = grp.children.slice(), n = kids.length, sc = kids.map(k => k.scale.clone()); grp.visible = false; A(s0, s1, e => { grp.visible = e > 0; kids.forEach((k, i) => { const u = clamp(e * 1.6 - (i / n) * .6), q = Math.max(.0001, ease(u)); k.visible = u > 0; k.scale.set(sc[i].x * q, sc[i].y * q, sc[i].z * q); }); }); };
+  const photo = (src, w, h) => { const g = new THREE.Group(); const f = box(w + .12, h + .12, .05, '#fffaf3'); g.add(f); const t = new THREE.TextureLoader().load(src); const p = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ map: t })); p.position.z = .03; g.add(p); return g; };
+  const add = (o, x, y, z, parent = S) => { o.position.set(x, y, z); parent.add(o); return o; };
+
+  /* ground */
+  add(mesh(new THREE.CylinderGeometry(7.4, 7.7, .6, 80), M('#d3b1a3')), 0, -.3, 0);
+  const lawnMat = M('#e6cbc0'); add(mesh(new THREE.CylinderGeometry(7.32, 7.32, .04, 80), lawnMat), 0, .02, 0);
+  const lawnA = new THREE.Color('#e6cbc0'), lawnB = new THREE.Color('#cbd4b2');
+  A(7, 7.6, e => lawnMat.color.copy(lawnA).lerp(lawnB, e));
+
+  /* foundation */
+  const found = add(box(6.7, .34, 4.7, '#e4d2bd'), 0, .17, 0);
+  A(0, .9, e => { found.visible = e > 0; found.position.y = lerp(-.45, .17, E.out(e)); });
+
+  /* bricks */
+  const BY0 = .34, CH = .25, COURSES = 17, UP = BY0 + 2.16, TOP = BY0 + COURSES * CH;
+  const walls = [
+    { ax: 'x', a: -3, b: 3, f: -1.875, op: [[-2.4, -.8, 10, 14], [.8, 2.4, 10, 14], [-2.5, -.9, 2, 6], [1.2, 2.5, 3, 6]] },
+    { ax: 'z', a: -1.75, b: 2.05, f: -2.875, op: [[-.75, .75, 10, 14], [-.6, .6, 2, 6]] },
+    { ax: 'z', a: -1.75, b: 2.05, f: 2.875, op: [[-.75, .75, 10, 14], [-.6, .6, 3, 6]] },
+    { ax: 'x', a: -2.75, b: -2.2, f: 1.925, op: [] },
+    { ax: 'x', a: 2.2, b: 2.75, f: 1.925, op: [] }
+  ];
+  const bricks = [];
+  walls.forEach((w, wi) => {
+    for (let c = 0; c < COURSES; c++) {
+      let segs = [[w.a, w.b]];
+      for (const [u0, u1, c0, c1] of w.op) if (c >= c0 && c <= c1) segs = segs.flatMap(([a, b]) => { if (u1 <= a || u0 >= b) return [[a, b]]; const o = []; if (u0 > a) o.push([a, u0]); if (u1 < b) o.push([u1, b]); return o; });
+      const off = (c % 2) * .25;
+      for (const [a, b] of segs) for (let s = -3.5 - off; s < b; s += .5) { const s0 = Math.max(s, a), s1 = Math.min(s + .5, b); if (s1 - s0 < .1) continue; bricks.push({ wi, c, u: (s0 + s1) / 2, len: s1 - s0 - .025, ax: w.ax, f: w.f }); }
+    }
+  });
+  bricks.sort((p, q) => p.c - q.c || p.wi - q.wi || p.u - q.u);
+  const NB = bricks.length;
+  const IM = new THREE.InstancedMesh(new THREE.BoxGeometry(1, .232, .24), M('#ffffff', { roughness: .93 }), NB);
+  IM.castShadow = true; IM.receiveShadow = true;
+  const pal = ['#f2cdc6', '#eec1ba', '#f6dbd1', '#e9b8b1', '#f2d6c7', '#f4c8c9', '#f7e0d6'].map(c => new THREE.Color(c));
+  for (let i = 0; i < NB; i++) { const col = pal[(Math.random() * pal.length) | 0].clone(); col.offsetHSL(0, 0, (Math.random() - .5) * .035); IM.setColorAt(i, col); }
+  IM.instanceColor.needsUpdate = true;
+  S.add(IM);
+  const dm = new THREE.Object3D(); let laid = 0;
+  function setBricks(p) {
+    const f = p * (NB + 8); laid = 0;
+    for (let i = 0; i < NB; i++) {
+      const b = bricks[i]; const u = clamp((f - i) / 8); if (u >= 1) laid++;
+      const y = BY0 + CH / 2 + b.c * CH + (1 - E.bounce(u)) * 1.8, sc = u > 0 ? 1 : .0001;
+      if (b.ax === 'x') { dm.position.set(b.u, y, b.f); dm.rotation.set(0, 0, 0); } else { dm.position.set(b.f, y, b.u); dm.rotation.set(0, Math.PI / 2, 0); }
+      dm.scale.set(b.len * sc, sc, sc); dm.updateMatrix(); IM.setMatrixAt(i, dm.matrix);
+    }
+    IM.instanceMatrix.needsUpdate = true;
+  }
+  setBricks(0);
+  A(.9, 2, e => setBricks(e));
+
+  /* windows: glass, sills, lintels */
+  const glass = M('#fff4e6', { emissive: new THREE.Color('#ffc983'), emissiveIntensity: 0, roughness: .35 });
+  const trim = M('#fffaf3');
+  const winGroup = new THREE.Group(); S.add(winGroup);
+  walls.forEach(w => w.op.forEach(([u0, u1, c0, c1]) => {
+    const len = u1 - u0, h = (c1 - c0 + 1) * CH, cu = (u0 + u1) / 2, cy = BY0 + c0 * CH + h / 2;
+    const g = new THREE.Group();
+    const gl = box(len, h, .05, glass); g.add(gl);
+    const mull = box(.05, h, .07, trim); g.add(mull);
+    const sill = box(len + .14, .06, .36, trim); sill.position.y = -h / 2 - .03; g.add(sill);
+    const lint = box(len + .1, .08, .27, trim); lint.position.y = h / 2 + .04; g.add(lint);
+    if (w.ax === 'x') { g.position.set(cu, cy, w.f); } else { g.position.set(w.f, cy, cu); g.rotation.y = Math.PI / 2; }
+    winGroup.add(g);
+  }));
+  popKids(winGroup, 2, 2.5, E.out);
+
+  /* slab with stairwell, floors, partition */
+  const oak = M('#edd9c0');
+  const slab = new THREE.Group(); S.add(slab);
+  [[5.5, 1.75, 0, -.875], [5.5, .85, 0, 1.625], [2.25, 1.2, -1.625, .6], [2.05, 1.2, 1.725, .6]].forEach(([w, d, x, z]) => add(box(w, .16, d, oak), x, UP - .08, z, slab));
+  const floor1 = add(box(5.5, .04, 3.85, M('#f1dfc8')), 0, BY0 + .02, .12);
+  A(2, 2.45, e => { const k = Math.max(.0001, E.out(e)); slab.visible = floor1.visible = e > 0; slab.scale.set(k, 1, 1); floor1.scale.set(k, 1, 1); });
+  const part = add(box(.12, 2.06, 1.75, '#f6e8e1'), 0, UP + 1.03, -.875);
+  pop(part, 2.3, 2.6, E.out);
+
+  /* roof */
+  const roofTex = canvasTex(128, 128, (x, w, h) => { x.fillStyle = '#dc9fa8'; x.fillRect(0, 0, w, h); for (let y = 0; y < h; y += 16) { x.fillStyle = 'rgba(160,80,95,.22)'; x.fillRect(0, y, w, 2); x.fillStyle = 'rgba(255,240,240,.18)'; x.fillRect(0, y + 2, w, 2); } });
+  roofTex.wrapS = roofTex.wrapT = THREE.RepeatWrapping; roofTex.repeat.set(3, 3);
+  const roofM = M('#ffffff', { map: roofTex });
+  const roof = new THREE.Group(); S.add(roof);
+  const run = 3.35, rise = 2.05, Ls = Math.hypot(run, rise), ang = Math.atan2(rise, run);
+  const sl = add(box(Ls + .12, .18, 4.75, roofM), -run / 2, TOP + rise / 2 + .09, 0, roof); sl.rotation.z = ang;
+  const sr = add(box(Ls + .12, .18, 4.75, roofM), run / 2, TOP + rise / 2 + .09, 0, roof); sr.rotation.z = -ang;
+  const tri = new THREE.Shape(); tri.moveTo(-3, 0); tri.lineTo(3, 0); tri.lineTo(0, 2); tri.lineTo(-3, 0);
+  const gable = add(mesh(new THREE.ExtrudeGeometry(tri, { depth: .24, bevelEnabled: false }), M('#f6e4dc')), 0, TOP, -2, roof);
+  add(box(.46, 1.3, .46, '#e9b7b3'), 1.7, TOP + 1.05, -1, roof);
+  const ridge = add(cyl(.07, .07, 4.8, '#c98d97'), 0, TOP + rise + .1, 0, roof); ridge.rotation.x = Math.PI / 2;
+  roof.visible = false;
+  A(2.4, 3, e => { roof.visible = e > 0; roof.position.y = (1 - E.back(e)) * 5; });
+
+  /* room 01: her dreams */
+  const r1 = new THREE.Group(); S.add(r1);
+  add(box(1.15, .06, .52, '#f4e6d8'), -1.9, UP + .74, -1.4, r1);
+  [[-2.42, -1.6], [-1.38, -1.6], [-2.42, -1.2], [-1.38, -1.2]].forEach(([x, z]) => add(box(.05, .72, .05, '#e2c4b0'), x, UP + .36, z, r1));
+  add(box(.42, .06, .42, '#efb6be'), -1.85, UP + .44, -.9, r1); add(box(.42, .46, .06, '#efb6be'), -1.85, UP + .68, -.7, r1);
+  add(cyl(.02, .02, .42, '#c9a15f'), -1.5, UP + .44, -.6, r1);
+  add(sph(.17, '#f6d6db'), -1.55, UP + 1.0, -1.45, r1); add(cyl(.015, .07, .2, '#c9a15f'), -1.55, UP + .82, -1.45, r1);
+  add(photo('img/h_vigeland.jpg', .78, .78), -1.25, UP + 1.45, -1.72, r1);
+  popKids(r1, 2.55, 3.05);
+  /* room 02: mine */
+  const r2 = new THREE.Group(); S.add(r2);
+  const board = add(box(1.05, .04, .72, '#fbf6ef'), 1.2, UP + .98, -1.2, r2); board.rotation.x = -.5;
+  [[.75, -1.45], [1.65, -1.45], [.75, -.95], [1.65, -.95]].forEach(([x, z]) => add(box(.05, .9, .05, '#d9b79a'), x, UP + .45, z, r2));
+  add(cyl(.17, .17, .05, '#c9a15f'), 1.2, UP + .5, -.45, r2); add(cyl(.03, .03, .48, '#c9a15f'), 1.2, UP + .25, -.45, r2);
+  const roll = add(cyl(.05, .05, .7, '#eef1f6'), 1.1, UP + 1.13, -1.15, r2); roll.rotation.z = Math.PI / 2;
+  add(photo('img/h_caps.jpg', .8, .8), 2.25, UP + 1.45, -1.72, r2);
+  popKids(r2, 2.6, 3.1);
+
+  /* kitchen */
+  const kit = new THREE.Group(); S.add(kit);
+  add(box(2.0, .8, .58, '#f2c6ca'), 1.75, BY0 + .44, -1.45, kit);
+  add(box(2.1, .06, .64, '#fffaf3'), 1.75, BY0 + .87, -1.45, kit);
+  [1.1, 1.55, 2.0, 2.45].forEach(x => add(box(.02, .5, .02, '#d9909b'), x, BY0 + .5, -1.15, kit));
+  const pot = add(cyl(.15, .13, .18, '#c9727f'), 2.35, BY0 + 1.0, -1.45, kit);
+  add(cyl(.12, .12, .03, '#f6e4dc'), 1.3, BY0 + .91, -1.4, kit);
+  add(photo('img/h_taste.jpg', .62, .62), 2.72, BY0 + 1.55, -.55, kit).rotation.y = -Math.PI / 2;
+  popKids(kit, 3.1, 3.75);
+
+  /* living room */
+  const liv = new THREE.Group(); S.add(liv);
+  add(cyl(1.05, 1.05, .02, '#f4c3ca', 40), -1.75, BY0 + .05, -.25, liv);
+  add(box(1.7, .34, .68, '#efb0ba'), -1.75, BY0 + .21, -1.3, liv);
+  add(box(1.7, .52, .2, '#efb0ba'), -1.75, BY0 + .5, -1.6, liv);
+  [-2.62, -.88].forEach(x => add(box(.17, .48, .68, '#eba7b2'), x, BY0 + .28, -1.3, liv));
+  [-2.15, -1.35].forEach(x => add(box(.42, .3, .12, '#fffaf3'), x, BY0 + .53, -1.46, liv));
+  add(cyl(.34, .34, .04, '#fffaf3'), -1.75, BY0 + .38, -.25, liv); add(cyl(.04, .04, .34, '#e2c4b0'), -1.75, BY0 + .2, -.25, liv);
+  add(cyl(.015, .015, 1.3, '#c9a15f'), -2.55, BY0 + .65, -1.55, liv); add(mesh(new THREE.ConeGeometry(.2, .26, 20, 1, true), M('#fbe6c9', { side: THREE.DoubleSide, emissive: new THREE.Color('#ffd9a0'), emissiveIntensity: .15 })), -2.55, BY0 + 1.36, -1.55, liv);
+  add(photo('img/h_laugh.jpg', .62, .62), -2.72, BY0 + 1.35, -1.25, liv).rotation.y = Math.PI / 2;
+  popKids(liv, 4.1, 4.75);
+  const mug = add(cyl(.065, .055, .11, '#f0a9b4'), -1.62, BY0 + .46, -.22); pop(mug, 8.4, 8.8);
+
+  /* lights on */
+  const lamps = [[-1.6, BY0 + 1.5, -.6], [1.7, BY0 + 1.5, -.6], [-1.5, UP + 1.5, -.6], [1.5, UP + 1.5, -.6]].map(([x, y, z]) => { const l = new THREE.PointLight(0xffcf94, 0, 5.5, 2); l.position.set(x, y, z); S.add(l); return l; });
+  A(5.05, 5.6, e => { glass.emissiveIntensity = e * 1.15; lamps.forEach(l => l.intensity = e * .85); });
+
+  /* spiral staircase + the two of us */
+  const stair = new THREE.Group(); S.add(stair);
+  const SX = .1, SZ = .6;
+  add(cyl(.05, .05, 2.3, '#c9a15f'), SX, BY0 + 1.15, SZ, stair);
+  const steps = [];
+  for (let i = 0; i < 12; i++) { const g = new THREE.Group(); g.position.set(SX, BY0 + .17 + i * .175, SZ); g.rotation.y = -i * .52 + 1.2; const s = box(.52, .05, .2, '#ecd3b6'); s.position.x = .28; g.add(s); stair.add(g); steps.push(g); g.visible = false; }
+  A(6.05, 6.75, e => { const n = e * 12; steps.forEach((g, i) => { const u = clamp(n - i); g.visible = u > 0; g.scale.setScalar(Math.max(.0001, E.back(u))); }); });
+  const person = (body, head) => { const g = new THREE.Group(); add(mesh(new THREE.ConeGeometry(.1, .3, 16), M(body)), 0, .15, 0, g); add(sph(.075, head), 0, .37, 0, g); return g; };
+  const stepPos = i => { const a = -i * .52 + 1.2; return [SX + Math.cos(a) * .3, BY0 + .17 + i * .175 + .03, SZ - Math.sin(a) * .3]; };
+  const her = person('#efb0ba', '#d9a07a'); her.position.set(...stepPos(8)); S.add(her);
+  const him = person('#9a7a6a', '#c98f6c'); him.position.set(...stepPos(5)); S.add(him);
+  const hv = new THREE.Vector3(...stepPos(8)).add(new THREE.Vector3(0, .2, 0)), mv = new THREE.Vector3(...stepPos(5)).add(new THREE.Vector3(0, .2, 0));
+  const armLen = hv.distanceTo(mv);
+  const arm = mesh(new THREE.CylinderGeometry(.018, .018, armLen, 8), M('#d9a07a'));
+  arm.position.copy(hv).add(mv).multiplyScalar(.5); arm.lookAt(hv); arm.rotateX(Math.PI / 2); S.add(arm);
+  const us = new THREE.Group(); [her, him, arm].forEach(o => { S.remove(o); us.add(o); }); S.add(us);
+  popKids(us, 6.6, 7);
+
+  /* garden */
+  const garden = new THREE.Group(); S.add(garden);
+  const FN = 74, fl = [];
+  const stemIM = new THREE.InstancedMesh(new THREE.CylinderGeometry(.016, .016, 1, 5), M('#a9bd98'), FN);
+  const bloomIM = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 12, 9), M('#ffffff', { roughness: .7 }), FN);
+  stemIM.castShadow = bloomIM.castShadow = true;
+  const fcol = ['#f4b6bf', '#f8d3d9', '#fff5f0', '#efa2ae', '#f6cfa8', '#f2c1d0'].map(c => new THREE.Color(c));
+  for (let i = 0; i < FN; i++) {
+    let x, z; do { const a = Math.random() * Math.PI * 2, r = 3.9 + Math.random() * 3.1; x = Math.cos(a) * r; z = Math.sin(a) * r; } while ((Math.abs(x) < 3.5 && z > -2.6 && z < 2.7) || (Math.abs(x) < .8 && z > 2));
+    fl.push({ x, z, h: .22 + Math.random() * .28, r: .07 + Math.random() * .05 }); bloomIM.setColorAt(i, fcol[(Math.random() * fcol.length) | 0]);
+  }
+  bloomIM.instanceColor.needsUpdate = true; garden.add(stemIM, bloomIM);
+  function setFlowers(e) {
+    fl.forEach((f, i) => {
+      const u = clamp(e * 1.7 - (i / FN) * .7), k = Math.max(.0001, E.elastic(u));
+      dm.rotation.set(0, 0, 0); dm.position.set(f.x, f.h * k / 2, f.z); dm.scale.set(1, f.h * k, 1); dm.updateMatrix(); stemIM.setMatrixAt(i, dm.matrix);
+      dm.position.set(f.x, f.h * k, f.z); dm.scale.setScalar(f.r * k); dm.updateMatrix(); bloomIM.setMatrixAt(i, dm.matrix);
+    });
+    stemIM.instanceMatrix.needsUpdate = bloomIM.instanceMatrix.needsUpdate = true;
+  }
+  setFlowers(0);
+  const trees = [[-5.3, -2.7, 1], [5.4, -2.3, .9], [-4.9, 3.5, .8], [5.0, 3.4, .75]].map(([x, z, s]) => {
+    const t = new THREE.Group(); add(cyl(.09, .14, 1.4, '#b98f86', 10), 0, .7, 0, t);
+    [[0, 1.75, 0, .75, '#f4bfc8'], [.45, 1.5, .2, .55, '#f8d3d9'], [-.4, 1.55, -.15, .55, '#efaebb'], [.05, 2.15, .1, .45, '#fbe0e4']].forEach(([a, b, c, r, col]) => add(sph(r, col, 16), a, b, c, t));
+    t.position.set(x, 0, z); t.scale.setScalar(s); garden.add(t); return t;
+  });
+  trees.forEach((t, i) => pop(t, 7 + i * .12, 7.6 + i * .12));
+  const stones = new THREE.Group(); garden.add(stones);
+  for (let i = 0; i < 6; i++) add(cyl(.3, .32, .05, '#efe4d8', 20), Math.sin(i * 1.3) * .25, .05, 2.75 + i * .72, stones);
+  popKids(stones, 7, 7.5, E.out);
+  A(7, 7.9, e => setFlowers(e));
+
+  /* sun */
+  const glowTex = canvasTex(128, 128, (x) => { const g = x.createRadialGradient(64, 64, 0, 64, 64, 64); g.addColorStop(0, 'rgba(255,240,200,1)'); g.addColorStop(.35, 'rgba(255,214,150,.6)'); g.addColorStop(1, 'rgba(255,200,150,0)'); x.fillStyle = g; x.fillRect(0, 0, 128, 128); });
+  const sunG = new THREE.Group(); S.add(sunG);
+  add(new THREE.Mesh(new THREE.SphereGeometry(1.1, 32, 20), new THREE.MeshBasicMaterial({ color: 0xffe2ae })), 0, 0, 0, sunG);
+  const sg = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, transparent: true, depthWrite: false })); sg.scale.set(8, 8, 1); sunG.add(sg);
+  sunG.position.set(8, -4, -12); sunG.visible = false;
+  A(8.05, 8.9, e => { sunG.visible = e > 0; sunG.position.y = lerp(-4, 7.5, E.out(e)); st.style.setProperty('--sunop', e.toFixed(3)); sunL.color.setRGB(1, lerp(.95, .86, e), lerp(.9, .74, e)); });
+
+  /* sprite particles: steam, notes, smoke, hearts */
+  const dotTex = canvasTex(64, 64, (x) => { const g = x.createRadialGradient(32, 32, 0, 32, 32, 32); g.addColorStop(0, 'rgba(255,255,255,.95)'); g.addColorStop(1, 'rgba(255,255,255,0)'); x.fillStyle = g; x.fillRect(0, 0, 64, 64); });
+  const noteTex = canvasTex(64, 64, (x) => { x.fillStyle = '#c9727f'; x.font = '52px Georgia, serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText('♪', 32, 34); });
+  const heartTex = canvasTex(64, 64, (x) => { x.fillStyle = '#ec9fab'; x.beginPath(); x.moveTo(32, 54); x.bezierCurveTo(4, 36, 6, 10, 22, 10); x.bezierCurveTo(28, 10, 32, 16, 32, 20); x.bezierCurveTo(32, 16, 36, 10, 42, 10); x.bezierCurveTo(58, 10, 60, 36, 32, 54); x.fill(); });
+  const emitters = [];
+  function emitter(tex, n, origin, opt) { const list = []; for (let i = 0; i < n; i++) { const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false, opacity: 0, color: opt.color || 0xffffff })); S.add(s); list.push({ s, ph: i / n + Math.random() * .1, ox: (Math.random() - .5) * (opt.spread || 0), oz: (Math.random() - .5) * (opt.spread || 0) }); } const em = { list, origin, opt, k: 0 }; emitters.push(em); return em; }
+  const steam = emitter(dotTex, 6, new THREE.Vector3(2.35, BY0 + 1.1, -1.45), { rise: .8, size: .22, speed: .35, sway: .08, color: 0xfff6f0 });
+  const notes = emitter(noteTex, 5, new THREE.Vector3(-1.75, BY0 + .8, -.8), { rise: 1.5, size: .22, speed: .22, sway: .25, spread: .8 });
+  const smoke = emitter(dotTex, 7, new THREE.Vector3(1.7, TOP + 1.8, -1), { rise: 2.2, size: .5, speed: .16, sway: .3, color: 0xf6e7e3 });
+  const mugSteam = emitter(dotTex, 4, new THREE.Vector3(-1.62, BY0 + .56, -.22), { rise: .5, size: .12, speed: .4, sway: .05, color: 0xfff6f0 });
+  const hearts = emitter(heartTex, 14, new THREE.Vector3(0, 1.2, .5), { rise: 6, size: .32, speed: .09, sway: .4, spread: 10 });
+  A(3.3, 3.7, e => steam.k = e); A(4.4, 4.8, e => notes.k = e); A(8.3, 8.8, e => { smoke.k = e; hearts.k = e; mugSteam.k = e; });
+  function runEmitters(t) {
+    emitters.forEach(em => em.list.forEach(p => {
+      const fr = ((t * em.opt.speed + p.ph) % 1 + 1) % 1;
+      p.s.position.set(em.origin.x + p.ox + Math.sin(t * 1.3 + p.ph * 9) * em.opt.sway, em.origin.y + fr * em.opt.rise, em.origin.z + p.oz);
+      const sz = em.opt.size * (.6 + fr * .8); p.s.scale.set(sz, sz, 1);
+      p.s.material.opacity = Math.sin(fr * Math.PI) * em.k * .9; p.s.visible = em.k > 0;
+    }));
+  }
+
+  /* camera + loop */
+  const target = new THREE.Vector3(0, 2.6, 0); let dist = 18, mob = false;
+  function resize() {
+    const w = st.clientWidth, h = st.clientHeight; if (!w || !h) return;
+    R.setSize(w, h, false); cam.aspect = w / h; mob = w < 900; cam.fov = mob ? 42 : 32; cam.clearViewOffset();
+    if (mob) cam.setViewOffset(w, h, 0, h * .2, w, h); else cam.setViewOffset(w, h, w * .2, 0, w, h);
+    cam.updateProjectionMatrix();
+    const vf = cam.fov * Math.PI / 180, hf = 2 * Math.atan(Math.tan(vf / 2) * cam.aspect);
+    dist = (mob ? 6.4 : 7.2) / Math.sin(Math.min(hf * (mob ? 1 : .72), vf * (mob ? .56 : .95)) / 2);
+  }
+  resize();
+  const cards = $$('.hstep .card', sec);
+  const steps9 = $$('.hstep', sec), hudS = $('#h-stage'), hudB = $('#h-bricks');
+  const names = ['Foundation', 'Walls', 'Rooms', 'Kitchen', 'Living room', 'Windows', 'Staircase', 'Garden', 'The little things'];
+  let sT = 0, s = 0, live = false, last = 0, hudLast = '';
+  function scroll() {
+    live = visible(st.parentElement, 100);
+    if (!live) return;
+    let v = 0; const line = innerHeight * .72; steps9.forEach(el => { const r = el.getBoundingClientRect(); v += clamp((line - r.top) / r.height); });
+    sT = clamp(v, 0, 9);
+    cards.forEach(c => { const r = c.getBoundingClientRect(); const o = innerWidth < 900 ? clamp((r.bottom - innerHeight * .6) / (innerHeight * .22)) : clamp((r.top - innerHeight * .02) / (innerHeight * .16)); c.style.opacity = o.toFixed(3); });
+  }
+  function frame(t) {
+    if (!live) return;
+    const dt = Math.min(.05, t - last || .016); last = t;
+    s += (sT - s) * Math.min(1, dt * (reduce ? 30 : 3.2));
+    anims.forEach(a => { const e = clamp((s - a.s0) / (a.s1 - a.s0)); if (e !== a.last) { a.last = e; a.fn(e); } });
+    runEmitters(t);
+    const q = s / 9;
+    const az = lerp(.62, -.22, sm(q)) + (reduce ? 0 : Math.sin(t * .13) * .07);
+    const el = lerp(.5, .3, sm(q));
+    const close = sm(clamp((s - 2) / 1.4)) * (1 - sm(clamp((s - 6.6) / 1.2)));
+    const d = dist * (1 - .16 * close) * (1 + .06 * sm(clamp(s - 7.6)));
+    target.y = lerp(1.7, 2.7, sm(clamp(s / 2.6)));
+    cam.position.set(Math.sin(az) * Math.cos(el) * d, target.y + Math.sin(el) * d, Math.cos(az) * Math.cos(el) * d);
+    cam.lookAt(target);
+    const nm = names[Math.min(8, Math.floor(s + .02))] || names[0];
+    const hl = nm + laid; if (hl !== hudLast) { hudLast = hl; hudS.textContent = nm; hudB.textContent = laid + ' / ' + NB; }
+    R.render(S, cam);
+  }
+  return { resize, scroll, frame };
+}
+
+/* ---------------- mirror parallax ---------------- */
+const oof = $('#oof');
+function updOof() { if (!visible(oof, 50)) return; const r = oof.getBoundingClientRect(); const p = clamp((innerHeight - r.top) / (innerHeight + r.height)); oof.style.setProperty('--py', ((p - .5) * -36).toFixed(1) + 'px'); }
+
+/* ---------------- finale: torn photo ---------------- */
+const Final = (() => {
+  const sec = $('#hand'), pl = $('#pl'), pr = $('#pr'), seam = $('#seamLine'), hold = $('#hold'), there = $('#there'), lbl = $('#hold-lbl'), torn = $('#torn');
+  const pts = []; for (let y = 0; y <= 100; y += 4) pts.push([50 + (y === 0 || y === 100 ? (Math.random() - .5) * 2 : (Math.random() - .5) * 8), y]);
+  const lp = pts.map(([x, y]) => `${x}% ${y}%`);
+  pl.style.clipPath = `polygon(0% 0%, ${lp.join(', ')}, 0% 100%)`;
+  pr.style.clipPath = `polygon(${lp[0]}, 100% 0%, 100% 100%, ${lp.slice().reverse().join(', ')})`;
+  seam.setAttribute('points', pts.map(([x, y]) => `${x},${y}`).join(' '));
+  let p = 0, holding = false, lastT = 0, joined = false; const DUR = 2600;
+  function step(t) {
+    if (!holding || joined) return;
+    const dt = lastT ? t - lastT : 16; lastT = t;
+    p = Math.min(1, p + dt / DUR); sec.style.setProperty('--p', p.toFixed(4));
+    if (p >= 1) {
+      joined = true; holding = false; sec.classList.add('joined');
+      there.textContent = 'There. That\'s all I ever wanted.'; lbl.style.opacity = 0;
+      Sound.sfx('join');
+      const r = torn.getBoundingClientRect(); const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      FX.burst(cx, cy, 70, { speed: 7 }); setTimeout(() => FX.burst(cx, r.top, 50, { up: true, speed: 6 }), 350); setTimeout(() => FX.burst(innerWidth / 2, innerHeight * .25, 40, { speed: 4 }), 800);
+      return;
+    }
+    requestAnimationFrame(step);
+  }
+  function start(e) { if (joined) return; if (e && e.cancelable) e.preventDefault(); if (holding) return; holding = true; lastT = 0; requestAnimationFrame(step); }
+  function stop() { holding = false; }
+  hold.addEventListener('pointerdown', start);
+  ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev => hold.addEventListener(ev, stop));
+  hold.addEventListener('contextmenu', e => e.preventDefault());
+  hold.addEventListener('keydown', e => { if ((e.key === ' ' || e.key === 'Enter') && !e.repeat) { e.preventDefault(); start(); } });
+  hold.addEventListener('keyup', e => { if (e.key === ' ' || e.key === 'Enter') stop(); });
+  hold.addEventListener('blur', stop);
+})();
+
+/* ---------------- where am I ---------------- */
+const whereEl = $('#where'), whereSecs = $$('[data-where]'); let whereLast = '';
+function updWhere() {
+  let txt = ''; for (const el of whereSecs) { if (el.getBoundingClientRect().top < innerHeight * .5) txt = el.dataset.where; }
+  const show = scrollY > innerHeight * .8;
+  whereEl.classList.toggle('show', show && !!txt);
+  if (show) $('#music').classList.add('show');
+  if (txt !== whereLast) { whereLast = txt; whereEl.textContent = txt; }
+}
+
+/* ---------------- boot ---------------- */
+let PS = null, HS = null;
+if (GL_OK) {
+  try { PS = Portraits(); } catch (e) { console.warn(e); }
+  try { HS = House(); } catch (e) { console.warn(e); }
+}
+if (!PS) {
+  const sec = $('#portraits'); sec.style.height = 'auto'; const st = sec.querySelector('.sticky'); st.style.position = 'relative'; st.style.height = 'auto'; st.innerHTML = '';
+  const wrap = document.createElement('div'); wrap.className = 'wrap'; wrap.style.cssText = 'display:grid;gap:5rem;padding-block:6rem';
+  PD.forEach(d => { const f = document.createElement('figure'); f.className = 'oof'; f.style.setProperty('--ft', d.ft); f.style.aspectRatio = d.w + '/' + d.h; f.innerHTML = `<div class="mat"></div><div class="bgimg" style="background-image:url(a/${d.k}_bg.jpg)"></div><img class="fg" src="a/${d.k}_fg.webp" alt=""><figcaption>${d.c}</figcaption>`; wrap.appendChild(f); });
+  st.appendChild(wrap);
+}
+if (!HS) { $('#house .sticky').style.display = 'none'; $('#house .hsteps').style.marginTop = '0'; }
+
+let dirty = true;
+addEventListener('scroll', () => { dirty = true; }, { passive: true });
+addEventListener('resize', () => { dirty = true; PS && PS.resize(); HS && HS.resize(); });
+function loop(ms) {
+  requestAnimationFrame(loop);
+  const t = ms / 1000;
+  if (dirty) { dirty = false; Clock.upd(); Kin.upd(); updPrints(); updOof(); updWhere(); PS && PS.scroll(); HS && HS.scroll(); }
+  PS && PS.frame(t); HS && HS.frame(t);
+}
+requestAnimationFrame(loop);
+})();
+
+</script>
+
+</body>
+</html>
